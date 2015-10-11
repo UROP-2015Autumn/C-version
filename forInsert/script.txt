@@ -1,0 +1,2 @@
+hbtype = *p++;
+pl = p;
