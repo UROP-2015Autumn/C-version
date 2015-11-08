@@ -1,0 +1,4008 @@
+	.file	"main.c"
+	.text
+	.globl	partStart
+	.type	partStart, @function
+partStart:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	partStart, .-partStart
+	.globl	partEnd
+	.type	partEnd, @function
+partEnd:
+.LFB1:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE1:
+	.size	partEnd, .-partEnd
+	.data
+	.type	bitmask_start_values, @object
+	.size	bitmask_start_values, 8
+bitmask_start_values:
+	.byte	-1
+	.byte	-2
+	.byte	-4
+	.byte	-8
+	.byte	-16
+	.byte	-32
+	.byte	-64
+	.byte	-128
+	.type	bitmask_end_values, @object
+	.size	bitmask_end_values, 8
+bitmask_end_values:
+	.byte	-1
+	.byte	1
+	.byte	3
+	.byte	7
+	.byte	15
+	.byte	31
+	.byte	63
+	.byte	127
+	.align 4
+	.type	g_probable_mtu, @object
+	.size	g_probable_mtu, 12
+g_probable_mtu:
+	.long	1472
+	.long	484
+	.long	228
+	.section	.rodata
+.LC0:
+	.string	"d1_both.c"
+	.text
+	.type	dtls1_hm_fragment_new, @function
+dtls1_hm_fragment_new:
+.LFB4:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$48, %rsp
+	movq	%rdi, -40(%rbp)
+	movl	%esi, -44(%rbp)
+	movq	$0, -24(%rbp)
+	movq	$0, -8(%rbp)
+	movq	$0, -16(%rbp)
+	movl	$184, %edx
+	movl	$.LC0, %esi
+	movl	$104, %edi
+	call	CRYPTO_malloc
+	movq	%rax, -24(%rbp)
+	cmpq	$0, -24(%rbp)
+	jne	.L4
+	movl	$0, %eax
+	jmp	.L5
+.L4:
+	cmpq	$0, -40(%rbp)
+	je	.L6
+	movq	-40(%rbp), %rax
+	movl	$190, %edx
+	movl	$.LC0, %esi
+	movl	%eax, %edi
+	call	CRYPTO_malloc
+	movq	%rax, -8(%rbp)
+	cmpq	$0, -8(%rbp)
+	jne	.L6
+	movq	-24(%rbp), %rax
+	movq	%rax, %rdi
+	call	CRYPTO_free
+	movl	$0, %eax
+	jmp	.L5
+.L6:
+	movq	-24(%rbp), %rax
+	movq	-8(%rbp), %rdx
+	movq	%rdx, 88(%rax)
+	cmpl	$0, -44(%rbp)
+	je	.L7
+	movq	-40(%rbp), %rax
+	addq	$7, %rax
+	shrq	$3, %rax
+	movl	$204, %edx
+	movl	$.LC0, %esi
+	movl	%eax, %edi
+	call	CRYPTO_malloc
+	movq	%rax, -16(%rbp)
+	cmpq	$0, -16(%rbp)
+	jne	.L8
+	cmpq	$0, -8(%rbp)
+	je	.L9
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	CRYPTO_free
+.L9:
+	movq	-24(%rbp), %rax
+	movq	%rax, %rdi
+	call	CRYPTO_free
+	movl	$0, %eax
+	jmp	.L5
+.L8:
+	movq	-40(%rbp), %rax
+	addq	$7, %rax
+	shrq	$3, %rax
+	movq	%rax, %rdx
+	movq	-16(%rbp), %rax
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	memset
+.L7:
+	movq	-24(%rbp), %rax
+	movq	-16(%rbp), %rdx
+	movq	%rdx, 96(%rax)
+	movq	-24(%rbp), %rax
+.L5:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE4:
+	.size	dtls1_hm_fragment_new, .-dtls1_hm_fragment_new
+	.type	dtls1_hm_fragment_free, @function
+dtls1_hm_fragment_free:
+.LFB5:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movl	40(%rax), %eax
+	testl	%eax, %eax
+	je	.L11
+	movq	-8(%rbp), %rax
+	movq	48(%rax), %rax
+	movq	%rax, %rdi
+	call	EVP_CIPHER_CTX_free
+	movq	-8(%rbp), %rax
+	movq	56(%rax), %rax
+	movq	%rax, %rdi
+	call	EVP_MD_CTX_destroy
+.L11:
+	movq	-8(%rbp), %rax
+	movq	88(%rax), %rax
+	testq	%rax, %rax
+	je	.L12
+	movq	-8(%rbp), %rax
+	movq	88(%rax), %rax
+	movq	%rax, %rdi
+	call	CRYPTO_free
+.L12:
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rax
+	testq	%rax, %rax
+	je	.L13
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rax
+	movq	%rax, %rdi
+	call	CRYPTO_free
+.L13:
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	CRYPTO_free
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE5:
+	.size	dtls1_hm_fragment_free, .-dtls1_hm_fragment_free
+	.section	.rodata
+.LC1:
+	.string	"s->d1->mtu >= dtls1_min_mtu()"
+	.align 8
+.LC2:
+	.string	"s->init_num == (int)s->d1->w_msg_hdr.msg_len + DTLS1_HM_HEADER_LENGTH"
+	.align 8
+.LC3:
+	.string	"s->init_off > DTLS1_HM_HEADER_LENGTH"
+.LC4:
+	.string	"len >= DTLS1_HM_HEADER_LENGTH"
+.LC5:
+	.string	"len == (unsigned int)ret"
+	.text
+	.globl	dtls1_do_write
+	.type	dtls1_do_write, @function
+dtls1_do_write:
+.LFB6:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	pushq	%rbx
+	subq	$88, %rsp
+	.cfi_offset 3, -24
+	movq	%rdi, -72(%rbp)
+	movl	%esi, -76(%rbp)
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	640(%rax), %ebx
+	call	dtls1_min_mtu
+	cmpl	%eax, %ebx
+	jae	.L15
+	movq	-72(%rbp), %rax
+	movl	$0, %ecx
+	movl	$0, %edx
+	movl	$32, %esi
+	movq	%rax, %rdi
+	call	SSL_ctrl
+	andl	$4096, %eax
+	testq	%rax, %rax
+	jne	.L15
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rbx
+	movq	-72(%rbp), %rax
+	movq	%rax, %rdi
+	call	SSL_get_wbio
+	movl	$0, %ecx
+	movl	$0, %edx
+	movl	$40, %esi
+	movq	%rax, %rdi
+	call	BIO_ctrl
+	movl	%eax, 640(%rbx)
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	640(%rax), %ebx
+	call	dtls1_min_mtu
+	cmpl	%eax, %ebx
+	jae	.L15
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	$0, 640(%rax)
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rbx
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	640(%rax), %eax
+	movl	%eax, %edi
+	call	dtls1_guess_mtu
+	movl	%eax, 640(%rbx)
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	640(%rax), %eax
+	movl	%eax, %ebx
+	movq	-72(%rbp), %rax
+	movq	%rax, %rdi
+	call	SSL_get_wbio
+	movl	$0, %ecx
+	movq	%rbx, %rdx
+	movl	$42, %esi
+	movq	%rax, %rdi
+	call	BIO_ctrl
+.L15:
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	640(%rax), %ebx
+	call	dtls1_min_mtu
+	cmpl	%eax, %ebx
+	jae	.L16
+	movl	$.LC1, %edx
+	movl	$279, %esi
+	movl	$.LC0, %edi
+	call	OpenSSLDie
+.L16:
+	movq	-72(%rbp), %rax
+	movl	100(%rax), %eax
+	testl	%eax, %eax
+	jne	.L17
+	cmpl	$22, -76(%rbp)
+	jne	.L17
+	movq	-72(%rbp), %rax
+	movl	96(%rax), %edx
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	656(%rax), %rax
+	addl	$12, %eax
+	cmpl	%eax, %edx
+	je	.L17
+	movl	$.LC2, %edx
+	movl	$283, %esi
+	movl	$.LC0, %edi
+	call	OpenSSLDie
+.L17:
+	movq	-72(%rbp), %rax
+	movq	240(%rax), %rax
+	testq	%rax, %rax
+	je	.L18
+	movq	-72(%rbp), %rax
+	movq	240(%rax), %rax
+	movq	%rax, %rdi
+	call	EVP_MD_CTX_md
+	movq	%rax, %rdi
+	call	EVP_MD_size
+	movl	%eax, -32(%rbp)
+	jmp	.L19
+.L18:
+	movl	$0, -32(%rbp)
+.L19:
+	movq	-72(%rbp), %rax
+	movq	232(%rax), %rax
+	testq	%rax, %rax
+	je	.L20
+	movq	-72(%rbp), %rax
+	movq	232(%rax), %rax
+	movq	(%rax), %rax
+	movq	%rax, %rdi
+	call	EVP_CIPHER_flags
+	andl	$2, %eax
+	testq	%rax, %rax
+	je	.L20
+	movq	-72(%rbp), %rax
+	movq	232(%rax), %rax
+	movq	(%rax), %rax
+	movq	%rax, %rdi
+	call	EVP_CIPHER_block_size
+	addl	%eax, %eax
+	movl	%eax, -36(%rbp)
+	jmp	.L21
+.L20:
+	movl	$0, -36(%rbp)
+.L21:
+	movl	$0, -28(%rbp)
+	jmp	.L22
+.L40:
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	640(%rax), %ebx
+	movq	-72(%rbp), %rax
+	movq	%rax, %rdi
+	call	SSL_get_wbio
+	movl	$0, %ecx
+	movl	$0, %edx
+	movl	$13, %esi
+	movq	%rax, %rdi
+	call	BIO_ctrl
+	subl	%eax, %ebx
+	movl	%ebx, %eax
+	subl	-32(%rbp), %eax
+	subl	-36(%rbp), %eax
+	subl	$13, %eax
+	movl	%eax, -20(%rbp)
+	cmpl	$12, -20(%rbp)
+	jg	.L23
+	movq	-72(%rbp), %rax
+	movq	%rax, %rdi
+	call	SSL_get_wbio
+	movl	$0, %ecx
+	movl	$0, %edx
+	movl	$11, %esi
+	movq	%rax, %rdi
+	call	BIO_ctrl
+	movl	%eax, -56(%rbp)
+	cmpl	$0, -56(%rbp)
+	jg	.L24
+	movl	-56(%rbp), %eax
+	jmp	.L25
+.L24:
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	640(%rax), %eax
+	subl	-32(%rbp), %eax
+	subl	-36(%rbp), %eax
+	subl	$13, %eax
+	movl	%eax, -20(%rbp)
+.L23:
+	movq	-72(%rbp), %rax
+	movl	96(%rax), %eax
+	cmpl	-20(%rbp), %eax
+	jle	.L26
+	movl	-20(%rbp), %eax
+	movl	%eax, -24(%rbp)
+	jmp	.L27
+.L26:
+	movq	-72(%rbp), %rax
+	movl	96(%rax), %eax
+	movl	%eax, -24(%rbp)
+.L27:
+	cmpl	$22, -76(%rbp)
+	jne	.L28
+	movq	-72(%rbp), %rax
+	movl	100(%rax), %eax
+	testl	%eax, %eax
+	je	.L29
+	movq	-72(%rbp), %rax
+	movl	100(%rax), %eax
+	cmpl	$12, %eax
+	jg	.L30
+	movl	$.LC3, %edx
+	movl	$323, %esi
+	movl	$.LC0, %edi
+	call	OpenSSLDie
+.L30:
+	movq	-72(%rbp), %rax
+	movl	100(%rax), %eax
+	leal	-12(%rax), %edx
+	movq	-72(%rbp), %rax
+	movl	%edx, 100(%rax)
+	movq	-72(%rbp), %rax
+	movl	96(%rax), %eax
+	leal	12(%rax), %edx
+	movq	-72(%rbp), %rax
+	movl	%edx, 96(%rax)
+	movq	-72(%rbp), %rax
+	movl	96(%rax), %eax
+	cmpl	-20(%rbp), %eax
+	jle	.L31
+	movl	-20(%rbp), %eax
+	movl	%eax, -24(%rbp)
+	jmp	.L29
+.L31:
+	movq	-72(%rbp), %rax
+	movl	96(%rax), %eax
+	movl	%eax, -24(%rbp)
+.L29:
+	movl	-24(%rbp), %eax
+	subl	$12, %eax
+	movl	%eax, %edx
+	movl	-28(%rbp), %ecx
+	movq	-72(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	dtls1_fix_message_header
+	movq	-72(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	8(%rax), %rdx
+	movq	-72(%rbp), %rax
+	movl	100(%rax), %eax
+	cltq
+	addq	%rax, %rdx
+	movq	-72(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	dtls1_write_message_header
+	cmpl	$11, -24(%rbp)
+	ja	.L28
+	movl	$.LC4, %edx
+	movl	$338, %esi
+	movl	$.LC0, %edi
+	call	OpenSSLDie
+.L28:
+	movl	-24(%rbp), %edx
+	movq	-72(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	8(%rax), %rcx
+	movq	-72(%rbp), %rax
+	movl	100(%rax), %eax
+	cltq
+	leaq	(%rcx,%rax), %rdi
+	movl	-76(%rbp), %esi
+	movq	-72(%rbp), %rax
+	movl	%edx, %ecx
+	movq	%rdi, %rdx
+	movq	%rax, %rdi
+	call	dtls1_write_bytes
+	movl	%eax, -56(%rbp)
+	cmpl	$0, -56(%rbp)
+	jns	.L32
+	movq	-72(%rbp), %rax
+	movq	%rax, %rdi
+	call	SSL_get_wbio
+	movl	$0, %ecx
+	movl	$0, %edx
+	movl	$43, %esi
+	movq	%rax, %rdi
+	call	BIO_ctrl
+	testq	%rax, %rax
+	jle	.L33
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rbx
+	movq	-72(%rbp), %rax
+	movq	%rax, %rdi
+	call	SSL_get_wbio
+	movl	$0, %ecx
+	movl	$0, %edx
+	movl	$40, %esi
+	movq	%rax, %rdi
+	call	BIO_ctrl
+	movl	%eax, 640(%rbx)
+	jmp	.L22
+.L33:
+	movl	$-1, %eax
+	jmp	.L25
+.L32:
+	movl	-56(%rbp), %eax
+	cmpl	-24(%rbp), %eax
+	je	.L34
+	movl	$.LC5, %edx
+	movl	$363, %esi
+	movl	$.LC0, %edi
+	call	OpenSSLDie
+.L34:
+	cmpl	$22, -76(%rbp)
+	jne	.L35
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	880(%rax), %eax
+	testl	%eax, %eax
+	jne	.L35
+	movq	-72(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	8(%rax), %rdx
+	movq	-72(%rbp), %rax
+	movl	100(%rax), %eax
+	cltq
+	addq	%rdx, %rax
+	movq	%rax, -48(%rbp)
+	movq	-72(%rbp), %rax
+	movq	136(%rax), %rax
+	addq	$648, %rax
+	movq	%rax, -64(%rbp)
+	cmpl	$0, -28(%rbp)
+	jne	.L36
+	movq	-72(%rbp), %rax
+	movl	(%rax), %eax
+	cmpl	$256, %eax
+	je	.L36
+	movq	-48(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	%rdx, -48(%rbp)
+	movq	-64(%rbp), %rdx
+	movzbl	(%rdx), %edx
+	movb	%dl, (%rax)
+	movq	-64(%rbp), %rax
+	movq	8(%rax), %rax
+	shrq	$16, %rax
+	movl	%eax, %edx
+	movq	-48(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-48(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-64(%rbp), %rax
+	movq	8(%rax), %rax
+	shrq	$8, %rax
+	movb	%al, (%rdx)
+	movq	-48(%rbp), %rax
+	leaq	2(%rax), %rdx
+	movq	-64(%rbp), %rax
+	movq	8(%rax), %rax
+	movb	%al, (%rdx)
+	addq	$3, -48(%rbp)
+	movq	-64(%rbp), %rax
+	movzwl	16(%rax), %eax
+	shrw	$8, %ax
+	movl	%eax, %edx
+	movq	-48(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-48(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-64(%rbp), %rax
+	movzwl	16(%rax), %eax
+	movb	%al, (%rdx)
+	addq	$2, -48(%rbp)
+	movq	-48(%rbp), %rax
+	movb	$0, (%rax)
+	movq	-48(%rbp), %rax
+	addq	$1, %rax
+	movb	$0, (%rax)
+	movq	-48(%rbp), %rax
+	addq	$2, %rax
+	movb	$0, (%rax)
+	addq	$3, -48(%rbp)
+	movq	-64(%rbp), %rax
+	movq	8(%rax), %rax
+	shrq	$16, %rax
+	movl	%eax, %edx
+	movq	-48(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-48(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-64(%rbp), %rax
+	movq	8(%rax), %rax
+	shrq	$8, %rax
+	movb	%al, (%rdx)
+	movq	-48(%rbp), %rax
+	leaq	2(%rax), %rdx
+	movq	-64(%rbp), %rax
+	movq	8(%rax), %rax
+	movb	%al, (%rdx)
+	addq	$3, -48(%rbp)
+	subq	$12, -48(%rbp)
+	movl	-56(%rbp), %eax
+	movl	%eax, -52(%rbp)
+	jmp	.L37
+.L36:
+	addq	$12, -48(%rbp)
+	movl	-56(%rbp), %eax
+	subl	$12, %eax
+	movl	%eax, -52(%rbp)
+.L37:
+	movl	-52(%rbp), %edx
+	movq	-48(%rbp), %rcx
+	movq	-72(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	ssl3_finish_mac
+.L35:
+	movq	-72(%rbp), %rax
+	movl	96(%rax), %eax
+	cmpl	-56(%rbp), %eax
+	jne	.L38
+	movq	-72(%rbp), %rax
+	movq	152(%rax), %rax
+	testq	%rax, %rax
+	je	.L39
+	movq	-72(%rbp), %rax
+	movq	152(%rax), %rax
+	movq	-72(%rbp), %rdx
+	movq	160(%rdx), %rdi
+	movq	-72(%rbp), %rdx
+	movl	100(%rdx), %ecx
+	movq	-72(%rbp), %rdx
+	movl	96(%rdx), %edx
+	addl	%ecx, %edx
+	movslq	%edx, %r8
+	movq	-72(%rbp), %rdx
+	movq	80(%rdx), %rdx
+	movq	8(%rdx), %rcx
+	movq	-72(%rbp), %rdx
+	movl	(%rdx), %esi
+	movq	-72(%rbp), %r9
+	movl	-76(%rbp), %edx
+	movq	%rdi, (%rsp)
+	movl	$1, %edi
+	call	*%rax
+.L39:
+	movq	-72(%rbp), %rax
+	movl	$0, 100(%rax)
+	movq	-72(%rbp), %rax
+	movl	$0, 96(%rax)
+	movl	$1, %eax
+	jmp	.L25
+.L38:
+	movq	-72(%rbp), %rax
+	movl	100(%rax), %edx
+	movl	-56(%rbp), %eax
+	addl	%eax, %edx
+	movq	-72(%rbp), %rax
+	movl	%edx, 100(%rax)
+	movq	-72(%rbp), %rax
+	movl	96(%rax), %eax
+	subl	-56(%rbp), %eax
+	movl	%eax, %edx
+	movq	-72(%rbp), %rax
+	movl	%edx, 96(%rax)
+	subl	$12, -56(%rbp)
+	movl	-56(%rbp), %eax
+	addl	%eax, -28(%rbp)
+.L22:
+	movq	-72(%rbp), %rax
+	movl	96(%rax), %eax
+	testl	%eax, %eax
+	jne	.L40
+	movl	$0, %eax
+.L25:
+	addq	$88, %rsp
+	popq	%rbx
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE6:
+	.size	dtls1_do_write, .-dtls1_do_write
+	.globl	dtls1_get_message
+	.type	dtls1_get_message, @function
+dtls1_get_message:
+.LFB7:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$96, %rsp
+	movq	%rdi, -56(%rbp)
+	movl	%esi, -60(%rbp)
+	movl	%edx, -64(%rbp)
+	movl	%ecx, -68(%rbp)
+	movq	%r8, -80(%rbp)
+	movq	%r9, -88(%rbp)
+	movq	-56(%rbp), %rax
+	movq	128(%rax), %rax
+	movl	964(%rax), %eax
+	testl	%eax, %eax
+	je	.L42
+	movq	-56(%rbp), %rax
+	movq	128(%rax), %rax
+	movl	$0, 964(%rax)
+	cmpl	$0, -68(%rbp)
+	js	.L43
+	movq	-56(%rbp), %rax
+	movq	128(%rax), %rax
+	movl	928(%rax), %eax
+	cmpl	-68(%rbp), %eax
+	je	.L43
+	movl	$10, -20(%rbp)
+	movl	$435, %r8d
+	movl	$.LC0, %ecx
+	movl	$244, %edx
+	movl	$252, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	nop
+.L44:
+	movl	-20(%rbp), %edx
+	movq	-56(%rbp), %rax
+	movl	$2, %esi
+	movq	%rax, %rdi
+	call	ssl3_send_alert
+	movq	-88(%rbp), %rax
+	movl	$0, (%rax)
+	movq	$-1, %rax
+	jmp	.L45
+.L43:
+	movq	-88(%rbp), %rax
+	movl	$1, (%rax)
+	movq	-56(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	8(%rax), %rax
+	leaq	12(%rax), %rdx
+	movq	-56(%rbp), %rax
+	movq	%rdx, 88(%rax)
+	movq	-56(%rbp), %rax
+	movq	128(%rax), %rax
+	movq	920(%rax), %rax
+	movl	%eax, %edx
+	movq	-56(%rbp), %rax
+	movl	%edx, 96(%rax)
+	movq	-56(%rbp), %rax
+	movl	96(%rax), %eax
+	cltq
+	jmp	.L45
+.L42:
+	movq	-56(%rbp), %rax
+	movq	136(%rax), %rax
+	addq	$736, %rax
+	movq	%rax, -32(%rbp)
+	movq	-32(%rbp), %rax
+	movl	$88, %edx
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	memset
+.L46:
+	movq	-88(%rbp), %rdi
+	movq	-80(%rbp), %rcx
+	movl	-64(%rbp), %edx
+	movl	-60(%rbp), %esi
+	movq	-56(%rbp), %rax
+	movq	%rdi, %r8
+	movq	%rax, %rdi
+	call	dtls1_get_message_fragment
+	movl	%eax, -36(%rbp)
+	cmpl	$-2, -36(%rbp)
+	je	.L46
+	cmpl	$-3, -36(%rbp)
+	je	.L46
+	cmpl	$0, -36(%rbp)
+	jg	.L47
+	movq	-88(%rbp), %rax
+	movl	(%rax), %eax
+	testl	%eax, %eax
+	jne	.L47
+	movl	-36(%rbp), %eax
+	cltq
+	jmp	.L45
+.L47:
+	movq	-56(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	8(%rax), %rax
+	movq	%rax, -8(%rbp)
+	movq	-32(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	%rax, -16(%rbp)
+	movq	-8(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	%rdx, -8(%rbp)
+	movq	-32(%rbp), %rdx
+	movzbl	(%rdx), %edx
+	movb	%dl, (%rax)
+	movq	-16(%rbp), %rax
+	shrq	$16, %rax
+	movl	%eax, %edx
+	movq	-8(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-8(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-16(%rbp), %rax
+	shrq	$8, %rax
+	movb	%al, (%rdx)
+	movq	-8(%rbp), %rax
+	leaq	2(%rax), %rdx
+	movq	-16(%rbp), %rax
+	movb	%al, (%rdx)
+	addq	$3, -8(%rbp)
+	movq	-32(%rbp), %rax
+	movzwl	16(%rax), %eax
+	shrw	$8, %ax
+	movl	%eax, %edx
+	movq	-8(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-8(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-32(%rbp), %rax
+	movzwl	16(%rax), %eax
+	movb	%al, (%rdx)
+	addq	$2, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movb	$0, (%rax)
+	movq	-8(%rbp), %rax
+	addq	$1, %rax
+	movb	$0, (%rax)
+	movq	-8(%rbp), %rax
+	addq	$2, %rax
+	movb	$0, (%rax)
+	addq	$3, -8(%rbp)
+	movq	-16(%rbp), %rax
+	shrq	$16, %rax
+	movl	%eax, %edx
+	movq	-8(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-8(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-16(%rbp), %rax
+	shrq	$8, %rax
+	movb	%al, (%rdx)
+	movq	-8(%rbp), %rax
+	leaq	2(%rax), %rdx
+	movq	-16(%rbp), %rax
+	movb	%al, (%rdx)
+	addq	$3, -8(%rbp)
+	movq	-56(%rbp), %rax
+	movl	(%rax), %eax
+	cmpl	$256, %eax
+	je	.L48
+	subq	$12, -8(%rbp)
+	addq	$12, -16(%rbp)
+.L48:
+	movq	-16(%rbp), %rax
+	movl	%eax, %edx
+	movq	-8(%rbp), %rcx
+	movq	-56(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	ssl3_finish_mac
+	movq	-56(%rbp), %rax
+	movq	152(%rax), %rax
+	testq	%rax, %rax
+	je	.L49
+	movq	-56(%rbp), %rax
+	movq	152(%rax), %rax
+	movq	-56(%rbp), %rdx
+	movq	160(%rdx), %rcx
+	movq	-56(%rbp), %rdx
+	movl	(%rdx), %esi
+	movq	-56(%rbp), %r8
+	movq	-16(%rbp), %rdi
+	movq	-8(%rbp), %rdx
+	movq	%rcx, (%rsp)
+	movq	%r8, %r9
+	movq	%rdi, %r8
+	movq	%rdx, %rcx
+	movl	$22, %edx
+	movl	$0, %edi
+	call	*%rax
+.L49:
+	movq	-32(%rbp), %rax
+	movl	$88, %edx
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	memset
+	movq	-56(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	888(%rax), %eax
+	testl	%eax, %eax
+	jne	.L50
+	movq	-56(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	564(%rax), %edx
+	addl	$1, %edx
+	movw	%dx, 564(%rax)
+.L50:
+	movq	-56(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	8(%rax), %rax
+	leaq	12(%rax), %rdx
+	movq	-56(%rbp), %rax
+	movq	%rdx, 88(%rax)
+	movq	-56(%rbp), %rax
+	movl	96(%rax), %eax
+	cltq
+.L45:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE7:
+	.size	dtls1_get_message, .-dtls1_get_message
+	.type	dtls1_preprocess_fragment, @function
+dtls1_preprocess_fragment:
+.LFB8:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$64, %rsp
+	movq	%rdi, -40(%rbp)
+	movq	%rsi, -48(%rbp)
+	movl	%edx, -52(%rbp)
+	movq	-48(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	%rax, -8(%rbp)
+	movq	-48(%rbp), %rax
+	movq	24(%rax), %rax
+	movq	%rax, -16(%rbp)
+	movq	-48(%rbp), %rax
+	movq	32(%rax), %rax
+	movq	%rax, -24(%rbp)
+	movq	-24(%rbp), %rax
+	movq	-16(%rbp), %rdx
+	addq	%rdx, %rax
+	cmpq	-8(%rbp), %rax
+	jbe	.L52
+	movl	$502, %r8d
+	movl	$.LC0, %ecx
+	movl	$152, %edx
+	movl	$288, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	movl	$47, %eax
+	jmp	.L53
+.L52:
+	movq	-24(%rbp), %rax
+	movq	-16(%rbp), %rdx
+	addq	%rax, %rdx
+	movl	-52(%rbp), %eax
+	cltq
+	cmpq	%rax, %rdx
+	jbe	.L54
+	movl	$508, %r8d
+	movl	$.LC0, %ecx
+	movl	$152, %edx
+	movl	$288, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	movl	$47, %eax
+	jmp	.L53
+.L54:
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	760(%rax), %rax
+	testq	%rax, %rax
+	jne	.L55
+	movq	-8(%rbp), %rax
+	leaq	12(%rax), %rdx
+	movq	-40(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	BUF_MEM_grow_clean
+	testl	%eax, %eax
+	jne	.L56
+	movl	$518, %r8d
+	movl	$.LC0, %ecx
+	movl	$7, %edx
+	movl	$288, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	movl	$80, %eax
+	jmp	.L53
+.L56:
+	movq	-40(%rbp), %rax
+	movq	128(%rax), %rax
+	movq	-8(%rbp), %rdx
+	movq	%rdx, 920(%rax)
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	-8(%rbp), %rdx
+	movq	%rdx, 744(%rax)
+	movq	-40(%rbp), %rax
+	movq	128(%rax), %rax
+	movq	-48(%rbp), %rdx
+	movzbl	(%rdx), %edx
+	movzbl	%dl, %edx
+	movl	%edx, 928(%rax)
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	-48(%rbp), %rdx
+	movzbl	(%rdx), %edx
+	movb	%dl, 736(%rax)
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	-48(%rbp), %rdx
+	movzwl	16(%rdx), %edx
+	movw	%dx, 752(%rax)
+	jmp	.L57
+.L55:
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	744(%rax), %rax
+	cmpq	-8(%rbp), %rax
+	je	.L57
+	movl	$532, %r8d
+	movl	$.LC0, %ecx
+	movl	$152, %edx
+	movl	$288, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	movl	$47, %eax
+	jmp	.L53
+.L57:
+	movl	$0, %eax
+.L53:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE8:
+	.size	dtls1_preprocess_fragment, .-dtls1_preprocess_fragment
+	.type	dtls1_retrieve_buffered_fragment, @function
+dtls1_retrieve_buffered_fragment:
+.LFB9:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$80, %rsp
+	movq	%rdi, -56(%rbp)
+	movq	%rsi, -64(%rbp)
+	movq	%rdx, -72(%rbp)
+	movq	-72(%rbp), %rax
+	movl	$0, (%rax)
+	movq	-56(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	608(%rax), %rax
+	movq	%rax, %rdi
+	call	pqueue_peek
+	movq	%rax, -8(%rbp)
+	cmpq	$0, -8(%rbp)
+	jne	.L59
+	movl	$0, %eax
+	jmp	.L60
+.L59:
+	movq	-8(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	%rax, -16(%rbp)
+	movq	-16(%rbp), %rax
+	movq	96(%rax), %rax
+	testq	%rax, %rax
+	je	.L61
+	movl	$0, %eax
+	jmp	.L60
+.L61:
+	movq	-56(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	564(%rax), %edx
+	movq	-16(%rbp), %rax
+	movzwl	16(%rax), %eax
+	cmpw	%ax, %dx
+	jne	.L62
+	movq	-16(%rbp), %rax
+	movq	32(%rax), %rax
+	movq	%rax, -24(%rbp)
+	movq	-56(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	608(%rax), %rax
+	movq	%rax, %rdi
+	call	pqueue_pop
+	movq	-64(%rbp), %rax
+	movl	%eax, %edx
+	movq	-16(%rbp), %rcx
+	movq	-56(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	dtls1_preprocess_fragment
+	movl	%eax, -28(%rbp)
+	cmpl	$0, -28(%rbp)
+	jne	.L63
+	movq	-56(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	8(%rax), %rax
+	addq	$12, %rax
+	movq	%rax, -40(%rbp)
+	movq	-16(%rbp), %rax
+	movq	32(%rax), %rdx
+	movq	-16(%rbp), %rax
+	movq	88(%rax), %rax
+	movq	-16(%rbp), %rcx
+	movq	24(%rcx), %rsi
+	movq	-40(%rbp), %rcx
+	addq	%rsi, %rcx
+	movq	%rax, %rsi
+	movq	%rcx, %rdi
+	call	memcpy
+.L63:
+	movq	-16(%rbp), %rax
+	movq	%rax, %rdi
+	call	dtls1_hm_fragment_free
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	pitem_free
+	cmpl	$0, -28(%rbp)
+	jne	.L64
+	movq	-72(%rbp), %rax
+	movl	$1, (%rax)
+	movq	-24(%rbp), %rax
+	jmp	.L60
+.L64:
+	movl	-28(%rbp), %edx
+	movq	-56(%rbp), %rax
+	movl	$2, %esi
+	movq	%rax, %rdi
+	call	ssl3_send_alert
+	movq	-56(%rbp), %rax
+	movl	$0, 96(%rax)
+	movq	-72(%rbp), %rax
+	movl	$0, (%rax)
+	movl	$-1, %eax
+	jmp	.L60
+.L62:
+	movl	$0, %eax
+.L60:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE9:
+	.size	dtls1_retrieve_buffered_fragment, .-dtls1_retrieve_buffered_fragment
+	.section	.rodata
+.LC6:
+	.string	"((long)msg_hdr->msg_len) > 0"
+	.text
+	.type	dtls1_reassemble_fragment, @function
+dtls1_reassemble_fragment:
+.LFB10:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$368, %rsp
+	movq	%rdi, -344(%rbp)
+	movq	%rsi, -352(%rbp)
+	movq	%rdx, -360(%rbp)
+	movq	$0, -8(%rbp)
+	movq	$0, -16(%rbp)
+	movl	$-1, -20(%rbp)
+	movq	-352(%rbp), %rax
+	movq	32(%rax), %rax
+	movq	%rax, -32(%rbp)
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rdx
+	movq	-32(%rbp), %rax
+	addq	%rax, %rdx
+	movq	-352(%rbp), %rax
+	movq	8(%rax), %rax
+	cmpq	%rax, %rdx
+	jbe	.L66
+	jmp	.L67
+.L66:
+	movq	-344(%rbp), %rax
+	movq	448(%rax), %rax
+	cmpq	$17740, %rax
+	jle	.L68
+	movq	-344(%rbp), %rax
+	movq	448(%rax), %rax
+	movq	%rax, -40(%rbp)
+	jmp	.L69
+.L68:
+	movq	$17740, -40(%rbp)
+.L69:
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rdx
+	movq	-32(%rbp), %rax
+	addq	%rdx, %rax
+	cmpq	-40(%rbp), %rax
+	jbe	.L70
+	jmp	.L67
+.L70:
+	leaq	-80(%rbp), %rax
+	movl	$8, %edx
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	memset
+	movq	-352(%rbp), %rax
+	movzwl	16(%rax), %eax
+	shrw	$8, %ax
+	movb	%al, -74(%rbp)
+	movq	-352(%rbp), %rax
+	movzwl	16(%rax), %eax
+	movb	%al, -73(%rbp)
+	movq	-344(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	608(%rax), %rax
+	leaq	-80(%rbp), %rdx
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	pqueue_find
+	movq	%rax, -16(%rbp)
+	cmpq	$0, -16(%rbp)
+	jne	.L71
+	movq	-352(%rbp), %rax
+	movq	8(%rax), %rax
+	movl	$1, %esi
+	movq	%rax, %rdi
+	call	dtls1_hm_fragment_new
+	movq	%rax, -8(%rbp)
+	cmpq	$0, -8(%rbp)
+	jne	.L72
+	jmp	.L67
+.L72:
+	movq	-8(%rbp), %rax
+	movq	-352(%rbp), %rcx
+	movl	$88, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	memcpy
+	movq	-8(%rbp), %rax
+	movq	8(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	%rdx, 32(%rax)
+	movq	-8(%rbp), %rax
+	movq	$0, 24(%rax)
+	jmp	.L73
+.L71:
+	movq	-16(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	%rax, -8(%rbp)
+.L73:
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rax
+	testq	%rax, %rax
+	jne	.L74
+	jmp	.L75
+.L77:
+	movq	-344(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	104(%rax), %rax
+	movl	$256, %edx
+	cmpq	$256, -32(%rbp)
+	cmovbe	-32(%rbp), %rdx
+	movl	%edx, %ecx
+	leaq	-336(%rbp), %rdx
+	movq	-344(%rbp), %rdi
+	movl	$0, %r8d
+	movl	$22, %esi
+	call	*%rax
+	movl	%eax, -20(%rbp)
+	cmpl	$0, -20(%rbp)
+	jle	.L67
+	movl	-20(%rbp), %eax
+	cltq
+	subq	%rax, -32(%rbp)
+.L75:
+	cmpq	$0, -32(%rbp)
+	jne	.L77
+	movl	$-3, %eax
+	jmp	.L96
+.L74:
+	movq	-344(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	104(%rax), %rax
+	movq	-32(%rbp), %rdx
+	movq	-8(%rbp), %rcx
+	movq	88(%rcx), %rsi
+	movq	-352(%rbp), %rcx
+	movq	24(%rcx), %rcx
+	addq	%rcx, %rsi
+	movq	-344(%rbp), %rdi
+	movl	$0, %r8d
+	movl	%edx, %ecx
+	movq	%rsi, %rdx
+	movl	$22, %esi
+	call	*%rax
+	movl	%eax, -20(%rbp)
+	cmpl	$0, -20(%rbp)
+	jle	.L67
+	movl	-20(%rbp), %eax
+	cltq
+	cmpq	-32(%rbp), %rax
+	jne	.L67
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rdx
+	movq	-32(%rbp), %rax
+	addq	%rdx, %rax
+	movq	%rax, %rdx
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rax
+	subq	%rax, %rdx
+	movq	%rdx, %rax
+	cmpq	$8, %rax
+	jg	.L79
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rax
+	movq	%rax, -48(%rbp)
+	jmp	.L80
+.L81:
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rdx
+	movq	-48(%rbp), %rax
+	sarq	$3, %rax
+	addq	%rax, %rdx
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rcx
+	movq	-48(%rbp), %rax
+	sarq	$3, %rax
+	addq	%rcx, %rax
+	movzbl	(%rax), %eax
+	movl	%eax, %esi
+	movq	-48(%rbp), %rax
+	andl	$7, %eax
+	movl	$1, %edi
+	movl	%eax, %ecx
+	sall	%cl, %edi
+	movl	%edi, %eax
+	orl	%esi, %eax
+	movb	%al, (%rdx)
+	addq	$1, -48(%rbp)
+.L80:
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rdx
+	movq	-32(%rbp), %rax
+	addq	%rdx, %rax
+	cmpq	-48(%rbp), %rax
+	jg	.L81
+	jmp	.L82
+.L79:
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rdx
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rax
+	sarq	$3, %rax
+	addq	%rax, %rdx
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rcx
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rax
+	sarq	$3, %rax
+	addq	%rcx, %rax
+	movzbl	(%rax), %ecx
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rax
+	andl	$7, %eax
+	movzbl	bitmask_start_values(%rax), %eax
+	orl	%ecx, %eax
+	movb	%al, (%rdx)
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rax
+	sarq	$3, %rax
+	addq	$1, %rax
+	movq	%rax, -56(%rbp)
+	jmp	.L83
+.L84:
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rdx
+	movq	-56(%rbp), %rax
+	addq	%rdx, %rax
+	movb	$-1, (%rax)
+	addq	$1, -56(%rbp)
+.L83:
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rdx
+	movq	-32(%rbp), %rax
+	addq	%rdx, %rax
+	subq	$1, %rax
+	sarq	$3, %rax
+	cmpq	-56(%rbp), %rax
+	jg	.L84
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rdx
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rcx
+	movq	-32(%rbp), %rax
+	addq	%rcx, %rax
+	subq	$1, %rax
+	sarq	$3, %rax
+	addq	%rax, %rdx
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rcx
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rsi
+	movq	-32(%rbp), %rax
+	addq	%rsi, %rax
+	subq	$1, %rax
+	sarq	$3, %rax
+	addq	%rcx, %rax
+	movzbl	(%rax), %ecx
+	movq	-352(%rbp), %rax
+	movq	24(%rax), %rsi
+	movq	-32(%rbp), %rax
+	addq	%rsi, %rax
+	andl	$7, %eax
+	movzbl	bitmask_end_values(%rax), %eax
+	orl	%ecx, %eax
+	movb	%al, (%rdx)
+.L82:
+	movq	-352(%rbp), %rax
+	movq	8(%rax), %rax
+	testq	%rax, %rax
+	jg	.L85
+	movl	$.LC6, %edx
+	movl	$665, %esi
+	movl	$.LC0, %edi
+	call	OpenSSLDie
+.L85:
+	movl	$1, -24(%rbp)
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rdx
+	movq	-352(%rbp), %rax
+	movq	8(%rax), %rax
+	subq	$1, %rax
+	sarq	$3, %rax
+	addq	%rdx, %rax
+	movzbl	(%rax), %edx
+	movq	-352(%rbp), %rax
+	movq	8(%rax), %rax
+	andl	$7, %eax
+	movzbl	bitmask_end_values(%rax), %eax
+	cmpb	%al, %dl
+	je	.L86
+	movl	$0, -24(%rbp)
+.L86:
+	cmpl	$0, -24(%rbp)
+	je	.L87
+	movq	-352(%rbp), %rax
+	movq	8(%rax), %rax
+	subq	$1, %rax
+	sarq	$3, %rax
+	subq	$1, %rax
+	movq	%rax, -64(%rbp)
+	jmp	.L88
+.L90:
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rdx
+	movq	-64(%rbp), %rax
+	addq	%rdx, %rax
+	movzbl	(%rax), %eax
+	cmpb	$-1, %al
+	je	.L89
+	movl	$0, -24(%rbp)
+	jmp	.L87
+.L89:
+	subq	$1, -64(%rbp)
+.L88:
+	cmpq	$0, -64(%rbp)
+	jns	.L90
+.L87:
+	cmpl	$0, -24(%rbp)
+	je	.L91
+	movq	-8(%rbp), %rax
+	movq	96(%rax), %rax
+	movq	%rax, %rdi
+	call	CRYPTO_free
+	movq	-8(%rbp), %rax
+	movq	$0, 96(%rax)
+.L91:
+	cmpq	$0, -16(%rbp)
+	jne	.L92
+	leaq	-80(%rbp), %rax
+	movl	$8, %edx
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	memset
+	movq	-352(%rbp), %rax
+	movzwl	16(%rax), %eax
+	shrw	$8, %ax
+	movb	%al, -74(%rbp)
+	movq	-352(%rbp), %rax
+	movzwl	16(%rax), %eax
+	movb	%al, -73(%rbp)
+	movq	-8(%rbp), %rdx
+	leaq	-80(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	pitem_new
+	movq	%rax, -16(%rbp)
+	cmpq	$0, -16(%rbp)
+	jne	.L93
+	jmp	.L67
+.L93:
+	movq	-344(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	608(%rax), %rax
+	movq	-16(%rbp), %rdx
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	pqueue_insert
+.L92:
+	movl	$-3, %eax
+	jmp	.L96
+.L67:
+	cmpq	$0, -8(%rbp)
+	je	.L94
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	dtls1_hm_fragment_free
+.L94:
+	cmpq	$0, -16(%rbp)
+	je	.L95
+	movq	-16(%rbp), %rax
+	movq	%rax, %rdi
+	call	CRYPTO_free
+.L95:
+	movq	-360(%rbp), %rax
+	movl	$0, (%rax)
+	movl	-20(%rbp), %eax
+.L96:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE10:
+	.size	dtls1_reassemble_fragment, .-dtls1_reassemble_fragment
+	.type	dtls1_process_out_of_seq_message, @function
+dtls1_process_out_of_seq_message:
+.LFB11:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$336, %rsp
+	movq	%rdi, -312(%rbp)
+	movq	%rsi, -320(%rbp)
+	movq	%rdx, -328(%rbp)
+	movl	$-1, -4(%rbp)
+	movq	$0, -16(%rbp)
+	movq	$0, -24(%rbp)
+	movq	-320(%rbp), %rax
+	movq	32(%rax), %rax
+	movq	%rax, -32(%rbp)
+	movq	-320(%rbp), %rax
+	movq	24(%rax), %rdx
+	movq	-32(%rbp), %rax
+	addq	%rax, %rdx
+	movq	-320(%rbp), %rax
+	movq	8(%rax), %rax
+	cmpq	%rax, %rdx
+	jbe	.L98
+	jmp	.L99
+.L98:
+	leaq	-48(%rbp), %rax
+	movl	$8, %edx
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	memset
+	movq	-320(%rbp), %rax
+	movzwl	16(%rax), %eax
+	shrw	$8, %ax
+	movb	%al, -42(%rbp)
+	movq	-320(%rbp), %rax
+	movzwl	16(%rax), %eax
+	movb	%al, -41(%rbp)
+	movq	-312(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	608(%rax), %rax
+	leaq	-48(%rbp), %rdx
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	pqueue_find
+	movq	%rax, -24(%rbp)
+	cmpq	$0, -24(%rbp)
+	je	.L100
+	movq	-320(%rbp), %rax
+	movq	8(%rax), %rax
+	cmpq	-32(%rbp), %rax
+	jbe	.L100
+	movq	$0, -24(%rbp)
+.L100:
+	movq	-320(%rbp), %rax
+	movzwl	16(%rax), %edx
+	movq	-312(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	564(%rax), %eax
+	cmpw	%ax, %dx
+	jbe	.L101
+	movq	-320(%rbp), %rax
+	movzwl	16(%rax), %eax
+	movzwl	%ax, %edx
+	movq	-312(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	564(%rax), %eax
+	movzwl	%ax, %eax
+	addl	$10, %eax
+	cmpl	%eax, %edx
+	jg	.L101
+	cmpq	$0, -24(%rbp)
+	jne	.L101
+	movq	-312(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	564(%rax), %eax
+	testw	%ax, %ax
+	jne	.L102
+	movq	-320(%rbp), %rax
+	movzbl	(%rax), %eax
+	cmpb	$20, %al
+	jne	.L102
+.L101:
+	jmp	.L103
+.L105:
+	movq	-312(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	104(%rax), %rax
+	movl	$256, %edx
+	cmpq	$256, -32(%rbp)
+	cmovbe	-32(%rbp), %rdx
+	movl	%edx, %ecx
+	leaq	-304(%rbp), %rdx
+	movq	-312(%rbp), %rdi
+	movl	$0, %r8d
+	movl	$22, %esi
+	call	*%rax
+	movl	%eax, -4(%rbp)
+	cmpl	$0, -4(%rbp)
+	jle	.L99
+	movl	-4(%rbp), %eax
+	cltq
+	subq	%rax, -32(%rbp)
+.L103:
+	cmpq	$0, -32(%rbp)
+	jne	.L105
+	jmp	.L106
+.L102:
+	cmpq	$0, -32(%rbp)
+	je	.L107
+	movq	-320(%rbp), %rax
+	movq	8(%rax), %rax
+	cmpq	-32(%rbp), %rax
+	jbe	.L107
+	movq	-328(%rbp), %rdx
+	movq	-320(%rbp), %rcx
+	movq	-312(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	dtls1_reassemble_fragment
+	jmp	.L114
+.L107:
+	movq	-32(%rbp), %rax
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	dtls1_hm_fragment_new
+	movq	%rax, -16(%rbp)
+	cmpq	$0, -16(%rbp)
+	jne	.L109
+	jmp	.L99
+.L109:
+	movq	-16(%rbp), %rax
+	movq	-320(%rbp), %rcx
+	movl	$88, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	memcpy
+	cmpq	$0, -32(%rbp)
+	je	.L110
+	movq	-312(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	104(%rax), %rax
+	movq	-32(%rbp), %rdx
+	movl	%edx, %ecx
+	movq	-16(%rbp), %rdx
+	movq	88(%rdx), %rdx
+	movq	-312(%rbp), %rdi
+	movl	$0, %r8d
+	movl	$22, %esi
+	call	*%rax
+	movl	%eax, -4(%rbp)
+	cmpl	$0, -4(%rbp)
+	jle	.L99
+	movl	-4(%rbp), %eax
+	cltq
+	cmpq	-32(%rbp), %rax
+	jne	.L99
+.L110:
+	leaq	-48(%rbp), %rax
+	movl	$8, %edx
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	memset
+	movq	-320(%rbp), %rax
+	movzwl	16(%rax), %eax
+	shrw	$8, %ax
+	movb	%al, -42(%rbp)
+	movq	-320(%rbp), %rax
+	movzwl	16(%rax), %eax
+	movb	%al, -41(%rbp)
+	movq	-16(%rbp), %rdx
+	leaq	-48(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	pitem_new
+	movq	%rax, -24(%rbp)
+	cmpq	$0, -24(%rbp)
+	jne	.L111
+	jmp	.L99
+.L111:
+	movq	-312(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	608(%rax), %rax
+	movq	-24(%rbp), %rdx
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	pqueue_insert
+.L106:
+	movl	$-3, %eax
+	jmp	.L114
+.L99:
+	cmpq	$0, -16(%rbp)
+	je	.L112
+	movq	-16(%rbp), %rax
+	movq	%rax, %rdi
+	call	dtls1_hm_fragment_free
+.L112:
+	cmpq	$0, -24(%rbp)
+	je	.L113
+	movq	-24(%rbp), %rax
+	movq	%rax, %rdi
+	call	CRYPTO_free
+.L113:
+	movq	-328(%rbp), %rax
+	movl	$0, (%rax)
+	movl	-4(%rbp), %eax
+.L114:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE11:
+	.size	dtls1_process_out_of_seq_message, .-dtls1_process_out_of_seq_message
+	.type	dtls1_get_message_fragment, @function
+dtls1_get_message_fragment:
+.LFB12:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$208, %rsp
+	movq	%rdi, -168(%rbp)
+	movl	%esi, -172(%rbp)
+	movl	%edx, -176(%rbp)
+	movq	%rcx, -184(%rbp)
+	movq	%r8, -192(%rbp)
+	movq	-192(%rbp), %rdx
+	movq	-184(%rbp), %rcx
+	movq	-168(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	dtls1_retrieve_buffered_fragment
+	cltq
+	movq	%rax, -16(%rbp)
+	cmpq	$0, -16(%rbp)
+	jne	.L116
+	movq	-192(%rbp), %rax
+	movl	(%rax), %eax
+	testl	%eax, %eax
+	je	.L117
+.L116:
+	movq	-192(%rbp), %rax
+	movl	(%rax), %eax
+	testl	%eax, %eax
+	je	.L118
+	movq	-16(%rbp), %rax
+	movl	%eax, %edx
+	movq	-168(%rbp), %rax
+	movl	%edx, 96(%rax)
+.L118:
+	movq	-16(%rbp), %rax
+	jmp	.L134
+.L117:
+	movq	-168(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	104(%rax), %rax
+	leaq	-64(%rbp), %rdx
+	movq	-168(%rbp), %rdi
+	movl	$0, %r8d
+	movl	$12, %ecx
+	movl	$22, %esi
+	call	*%rax
+	movl	%eax, -4(%rbp)
+	cmpl	$0, -4(%rbp)
+	jg	.L120
+	movq	-168(%rbp), %rax
+	movl	$3, 40(%rax)
+	movq	-192(%rbp), %rax
+	movl	$0, (%rax)
+	movl	-4(%rbp), %eax
+	cltq
+	jmp	.L134
+.L120:
+	cmpl	$12, -4(%rbp)
+	je	.L121
+	movl	$10, -8(%rbp)
+	movl	$812, %r8d
+	movl	$.LC0, %ecx
+	movl	$244, %edx
+	movl	$253, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	jmp	.L122
+.L121:
+	leaq	-160(%rbp), %rdx
+	leaq	-64(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	dtls1_get_message_header
+	movzwl	-144(%rbp), %edx
+	movq	-168(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	564(%rax), %eax
+	cmpw	%ax, %dx
+	je	.L123
+	movq	-168(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	888(%rax), %eax
+	testl	%eax, %eax
+	je	.L124
+	movzwl	-144(%rbp), %eax
+	cmpw	$1, %ax
+	je	.L123
+.L124:
+	movq	-192(%rbp), %rdx
+	leaq	-160(%rbp), %rcx
+	movq	-168(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	dtls1_process_out_of_seq_message
+	cltq
+	jmp	.L134
+.L123:
+	movq	-152(%rbp), %rax
+	movq	%rax, -24(%rbp)
+	movq	-136(%rbp), %rax
+	movq	%rax, -32(%rbp)
+	movq	-128(%rbp), %rax
+	movq	%rax, -16(%rbp)
+	cmpq	$0, -16(%rbp)
+	je	.L125
+	movq	-16(%rbp), %rax
+	cmpq	-24(%rbp), %rax
+	jae	.L125
+	movq	-192(%rbp), %rdx
+	leaq	-160(%rbp), %rcx
+	movq	-168(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	dtls1_reassemble_fragment
+	cltq
+	jmp	.L134
+.L125:
+	movq	-168(%rbp), %rax
+	movl	56(%rax), %eax
+	testl	%eax, %eax
+	jne	.L126
+	movq	-168(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	760(%rax), %rax
+	testq	%rax, %rax
+	jne	.L126
+	movzbl	-64(%rbp), %eax
+	testb	%al, %al
+	jne	.L126
+	movzbl	-63(%rbp), %eax
+	testb	%al, %al
+	jne	.L127
+	movzbl	-62(%rbp), %eax
+	testb	%al, %al
+	jne	.L127
+	movzbl	-61(%rbp), %eax
+	testb	%al, %al
+	jne	.L127
+	movq	-168(%rbp), %rax
+	movq	152(%rax), %rax
+	testq	%rax, %rax
+	je	.L128
+	movq	-168(%rbp), %rax
+	movq	152(%rax), %rax
+	movq	-168(%rbp), %rdx
+	movq	160(%rdx), %rcx
+	movq	-168(%rbp), %rdx
+	movl	(%rdx), %esi
+	movq	-168(%rbp), %rdi
+	leaq	-64(%rbp), %rdx
+	movq	%rcx, (%rsp)
+	movq	%rdi, %r9
+	movl	$12, %r8d
+	movq	%rdx, %rcx
+	movl	$22, %edx
+	movl	$0, %edi
+	call	*%rax
+.L128:
+	movq	-168(%rbp), %rax
+	movl	$0, 96(%rax)
+	movq	-192(%rbp), %rdi
+	movq	-184(%rbp), %rcx
+	movl	-176(%rbp), %edx
+	movl	-172(%rbp), %esi
+	movq	-168(%rbp), %rax
+	movq	%rdi, %r8
+	movq	%rax, %rdi
+	call	dtls1_get_message_fragment
+	jmp	.L134
+.L127:
+	movl	$10, -8(%rbp)
+	movl	$856, %r8d
+	movl	$.LC0, %ecx
+	movl	$244, %edx
+	movl	$253, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	jmp	.L122
+.L126:
+	movq	-184(%rbp), %rax
+	movl	%eax, %edx
+	leaq	-160(%rbp), %rcx
+	movq	-168(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	dtls1_preprocess_fragment
+	movl	%eax, -8(%rbp)
+	cmpl	$0, -8(%rbp)
+	je	.L129
+	jmp	.L122
+.L129:
+	movq	-168(%rbp), %rax
+	movl	-176(%rbp), %edx
+	movl	%edx, 72(%rax)
+	cmpq	$0, -16(%rbp)
+	je	.L130
+	movq	-168(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	8(%rax), %rax
+	addq	$12, %rax
+	movq	%rax, -40(%rbp)
+	movq	-168(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	104(%rax), %rax
+	movq	-16(%rbp), %rdx
+	movq	-32(%rbp), %rcx
+	movq	-40(%rbp), %rsi
+	addq	%rcx, %rsi
+	movq	-168(%rbp), %rdi
+	movl	$0, %r8d
+	movl	%edx, %ecx
+	movq	%rsi, %rdx
+	movl	$22, %esi
+	call	*%rax
+	movl	%eax, -4(%rbp)
+	cmpl	$0, -4(%rbp)
+	jg	.L131
+	movq	-168(%rbp), %rax
+	movl	$3, 40(%rax)
+	movq	-192(%rbp), %rax
+	movl	$0, (%rax)
+	movl	-4(%rbp), %eax
+	cltq
+	jmp	.L134
+.L131:
+	jmp	.L132
+.L130:
+	movl	$0, -4(%rbp)
+.L132:
+	movq	-16(%rbp), %rax
+	cmpl	-4(%rbp), %eax
+	je	.L133
+	movl	$47, -8(%rbp)
+	movl	$889, %r8d
+	movl	$.LC0, %ecx
+	movl	$47, %edx
+	movl	$253, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	jmp	.L122
+.L133:
+	movq	-192(%rbp), %rax
+	movl	$1, (%rax)
+	movq	-16(%rbp), %rax
+	movl	%eax, %edx
+	movq	-168(%rbp), %rax
+	movl	%edx, 96(%rax)
+	movq	-16(%rbp), %rax
+	jmp	.L134
+.L122:
+	movl	-8(%rbp), %edx
+	movq	-168(%rbp), %rax
+	movl	$2, %esi
+	movq	%rax, %rdi
+	call	ssl3_send_alert
+	movq	-168(%rbp), %rax
+	movl	$0, 96(%rax)
+	movq	-192(%rbp), %rax
+	movl	$0, (%rax)
+	movq	$-1, %rax
+.L134:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE12:
+	.size	dtls1_get_message_fragment, .-dtls1_get_message_fragment
+	.section	.rodata
+.LC7:
+	.string	"i <= EVP_MAX_MD_SIZE"
+	.text
+	.globl	dtls1_send_finished
+	.type	dtls1_send_finished, @function
+dtls1_send_finished:
+.LFB13:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$64, %rsp
+	movq	%rdi, -40(%rbp)
+	movl	%esi, -44(%rbp)
+	movl	%edx, -48(%rbp)
+	movq	%rcx, -56(%rbp)
+	movl	%r8d, -60(%rbp)
+	movq	-40(%rbp), %rax
+	movl	72(%rax), %eax
+	cmpl	-44(%rbp), %eax
+	jne	.L136
+	movq	-40(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	8(%rax), %rax
+	movq	%rax, -8(%rbp)
+	movq	-8(%rbp), %rax
+	addq	$12, %rax
+	movq	%rax, -16(%rbp)
+	movq	-40(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	200(%rax), %rax
+	movq	40(%rax), %rax
+	movq	-40(%rbp), %rdx
+	movq	128(%rdx), %rdx
+	leaq	656(%rdx), %rcx
+	movl	-60(%rbp), %edx
+	movq	-56(%rbp), %rsi
+	movq	-40(%rbp), %rdi
+	call	*%rax
+	movl	%eax, -20(%rbp)
+	movq	-40(%rbp), %rax
+	movq	128(%rax), %rax
+	movl	-20(%rbp), %edx
+	movl	%edx, 784(%rax)
+	movl	-20(%rbp), %eax
+	movslq	%eax, %rdx
+	movq	-40(%rbp), %rax
+	movq	128(%rax), %rax
+	leaq	656(%rax), %rcx
+	movq	-16(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	memcpy
+	movl	-20(%rbp), %eax
+	cltq
+	addq	%rax, -16(%rbp)
+	movl	-20(%rbp), %eax
+	cltq
+	movq	%rax, -32(%rbp)
+	movq	-40(%rbp), %rax
+	movl	4(%rax), %eax
+	cmpl	$4096, %eax
+	jne	.L137
+	cmpl	$64, -20(%rbp)
+	jle	.L138
+	movl	$.LC7, %edx
+	movl	$933, %esi
+	movl	$.LC0, %edi
+	call	OpenSSLDie
+.L138:
+	movl	-20(%rbp), %eax
+	cltq
+	movq	-40(%rbp), %rdx
+	movq	128(%rdx), %rdx
+	leaq	656(%rdx), %rsi
+	movq	-40(%rbp), %rdx
+	movq	128(%rdx), %rdx
+	leaq	1056(%rdx), %rcx
+	movq	%rax, %rdx
+	movq	%rcx, %rdi
+	call	memcpy
+	movq	-40(%rbp), %rax
+	movq	128(%rax), %rax
+	movl	-20(%rbp), %edx
+	movb	%dl, 1120(%rax)
+	jmp	.L139
+.L137:
+	cmpl	$64, -20(%rbp)
+	jle	.L140
+	movl	$.LC7, %edx
+	movl	$940, %esi
+	movl	$.LC0, %edi
+	call	OpenSSLDie
+.L140:
+	movl	-20(%rbp), %eax
+	cltq
+	movq	-40(%rbp), %rdx
+	movq	128(%rdx), %rdx
+	leaq	656(%rdx), %rsi
+	movq	-40(%rbp), %rdx
+	movq	128(%rdx), %rdx
+	leaq	1121(%rdx), %rcx
+	movq	%rax, %rdx
+	movq	%rcx, %rdi
+	call	memcpy
+	movq	-40(%rbp), %rax
+	movq	128(%rax), %rax
+	movl	-20(%rbp), %edx
+	movb	%dl, 1185(%rax)
+.L139:
+	movq	-32(%rbp), %rcx
+	movq	-32(%rbp), %rdx
+	movq	-8(%rbp), %rsi
+	movq	-40(%rbp), %rax
+	movq	%rcx, %r9
+	movl	$0, %r8d
+	movq	%rdx, %rcx
+	movl	$20, %edx
+	movq	%rax, %rdi
+	call	dtls1_set_message_header
+	movq	%rax, -8(%rbp)
+	movq	-32(%rbp), %rax
+	leal	12(%rax), %edx
+	movq	-40(%rbp), %rax
+	movl	%edx, 96(%rax)
+	movq	-40(%rbp), %rax
+	movl	$0, 100(%rax)
+	movq	-40(%rbp), %rax
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	dtls1_buffer_message
+	movq	-40(%rbp), %rax
+	movl	-48(%rbp), %edx
+	movl	%edx, 72(%rax)
+.L136:
+	movq	-40(%rbp), %rax
+	movl	$22, %esi
+	movq	%rax, %rdi
+	call	dtls1_do_write
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE13:
+	.size	dtls1_send_finished, .-dtls1_send_finished
+	.globl	dtls1_send_change_cipher_spec
+	.type	dtls1_send_change_cipher_spec, @function
+dtls1_send_change_cipher_spec:
+.LFB14:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$32, %rsp
+	movq	%rdi, -24(%rbp)
+	movl	%esi, -28(%rbp)
+	movl	%edx, -32(%rbp)
+	movq	-24(%rbp), %rax
+	movl	72(%rax), %eax
+	cmpl	-28(%rbp), %eax
+	jne	.L143
+	movq	-24(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	8(%rax), %rax
+	movq	%rax, -8(%rbp)
+	movq	-8(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	%rdx, -8(%rbp)
+	movb	$1, (%rax)
+	movq	-24(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	-24(%rbp), %rdx
+	movq	136(%rdx), %rdx
+	movzwl	562(%rdx), %edx
+	movw	%dx, 560(%rax)
+	movq	-24(%rbp), %rax
+	movl	$1, 96(%rax)
+	movq	-24(%rbp), %rax
+	movl	(%rax), %eax
+	cmpl	$256, %eax
+	jne	.L144
+	movq	-24(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	562(%rax), %edx
+	addl	$1, %edx
+	movw	%dx, 562(%rax)
+	movq	-24(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	560(%rax), %eax
+	shrw	$8, %ax
+	movl	%eax, %edx
+	movq	-8(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-8(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-24(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	560(%rax), %eax
+	movb	%al, (%rdx)
+	addq	$2, -8(%rbp)
+	movq	-24(%rbp), %rax
+	movl	96(%rax), %eax
+	leal	2(%rax), %edx
+	movq	-24(%rbp), %rax
+	movl	%edx, 96(%rax)
+.L144:
+	movq	-24(%rbp), %rax
+	movl	$0, 100(%rax)
+	movq	-24(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	560(%rax), %eax
+	movzwl	%ax, %edx
+	movq	-24(%rbp), %rax
+	movl	$0, %r9d
+	movl	$0, %r8d
+	movl	%edx, %ecx
+	movl	$0, %edx
+	movl	$1, %esi
+	movq	%rax, %rdi
+	call	dtls1_set_message_header_int
+	movq	-24(%rbp), %rax
+	movl	$1, %esi
+	movq	%rax, %rdi
+	call	dtls1_buffer_message
+	movq	-24(%rbp), %rax
+	movl	-32(%rbp), %edx
+	movl	%edx, 72(%rax)
+.L143:
+	movq	-24(%rbp), %rax
+	movl	$20, %esi
+	movq	%rax, %rdi
+	call	dtls1_do_write
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE14:
+	.size	dtls1_send_change_cipher_spec, .-dtls1_send_change_cipher_spec
+	.type	dtls1_add_cert_to_buf, @function
+dtls1_add_cert_to_buf:
+.LFB15:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$48, %rsp
+	movq	%rdi, -24(%rbp)
+	movq	%rsi, -32(%rbp)
+	movq	%rdx, -40(%rbp)
+	movq	-40(%rbp), %rax
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	i2d_X509
+	movl	%eax, -4(%rbp)
+	movq	-32(%rbp), %rax
+	movq	(%rax), %rax
+	movl	%eax, %edx
+	movl	-4(%rbp), %eax
+	addl	%edx, %eax
+	addl	$3, %eax
+	movslq	%eax, %rdx
+	movq	-24(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	BUF_MEM_grow_clean
+	testl	%eax, %eax
+	jne	.L147
+	movl	$1015, %r8d
+	movl	$.LC0, %ecx
+	movl	$7, %edx
+	movl	$295, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	movl	$0, %eax
+	jmp	.L149
+.L147:
+	movq	-24(%rbp), %rax
+	movq	8(%rax), %rdx
+	movq	-32(%rbp), %rax
+	movq	(%rax), %rax
+	addq	%rdx, %rax
+	movq	%rax, -16(%rbp)
+	movq	-16(%rbp), %rax
+	movl	-4(%rbp), %edx
+	sarl	$16, %edx
+	movb	%dl, (%rax)
+	movq	-16(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movl	-4(%rbp), %eax
+	sarl	$8, %eax
+	movb	%al, (%rdx)
+	movq	-16(%rbp), %rax
+	leaq	2(%rax), %rdx
+	movl	-4(%rbp), %eax
+	movb	%al, (%rdx)
+	movq	-16(%rbp), %rax
+	addq	$3, %rax
+	movq	%rax, -16(%rbp)
+	leaq	-16(%rbp), %rdx
+	movq	-40(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	i2d_X509
+	movq	-32(%rbp), %rax
+	movq	(%rax), %rdx
+	movl	-4(%rbp), %eax
+	addl	$3, %eax
+	cltq
+	addq	%rax, %rdx
+	movq	-32(%rbp), %rax
+	movq	%rdx, (%rax)
+	movl	$1, %eax
+.L149:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE15:
+	.size	dtls1_add_cert_to_buf, .-dtls1_add_cert_to_buf
+	.globl	dtls1_output_cert_chain
+	.type	dtls1_output_cert_chain, @function
+dtls1_output_cert_chain:
+.LFB16:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$304, %rsp
+	movq	%rdi, -296(%rbp)
+	movq	%rsi, -304(%rbp)
+	movq	$15, -32(%rbp)
+	movq	-296(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	%rax, -16(%rbp)
+	movq	-16(%rbp), %rax
+	movl	$10, %esi
+	movq	%rax, %rdi
+	call	BUF_MEM_grow_clean
+	testl	%eax, %eax
+	jne	.L151
+	movl	$1036, %r8d
+	movl	$.LC0, %ecx
+	movl	$7, %edx
+	movl	$255, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	movl	$0, %eax
+	jmp	.L162
+.L151:
+	cmpq	$0, -304(%rbp)
+	je	.L153
+	movq	-296(%rbp), %rax
+	movq	376(%rax), %rax
+	movq	24(%rax), %rsi
+	movq	-304(%rbp), %rdx
+	leaq	-288(%rbp), %rax
+	movl	$0, %ecx
+	movq	%rax, %rdi
+	call	X509_STORE_CTX_init
+	testl	%eax, %eax
+	jne	.L154
+	movl	$1045, %r8d
+	movl	$.LC0, %ecx
+	movl	$11, %edx
+	movl	$255, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	movl	$0, %eax
+	jmp	.L162
+.L154:
+	leaq	-288(%rbp), %rax
+	movq	%rax, %rdi
+	call	X509_verify_cert
+	call	ERR_clear_error
+	movl	$0, -4(%rbp)
+	jmp	.L156
+.L158:
+	movq	-128(%rbp), %rax
+	movl	-4(%rbp), %edx
+	movl	%edx, %esi
+	movq	%rax, %rdi
+	call	sk_value
+	movq	%rax, -304(%rbp)
+	movq	-304(%rbp), %rdx
+	leaq	-32(%rbp), %rcx
+	movq	-16(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	dtls1_add_cert_to_buf
+	testl	%eax, %eax
+	jne	.L157
+	leaq	-288(%rbp), %rax
+	movq	%rax, %rdi
+	call	X509_STORE_CTX_cleanup
+	movl	$0, %eax
+	jmp	.L162
+.L157:
+	addl	$1, -4(%rbp)
+.L156:
+	movq	-128(%rbp), %rax
+	movq	%rax, %rdi
+	call	sk_num
+	cmpl	-4(%rbp), %eax
+	jg	.L158
+	leaq	-288(%rbp), %rax
+	movq	%rax, %rdi
+	call	X509_STORE_CTX_cleanup
+.L153:
+	movl	$0, -4(%rbp)
+	jmp	.L159
+.L161:
+	movq	-296(%rbp), %rax
+	movq	376(%rax), %rax
+	movq	248(%rax), %rax
+	movl	-4(%rbp), %edx
+	movl	%edx, %esi
+	movq	%rax, %rdi
+	call	sk_value
+	movq	%rax, -304(%rbp)
+	movq	-304(%rbp), %rdx
+	leaq	-32(%rbp), %rcx
+	movq	-16(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	dtls1_add_cert_to_buf
+	testl	%eax, %eax
+	jne	.L160
+	movl	$0, %eax
+	jmp	.L162
+.L160:
+	addl	$1, -4(%rbp)
+.L159:
+	movq	-296(%rbp), %rax
+	movq	376(%rax), %rax
+	movq	248(%rax), %rax
+	movq	%rax, %rdi
+	call	sk_num
+	cmpl	-4(%rbp), %eax
+	jg	.L161
+	movq	-32(%rbp), %rax
+	subq	$15, %rax
+	movq	%rax, -32(%rbp)
+	movq	-16(%rbp), %rax
+	movq	8(%rax), %rax
+	addq	$12, %rax
+	movq	%rax, -24(%rbp)
+	movq	-32(%rbp), %rax
+	shrq	$16, %rax
+	movl	%eax, %edx
+	movq	-24(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-24(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-32(%rbp), %rax
+	shrq	$8, %rax
+	movb	%al, (%rdx)
+	movq	-24(%rbp), %rax
+	leaq	2(%rax), %rdx
+	movq	-32(%rbp), %rax
+	movb	%al, (%rdx)
+	addq	$3, -24(%rbp)
+	movq	-32(%rbp), %rax
+	addq	$3, %rax
+	movq	%rax, -32(%rbp)
+	movq	-16(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	%rax, -24(%rbp)
+	movq	-32(%rbp), %rcx
+	movq	-32(%rbp), %rdx
+	movq	-24(%rbp), %rsi
+	movq	-296(%rbp), %rax
+	movq	%rcx, %r9
+	movl	$0, %r8d
+	movq	%rdx, %rcx
+	movl	$11, %edx
+	movq	%rax, %rdi
+	call	dtls1_set_message_header
+	movq	%rax, -24(%rbp)
+	movq	-32(%rbp), %rax
+	addq	$12, %rax
+	movq	%rax, -32(%rbp)
+	movq	-32(%rbp), %rax
+.L162:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE16:
+	.size	dtls1_output_cert_chain, .-dtls1_output_cert_chain
+	.section	.rodata
+.LC8:
+	.string	"invalid state reached %s:%d"
+	.text
+	.globl	dtls1_read_failed
+	.type	dtls1_read_failed, @function
+dtls1_read_failed:
+.LFB17:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movl	%esi, -12(%rbp)
+	cmpl	$0, -12(%rbp)
+	jle	.L164
+	movq	stderr(%rip), %rax
+	movl	$1088, %ecx
+	movl	$.LC0, %edx
+	movl	$.LC8, %esi
+	movq	%rax, %rdi
+	movl	$0, %eax
+	call	fprintf
+	movl	$1, %eax
+	jmp	.L165
+.L164:
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	dtls1_is_timer_expired
+	testl	%eax, %eax
+	jne	.L166
+	movl	-12(%rbp), %eax
+	jmp	.L165
+.L166:
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	SSL_state
+	andl	$12288, %eax
+	testl	%eax, %eax
+	jne	.L167
+	movq	-8(%rbp), %rax
+	movl	676(%rax), %eax
+	testl	%eax, %eax
+	jne	.L167
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	SSL_get_rbio
+	movl	$1, %esi
+	movq	%rax, %rdi
+	call	BIO_set_flags
+	movl	-12(%rbp), %eax
+	jmp	.L165
+.L167:
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	dtls1_handle_timeout
+.L165:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE17:
+	.size	dtls1_read_failed, .-dtls1_read_failed
+	.globl	dtls1_get_queue_priority
+	.type	dtls1_get_queue_priority, @function
+dtls1_get_queue_priority:
+.LFB18:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	%edi, %eax
+	movl	%esi, -8(%rbp)
+	movw	%ax, -4(%rbp)
+	movzwl	-4(%rbp), %eax
+	addl	%eax, %eax
+	subl	-8(%rbp), %eax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE18:
+	.size	dtls1_get_queue_priority, .-dtls1_get_queue_priority
+	.section	.rodata
+	.align 8
+.LC9:
+	.string	"dtls1_retransmit_message() failed\n"
+	.text
+	.globl	dtls1_retransmit_buffered_messages
+	.type	dtls1_retransmit_buffered_messages, @function
+dtls1_retransmit_buffered_messages:
+.LFB19:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$64, %rsp
+	movq	%rdi, -56(%rbp)
+	movq	-56(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	616(%rax), %rax
+	movq	%rax, -16(%rbp)
+	movl	$0, -36(%rbp)
+	movq	-16(%rbp), %rax
+	movq	%rax, %rdi
+	call	pqueue_iterator
+	movq	%rax, -32(%rbp)
+	leaq	-32(%rbp), %rax
+	movq	%rax, %rdi
+	call	pqueue_next
+	movq	%rax, -8(%rbp)
+	jmp	.L171
+.L174:
+	movq	-8(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	%rax, -24(%rbp)
+	movq	-24(%rbp), %rax
+	movl	40(%rax), %eax
+	movl	%eax, %edx
+	movq	-24(%rbp), %rax
+	movzwl	16(%rax), %eax
+	movzwl	%ax, %eax
+	movl	%edx, %esi
+	movl	%eax, %edi
+	call	dtls1_get_queue_priority
+	movzwl	%ax, %esi
+	leaq	-36(%rbp), %rdx
+	movq	-56(%rbp), %rax
+	movq	%rdx, %rcx
+	movl	$0, %edx
+	movq	%rax, %rdi
+	call	dtls1_retransmit_message
+	testl	%eax, %eax
+	jg	.L172
+	movl	-36(%rbp), %eax
+	testl	%eax, %eax
+	je	.L172
+	movq	stderr(%rip), %rax
+	movq	%rax, %rcx
+	movl	$34, %edx
+	movl	$1, %esi
+	movl	$.LC9, %edi
+	call	fwrite
+	movl	$-1, %eax
+	jmp	.L175
+.L172:
+	leaq	-32(%rbp), %rax
+	movq	%rax, %rdi
+	call	pqueue_next
+	movq	%rax, -8(%rbp)
+.L171:
+	cmpq	$0, -8(%rbp)
+	jne	.L174
+	movl	$1, %eax
+.L175:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE19:
+	.size	dtls1_retransmit_buffered_messages, .-dtls1_retransmit_buffered_messages
+	.section	.rodata
+.LC10:
+	.string	"s->init_off == 0"
+	.align 8
+.LC11:
+	.string	"s->d1->w_msg_hdr.msg_len + ((s->version==DTLS1_VERSION)?DTLS1_CCS_HEADER_LENGTH:3) == (unsigned int)s->init_num"
+	.align 8
+.LC12:
+	.string	"s->d1->w_msg_hdr.msg_len + DTLS1_HM_HEADER_LENGTH == (unsigned int)s->init_num"
+	.text
+	.globl	dtls1_buffer_message
+	.type	dtls1_buffer_message, @function
+dtls1_buffer_message:
+.LFB20:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$48, %rsp
+	movq	%rdi, -40(%rbp)
+	movl	%esi, -44(%rbp)
+	movq	-40(%rbp), %rax
+	movl	100(%rax), %eax
+	testl	%eax, %eax
+	je	.L177
+	movl	$.LC10, %edx
+	movl	$1176, %esi
+	movl	$.LC0, %edi
+	call	OpenSSLDie
+.L177:
+	movq	-40(%rbp), %rax
+	movl	96(%rax), %eax
+	cltq
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	dtls1_hm_fragment_new
+	movq	%rax, -8(%rbp)
+	movq	-40(%rbp), %rax
+	movl	96(%rax), %eax
+	movslq	%eax, %rdx
+	movq	-40(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	8(%rax), %rcx
+	movq	-8(%rbp), %rax
+	movq	88(%rax), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	memcpy
+	cmpl	$0, -44(%rbp)
+	je	.L178
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	656(%rax), %rdx
+	movq	-40(%rbp), %rax
+	movl	(%rax), %eax
+	cmpl	$65279, %eax
+	jne	.L179
+	movl	$1, %eax
+	jmp	.L180
+.L179:
+	movl	$3, %eax
+.L180:
+	addq	%rax, %rdx
+	movq	-40(%rbp), %rax
+	movl	96(%rax), %eax
+	movl	%eax, %eax
+	cmpq	%rax, %rdx
+	je	.L181
+	movl	$.LC11, %edx
+	movl	$1185, %esi
+	movl	$.LC0, %edi
+	call	OpenSSLDie
+	jmp	.L181
+.L178:
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	656(%rax), %rax
+	leaq	12(%rax), %rdx
+	movq	-40(%rbp), %rax
+	movl	96(%rax), %eax
+	movl	%eax, %eax
+	cmpq	%rax, %rdx
+	je	.L181
+	movl	$.LC12, %edx
+	movl	$1190, %esi
+	movl	$.LC0, %edi
+	call	OpenSSLDie
+.L181:
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	656(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	%rdx, 8(%rax)
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	664(%rax), %edx
+	movq	-8(%rbp), %rax
+	movw	%dx, 16(%rax)
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movzbl	648(%rax), %edx
+	movq	-8(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-8(%rbp), %rax
+	movq	$0, 24(%rax)
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	656(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	%rdx, 32(%rax)
+	movl	-44(%rbp), %edx
+	movq	-8(%rbp), %rax
+	movl	%edx, 40(%rax)
+	movq	-40(%rbp), %rax
+	movq	232(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	%rdx, 48(%rax)
+	movq	-40(%rbp), %rax
+	movq	240(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	%rdx, 56(%rax)
+	movq	-40(%rbp), %rax
+	movq	248(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	%rdx, 64(%rax)
+	movq	-40(%rbp), %rax
+	movq	304(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	%rdx, 72(%rax)
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	522(%rax), %edx
+	movq	-8(%rbp), %rax
+	movw	%dx, 80(%rax)
+	leaq	-32(%rbp), %rax
+	movl	$8, %edx
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	memset
+	movq	-8(%rbp), %rax
+	movl	40(%rax), %eax
+	movl	%eax, %edx
+	movq	-8(%rbp), %rax
+	movzwl	16(%rax), %eax
+	movzwl	%ax, %eax
+	movl	%edx, %esi
+	movl	%eax, %edi
+	call	dtls1_get_queue_priority
+	sarl	$8, %eax
+	movb	%al, -26(%rbp)
+	movq	-8(%rbp), %rax
+	movl	40(%rax), %eax
+	movl	%eax, %edx
+	movq	-8(%rbp), %rax
+	movzwl	16(%rax), %eax
+	movzwl	%ax, %eax
+	movl	%edx, %esi
+	movl	%eax, %edi
+	call	dtls1_get_queue_priority
+	movb	%al, -25(%rbp)
+	movq	-8(%rbp), %rdx
+	leaq	-32(%rbp), %rax
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	pitem_new
+	movq	%rax, -16(%rbp)
+	cmpq	$0, -16(%rbp)
+	jne	.L182
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	dtls1_hm_fragment_free
+	movl	$0, %eax
+	jmp	.L184
+.L182:
+	movq	-40(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	616(%rax), %rax
+	movq	-16(%rbp), %rdx
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	pqueue_insert
+	movl	$1, %eax
+.L184:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE20:
+	.size	dtls1_buffer_message, .-dtls1_buffer_message
+	.section	.rodata
+	.align 8
+.LC13:
+	.string	"retransmit:  message %d non-existant\n"
+	.text
+	.globl	dtls1_retransmit_message
+	.type	dtls1_retransmit_message, @function
+dtls1_retransmit_message:
+.LFB21:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$144, %rsp
+	movq	%rdi, -120(%rbp)
+	movl	%esi, %eax
+	movq	%rdx, -136(%rbp)
+	movq	%rcx, -144(%rbp)
+	movw	%ax, -124(%rbp)
+	leaq	-48(%rbp), %rax
+	movl	$8, %edx
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	memset
+	movzwl	-124(%rbp), %eax
+	shrw	$8, %ax
+	movb	%al, -42(%rbp)
+	movzwl	-124(%rbp), %eax
+	movb	%al, -41(%rbp)
+	movq	-120(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	616(%rax), %rax
+	leaq	-48(%rbp), %rdx
+	movq	%rdx, %rsi
+	movq	%rax, %rdi
+	call	pqueue_find
+	movq	%rax, -16(%rbp)
+	cmpq	$0, -16(%rbp)
+	jne	.L186
+	movzwl	-124(%rbp), %edx
+	movq	stderr(%rip), %rax
+	movl	$.LC13, %esi
+	movq	%rax, %rdi
+	movl	$0, %eax
+	call	fprintf
+	movq	-144(%rbp), %rax
+	movl	$0, (%rax)
+	movl	$0, %eax
+	jmp	.L194
+.L186:
+	movq	-144(%rbp), %rax
+	movl	$1, (%rax)
+	movq	-16(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	%rax, -24(%rbp)
+	movq	-24(%rbp), %rax
+	movl	40(%rax), %eax
+	testl	%eax, %eax
+	je	.L188
+	movq	$1, -8(%rbp)
+	jmp	.L189
+.L188:
+	movq	$12, -8(%rbp)
+.L189:
+	movq	-24(%rbp), %rax
+	movq	8(%rax), %rdx
+	movq	-8(%rbp), %rax
+	addq	%rax, %rdx
+	movq	-24(%rbp), %rax
+	movq	88(%rax), %rcx
+	movq	-120(%rbp), %rax
+	movq	80(%rax), %rax
+	movq	8(%rax), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	memcpy
+	movq	-24(%rbp), %rax
+	movq	8(%rax), %rax
+	movl	%eax, %edx
+	movq	-8(%rbp), %rax
+	addl	%edx, %eax
+	movl	%eax, %edx
+	movq	-120(%rbp), %rax
+	movl	%edx, 96(%rax)
+	movq	-24(%rbp), %rax
+	movq	32(%rax), %rdi
+	movq	-24(%rbp), %rax
+	movzwl	16(%rax), %eax
+	movzwl	%ax, %ecx
+	movq	-24(%rbp), %rax
+	movq	8(%rax), %rdx
+	movq	-24(%rbp), %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %esi
+	movq	-120(%rbp), %rax
+	movq	%rdi, %r9
+	movl	$0, %r8d
+	movq	%rax, %rdi
+	call	dtls1_set_message_header_int
+	movq	-120(%rbp), %rax
+	movq	232(%rax), %rax
+	movq	%rax, -96(%rbp)
+	movq	-120(%rbp), %rax
+	movq	240(%rax), %rax
+	movq	%rax, -88(%rbp)
+	movq	-120(%rbp), %rax
+	movq	248(%rax), %rax
+	movq	%rax, -80(%rbp)
+	movq	-120(%rbp), %rax
+	movq	304(%rax), %rax
+	movq	%rax, -72(%rbp)
+	movq	-120(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	522(%rax), %eax
+	movw	%ax, -64(%rbp)
+	movq	-120(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	522(%rax), %eax
+	movw	%ax, -64(%rbp)
+	movq	-120(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	$1, 880(%rax)
+	movq	-24(%rbp), %rax
+	movq	48(%rax), %rdx
+	movq	-120(%rbp), %rax
+	movq	%rdx, 232(%rax)
+	movq	-24(%rbp), %rax
+	movq	56(%rax), %rdx
+	movq	-120(%rbp), %rax
+	movq	%rdx, 240(%rax)
+	movq	-24(%rbp), %rax
+	movq	64(%rax), %rdx
+	movq	-120(%rbp), %rax
+	movq	%rdx, 248(%rax)
+	movq	-24(%rbp), %rax
+	movq	72(%rax), %rdx
+	movq	-120(%rbp), %rax
+	movq	%rdx, 304(%rax)
+	movq	-120(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	-24(%rbp), %rdx
+	movzwl	80(%rdx), %edx
+	movw	%dx, 522(%rax)
+	movq	-24(%rbp), %rax
+	movzwl	80(%rax), %eax
+	movzwl	%ax, %eax
+	movzwl	-64(%rbp), %edx
+	movzwl	%dx, %edx
+	subl	$1, %edx
+	cmpl	%edx, %eax
+	jne	.L190
+	movq	-120(%rbp), %rax
+	movq	128(%rax), %rax
+	movq	88(%rax), %rax
+	movq	%rax, -112(%rbp)
+	movq	-120(%rbp), %rax
+	movq	136(%rax), %rax
+	leaq	566(%rax), %rcx
+	movq	-120(%rbp), %rax
+	movq	128(%rax), %rax
+	addq	$88, %rax
+	movl	$8, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	memcpy
+.L190:
+	movq	-24(%rbp), %rax
+	movl	40(%rax), %eax
+	testl	%eax, %eax
+	je	.L191
+	movl	$20, %eax
+	jmp	.L192
+.L191:
+	movl	$22, %eax
+.L192:
+	movq	-120(%rbp), %rdx
+	movl	%eax, %esi
+	movq	%rdx, %rdi
+	call	dtls1_do_write
+	movl	%eax, -28(%rbp)
+	movq	-96(%rbp), %rdx
+	movq	-120(%rbp), %rax
+	movq	%rdx, 232(%rax)
+	movq	-88(%rbp), %rdx
+	movq	-120(%rbp), %rax
+	movq	%rdx, 240(%rax)
+	movq	-80(%rbp), %rdx
+	movq	-120(%rbp), %rax
+	movq	%rdx, 248(%rax)
+	movq	-72(%rbp), %rdx
+	movq	-120(%rbp), %rax
+	movq	%rdx, 304(%rax)
+	movq	-120(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	-64(%rbp), %edx
+	movw	%dx, 522(%rax)
+	movq	-24(%rbp), %rax
+	movzwl	80(%rax), %eax
+	movzwl	%ax, %eax
+	movzwl	-64(%rbp), %edx
+	movzwl	%dx, %edx
+	subl	$1, %edx
+	cmpl	%edx, %eax
+	jne	.L193
+	movq	-120(%rbp), %rax
+	movq	128(%rax), %rax
+	leaq	88(%rax), %rcx
+	movq	-120(%rbp), %rax
+	movq	136(%rax), %rax
+	addq	$566, %rax
+	movl	$8, %edx
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	memcpy
+	movq	-120(%rbp), %rax
+	movq	128(%rax), %rax
+	leaq	88(%rax), %rdx
+	movq	-112(%rbp), %rax
+	movq	%rax, (%rdx)
+.L193:
+	movq	-120(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	$0, 880(%rax)
+	movq	-120(%rbp), %rax
+	movq	%rax, %rdi
+	call	SSL_get_wbio
+	movl	$0, %ecx
+	movl	$0, %edx
+	movl	$11, %esi
+	movq	%rax, %rdi
+	call	BIO_ctrl
+	movl	-28(%rbp), %eax
+.L194:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE21:
+	.size	dtls1_retransmit_message, .-dtls1_retransmit_message
+	.globl	dtls1_clear_record_buffer
+	.type	dtls1_clear_record_buffer, @function
+dtls1_clear_record_buffer:
+.LFB22:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$32, %rsp
+	movq	%rdi, -24(%rbp)
+	movq	-24(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	616(%rax), %rax
+	movq	%rax, %rdi
+	call	pqueue_pop
+	movq	%rax, -8(%rbp)
+	jmp	.L196
+.L197:
+	movq	-8(%rbp), %rax
+	movq	8(%rax), %rax
+	movq	%rax, %rdi
+	call	dtls1_hm_fragment_free
+	movq	-8(%rbp), %rax
+	movq	%rax, %rdi
+	call	pitem_free
+	movq	-24(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	616(%rax), %rax
+	movq	%rax, %rdi
+	call	pqueue_pop
+	movq	%rax, -8(%rbp)
+.L196:
+	cmpq	$0, -8(%rbp)
+	jne	.L197
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE22:
+	.size	dtls1_clear_record_buffer, .-dtls1_clear_record_buffer
+	.globl	dtls1_set_message_header
+	.type	dtls1_set_message_header, @function
+dtls1_set_message_header:
+.LFB23:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$48, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movl	%edx, %eax
+	movq	%rcx, -32(%rbp)
+	movq	%r8, -40(%rbp)
+	movq	%r9, -48(%rbp)
+	movb	%al, -20(%rbp)
+	cmpq	$0, -40(%rbp)
+	jne	.L199
+	movq	-8(%rbp), %rax
+	movq	136(%rax), %rax
+	movl	888(%rax), %eax
+	testl	%eax, %eax
+	jne	.L199
+	movq	-8(%rbp), %rax
+	movq	136(%rax), %rax
+	movq	-8(%rbp), %rdx
+	movq	136(%rdx), %rdx
+	movzwl	562(%rdx), %edx
+	movw	%dx, 560(%rax)
+	movq	-8(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	562(%rax), %edx
+	addl	$1, %edx
+	movw	%dx, 562(%rax)
+.L199:
+	movq	-8(%rbp), %rax
+	movq	136(%rax), %rax
+	movzwl	560(%rax), %eax
+	movzwl	%ax, %ecx
+	movzbl	-20(%rbp), %esi
+	movq	-48(%rbp), %r8
+	movq	-40(%rbp), %rdi
+	movq	-32(%rbp), %rdx
+	movq	-8(%rbp), %rax
+	movq	%r8, %r9
+	movq	%rdi, %r8
+	movq	%rax, %rdi
+	call	dtls1_set_message_header_int
+	addq	$12, -16(%rbp)
+	movq	-16(%rbp), %rax
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE23:
+	.size	dtls1_set_message_header, .-dtls1_set_message_header
+	.type	dtls1_set_message_header_int, @function
+dtls1_set_message_header_int:
+.LFB24:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -24(%rbp)
+	movq	%rdx, -40(%rbp)
+	movl	%ecx, %eax
+	movq	%r8, -48(%rbp)
+	movq	%r9, -56(%rbp)
+	movb	%sil, -28(%rbp)
+	movw	%ax, -32(%rbp)
+	movq	-24(%rbp), %rax
+	movq	136(%rax), %rax
+	addq	$648, %rax
+	movq	%rax, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movzbl	-28(%rbp), %edx
+	movb	%dl, (%rax)
+	movq	-8(%rbp), %rax
+	movq	-40(%rbp), %rdx
+	movq	%rdx, 8(%rax)
+	movq	-8(%rbp), %rax
+	movzwl	-32(%rbp), %edx
+	movw	%dx, 16(%rax)
+	movq	-8(%rbp), %rax
+	movq	-48(%rbp), %rdx
+	movq	%rdx, 24(%rax)
+	movq	-8(%rbp), %rax
+	movq	-56(%rbp), %rdx
+	movq	%rdx, 32(%rax)
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE24:
+	.size	dtls1_set_message_header_int, .-dtls1_set_message_header_int
+	.type	dtls1_fix_message_header, @function
+dtls1_fix_message_header:
+.LFB25:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -24(%rbp)
+	movq	%rsi, -32(%rbp)
+	movq	%rdx, -40(%rbp)
+	movq	-24(%rbp), %rax
+	movq	136(%rax), %rax
+	addq	$648, %rax
+	movq	%rax, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movq	-32(%rbp), %rdx
+	movq	%rdx, 24(%rax)
+	movq	-8(%rbp), %rax
+	movq	-40(%rbp), %rdx
+	movq	%rdx, 32(%rax)
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE25:
+	.size	dtls1_fix_message_header, .-dtls1_fix_message_header
+	.type	dtls1_write_message_header, @function
+dtls1_write_message_header:
+.LFB26:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movq	%rdi, -24(%rbp)
+	movq	%rsi, -32(%rbp)
+	movq	-24(%rbp), %rax
+	movq	136(%rax), %rax
+	addq	$648, %rax
+	movq	%rax, -8(%rbp)
+	movq	-32(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	%rdx, -32(%rbp)
+	movq	-8(%rbp), %rdx
+	movzbl	(%rdx), %edx
+	movb	%dl, (%rax)
+	movq	-8(%rbp), %rax
+	movq	8(%rax), %rax
+	shrq	$16, %rax
+	movl	%eax, %edx
+	movq	-32(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-32(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	8(%rax), %rax
+	shrq	$8, %rax
+	movb	%al, (%rdx)
+	movq	-32(%rbp), %rax
+	leaq	2(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	8(%rax), %rax
+	movb	%al, (%rdx)
+	addq	$3, -32(%rbp)
+	movq	-8(%rbp), %rax
+	movzwl	16(%rax), %eax
+	shrw	$8, %ax
+	movl	%eax, %edx
+	movq	-32(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-32(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movzwl	16(%rax), %eax
+	movb	%al, (%rdx)
+	addq	$2, -32(%rbp)
+	movq	-8(%rbp), %rax
+	movq	24(%rax), %rax
+	shrq	$16, %rax
+	movl	%eax, %edx
+	movq	-32(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-32(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	24(%rax), %rax
+	shrq	$8, %rax
+	movb	%al, (%rdx)
+	movq	-32(%rbp), %rax
+	leaq	2(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	24(%rax), %rax
+	movb	%al, (%rdx)
+	addq	$3, -32(%rbp)
+	movq	-8(%rbp), %rax
+	movq	32(%rax), %rax
+	shrq	$16, %rax
+	movl	%eax, %edx
+	movq	-32(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-32(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	32(%rax), %rax
+	shrq	$8, %rax
+	movb	%al, (%rdx)
+	movq	-32(%rbp), %rax
+	leaq	2(%rax), %rdx
+	movq	-8(%rbp), %rax
+	movq	32(%rax), %rax
+	movb	%al, (%rdx)
+	addq	$3, -32(%rbp)
+	movq	-32(%rbp), %rax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE26:
+	.size	dtls1_write_message_header, .-dtls1_write_message_header
+	.globl	dtls1_min_mtu
+	.type	dtls1_min_mtu, @function
+dtls1_min_mtu:
+.LFB27:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	g_probable_mtu+8(%rip), %eax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE27:
+	.size	dtls1_min_mtu, .-dtls1_min_mtu
+	.type	dtls1_guess_mtu, @function
+dtls1_guess_mtu:
+.LFB28:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	%edi, -20(%rbp)
+	cmpl	$0, -20(%rbp)
+	jne	.L208
+	movl	g_probable_mtu(%rip), %eax
+	jmp	.L209
+.L208:
+	movl	$0, -4(%rbp)
+	jmp	.L210
+.L212:
+	movl	-4(%rbp), %eax
+	movl	g_probable_mtu(,%rax,4), %eax
+	cmpl	-20(%rbp), %eax
+	jae	.L211
+	movl	-4(%rbp), %eax
+	movl	g_probable_mtu(,%rax,4), %eax
+	jmp	.L209
+.L211:
+	addl	$1, -4(%rbp)
+.L210:
+	cmpl	$2, -4(%rbp)
+	jbe	.L212
+	movl	-20(%rbp), %eax
+.L209:
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE28:
+	.size	dtls1_guess_mtu, .-dtls1_guess_mtu
+	.globl	dtls1_get_message_header
+	.type	dtls1_get_message_header, @function
+dtls1_get_message_header:
+.LFB29:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-16(%rbp), %rax
+	movl	$88, %edx
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	memset
+	movq	-8(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	%rdx, -8(%rbp)
+	movzbl	(%rax), %edx
+	movq	-16(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-8(%rbp), %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	salq	$16, %rax
+	movq	%rax, %rdx
+	movq	-8(%rbp), %rax
+	addq	$1, %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	salq	$8, %rax
+	orq	%rax, %rdx
+	movq	-8(%rbp), %rax
+	addq	$2, %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	orq	%rax, %rdx
+	movq	-16(%rbp), %rax
+	movq	%rdx, 8(%rax)
+	addq	$3, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	sall	$8, %eax
+	movl	%eax, %edx
+	movq	-8(%rbp), %rax
+	addq	$1, %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	orl	%eax, %edx
+	movq	-16(%rbp), %rax
+	movw	%dx, 16(%rax)
+	addq	$2, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	salq	$16, %rax
+	movq	%rax, %rdx
+	movq	-8(%rbp), %rax
+	addq	$1, %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	salq	$8, %rax
+	orq	%rax, %rdx
+	movq	-8(%rbp), %rax
+	addq	$2, %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	orq	%rax, %rdx
+	movq	-16(%rbp), %rax
+	movq	%rdx, 24(%rax)
+	addq	$3, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	salq	$16, %rax
+	movq	%rax, %rdx
+	movq	-8(%rbp), %rax
+	addq	$1, %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	salq	$8, %rax
+	orq	%rax, %rdx
+	movq	-8(%rbp), %rax
+	addq	$2, %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	orq	%rax, %rdx
+	movq	-16(%rbp), %rax
+	movq	%rdx, 32(%rax)
+	addq	$3, -8(%rbp)
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE29:
+	.size	dtls1_get_message_header, .-dtls1_get_message_header
+	.globl	dtls1_get_ccs_header
+	.type	dtls1_get_ccs_header, @function
+dtls1_get_ccs_header:
+.LFB30:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	-16(%rbp), %rax
+	movl	$4, %edx
+	movl	$0, %esi
+	movq	%rax, %rdi
+	call	memset
+	movq	-8(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	%rdx, -8(%rbp)
+	movzbl	(%rax), %edx
+	movq	-16(%rbp), %rax
+	movb	%dl, (%rax)
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE30:
+	.size	dtls1_get_ccs_header, .-dtls1_get_ccs_header
+	.globl	dtls1_shutdown
+	.type	dtls1_shutdown, @function
+dtls1_shutdown:
+.LFB31:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$32, %rsp
+	movq	%rdi, -24(%rbp)
+	movq	-24(%rbp), %rax
+	movq	%rax, %rdi
+	call	ssl3_shutdown
+	movl	%eax, -4(%rbp)
+	movl	-4(%rbp), %eax
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE31:
+	.size	dtls1_shutdown, .-dtls1_shutdown
+	.globl	dtls1_process_heartbeat
+	.type	dtls1_process_heartbeat, @function
+dtls1_process_heartbeat:
+.LFB32:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$80, %rsp
+	movq	%rdi, -72(%rbp)
+	movq	-72(%rbp), %rax
+	movq	128(%rax), %rax
+	movq	304(%rax), %rax
+	movq	%rax, -8(%rbp)
+	movl	$16, -12(%rbp)
+	movl	$0, %eax
+	call	partStart
+	movq	-8(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	%rdx, -8(%rbp)
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	movw	%ax, -14(%rbp)
+	movq	-8(%rbp), %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	sall	$8, %eax
+	movl	%eax, %edx
+	movq	-8(%rbp), %rax
+	addq	$1, %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	orl	%edx, %eax
+	movl	%eax, -20(%rbp)
+	addq	$2, -8(%rbp)
+	movq	-8(%rbp), %rax
+	movq	%rax, -32(%rbp)
+	movl	$0, %eax
+	call	partEnd
+	movq	-72(%rbp), %rax
+	movq	152(%rax), %rax
+	testq	%rax, %rax
+	je	.L218
+	movq	-72(%rbp), %rax
+	movq	152(%rax), %rax
+	movq	-72(%rbp), %rdx
+	movq	160(%rdx), %rcx
+	movq	-72(%rbp), %rdx
+	movq	128(%rdx), %rdx
+	movl	292(%rdx), %edx
+	movl	%edx, %edi
+	movq	-72(%rbp), %rdx
+	movq	128(%rdx), %rdx
+	movq	304(%rdx), %rdx
+	movq	-72(%rbp), %rsi
+	movl	(%rsi), %esi
+	movq	-72(%rbp), %r8
+	movq	%rcx, (%rsp)
+	movq	%r8, %r9
+	movq	%rdi, %r8
+	movq	%rdx, %rcx
+	movl	$24, %edx
+	movl	$0, %edi
+	call	*%rax
+.L218:
+	cmpw	$1, -14(%rbp)
+	jne	.L219
+	movl	-12(%rbp), %eax
+	movl	-20(%rbp), %edx
+	addl	%edx, %eax
+	addl	$3, %eax
+	movl	$1490, %edx
+	movl	$.LC0, %esi
+	movl	%eax, %edi
+	call	CRYPTO_malloc
+	movq	%rax, -40(%rbp)
+	movq	-40(%rbp), %rax
+	movq	%rax, -48(%rbp)
+	movq	-48(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	%rdx, -48(%rbp)
+	movb	$2, (%rax)
+	movl	-20(%rbp), %eax
+	shrl	$8, %eax
+	movl	%eax, %edx
+	movq	-48(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-48(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movl	-20(%rbp), %eax
+	movb	%al, (%rdx)
+	addq	$2, -48(%rbp)
+	movl	-20(%rbp), %edx
+	movq	-32(%rbp), %rcx
+	movq	-48(%rbp), %rax
+	movq	%rcx, %rsi
+	movq	%rax, %rdi
+	call	memcpy
+	movl	-20(%rbp), %eax
+	addq	%rax, -48(%rbp)
+	movl	-12(%rbp), %edx
+	movq	-48(%rbp), %rax
+	movl	%edx, %esi
+	movq	%rax, %rdi
+	call	RAND_pseudo_bytes
+	movl	-12(%rbp), %eax
+	movl	-20(%rbp), %edx
+	addl	%edx, %eax
+	addl	$3, %eax
+	movl	%eax, %ecx
+	movq	-40(%rbp), %rdx
+	movq	-72(%rbp), %rax
+	movl	$24, %esi
+	movq	%rax, %rdi
+	call	dtls1_write_bytes
+	movl	%eax, -52(%rbp)
+	cmpl	$0, -52(%rbp)
+	js	.L220
+	movq	-72(%rbp), %rax
+	movq	152(%rax), %rax
+	testq	%rax, %rax
+	je	.L220
+	movq	-72(%rbp), %rax
+	movq	152(%rax), %rax
+	movq	-72(%rbp), %rdx
+	movq	160(%rdx), %rcx
+	movl	-12(%rbp), %edx
+	movl	-20(%rbp), %esi
+	addl	%esi, %edx
+	addl	$3, %edx
+	movl	%edx, %edi
+	movq	-72(%rbp), %rdx
+	movl	(%rdx), %esi
+	movq	-72(%rbp), %r8
+	movq	-40(%rbp), %rdx
+	movq	%rcx, (%rsp)
+	movq	%r8, %r9
+	movq	%rdi, %r8
+	movq	%rdx, %rcx
+	movl	$24, %edx
+	movl	$1, %edi
+	call	*%rax
+.L220:
+	movq	-40(%rbp), %rax
+	movq	%rax, %rdi
+	call	CRYPTO_free
+	cmpl	$0, -52(%rbp)
+	jns	.L221
+	movl	-52(%rbp), %eax
+	jmp	.L222
+.L221:
+	jmp	.L223
+.L219:
+	cmpw	$2, -14(%rbp)
+	jne	.L223
+	movq	-32(%rbp), %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	sall	$8, %eax
+	movl	%eax, %edx
+	movq	-32(%rbp), %rax
+	addq	$1, %rax
+	movzbl	(%rax), %eax
+	movzbl	%al, %eax
+	orl	%edx, %eax
+	movl	%eax, -56(%rbp)
+	addq	$2, -32(%rbp)
+	cmpl	$18, -20(%rbp)
+	jne	.L223
+	movq	-72(%rbp), %rax
+	movl	680(%rax), %eax
+	cmpl	-56(%rbp), %eax
+	jne	.L223
+	movq	-72(%rbp), %rax
+	movq	%rax, %rdi
+	call	dtls1_stop_timer
+	movq	-72(%rbp), %rax
+	movl	680(%rax), %eax
+	leal	1(%rax), %edx
+	movq	-72(%rbp), %rax
+	movl	%edx, 680(%rax)
+	movq	-72(%rbp), %rax
+	movl	$0, 676(%rax)
+.L223:
+	movl	$0, %eax
+.L222:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE32:
+	.size	dtls1_process_heartbeat, .-dtls1_process_heartbeat
+	.section	.rodata
+.LC14:
+	.string	"payload + padding <= 16381"
+	.text
+	.globl	dtls1_heartbeat
+	.type	dtls1_heartbeat, @function
+dtls1_heartbeat:
+.LFB33:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$48, %rsp
+	movq	%rdi, -40(%rbp)
+	movl	$18, -4(%rbp)
+	movl	$16, -8(%rbp)
+	movq	-40(%rbp), %rax
+	movl	672(%rax), %eax
+	andl	$1, %eax
+	testl	%eax, %eax
+	je	.L225
+	movq	-40(%rbp), %rax
+	movl	672(%rax), %eax
+	andl	$2, %eax
+	testl	%eax, %eax
+	je	.L226
+.L225:
+	movl	$1545, %r8d
+	movl	$.LC0, %ecx
+	movl	$365, %edx
+	movl	$305, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	movl	$-1, %eax
+	jmp	.L227
+.L226:
+	movq	-40(%rbp), %rax
+	movl	676(%rax), %eax
+	testl	%eax, %eax
+	je	.L228
+	movl	$1552, %r8d
+	movl	$.LC0, %ecx
+	movl	$366, %edx
+	movl	$305, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	movl	$-1, %eax
+	jmp	.L227
+.L228:
+	movq	-40(%rbp), %rax
+	movq	%rax, %rdi
+	call	SSL_state
+	andl	$12288, %eax
+	testl	%eax, %eax
+	jne	.L229
+	movq	-40(%rbp), %rax
+	movl	44(%rax), %eax
+	testl	%eax, %eax
+	je	.L230
+.L229:
+	movl	$1559, %r8d
+	movl	$.LC0, %ecx
+	movl	$244, %edx
+	movl	$305, %esi
+	movl	$20, %edi
+	call	ERR_put_error
+	movl	$-1, %eax
+	jmp	.L227
+.L230:
+	movl	-8(%rbp), %eax
+	movl	-4(%rbp), %edx
+	addl	%edx, %eax
+	cmpl	$16381, %eax
+	jbe	.L231
+	movl	$.LC14, %edx
+	movl	$1566, %esi
+	movl	$.LC0, %edi
+	call	OpenSSLDie
+.L231:
+	movl	-8(%rbp), %eax
+	movl	-4(%rbp), %edx
+	addl	%edx, %eax
+	addl	$3, %eax
+	movl	$1577, %edx
+	movl	$.LC0, %esi
+	movl	%eax, %edi
+	call	CRYPTO_malloc
+	movq	%rax, -16(%rbp)
+	movq	-16(%rbp), %rax
+	movq	%rax, -24(%rbp)
+	movq	-24(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	%rdx, -24(%rbp)
+	movb	$1, (%rax)
+	movl	-4(%rbp), %eax
+	shrl	$8, %eax
+	movl	%eax, %edx
+	movq	-24(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-24(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movl	-4(%rbp), %eax
+	movb	%al, (%rdx)
+	addq	$2, -24(%rbp)
+	movq	-40(%rbp), %rax
+	movl	680(%rax), %eax
+	shrl	$8, %eax
+	movl	%eax, %edx
+	movq	-24(%rbp), %rax
+	movb	%dl, (%rax)
+	movq	-24(%rbp), %rax
+	leaq	1(%rax), %rdx
+	movq	-40(%rbp), %rax
+	movl	680(%rax), %eax
+	movb	%al, (%rdx)
+	addq	$2, -24(%rbp)
+	movq	-24(%rbp), %rax
+	movl	$16, %esi
+	movq	%rax, %rdi
+	call	RAND_pseudo_bytes
+	addq	$16, -24(%rbp)
+	movl	-8(%rbp), %edx
+	movq	-24(%rbp), %rax
+	movl	%edx, %esi
+	movq	%rax, %rdi
+	call	RAND_pseudo_bytes
+	movl	-8(%rbp), %eax
+	movl	-4(%rbp), %edx
+	addl	%edx, %eax
+	addl	$3, %eax
+	movl	%eax, %ecx
+	movq	-16(%rbp), %rdx
+	movq	-40(%rbp), %rax
+	movl	$24, %esi
+	movq	%rax, %rdi
+	call	dtls1_write_bytes
+	movl	%eax, -28(%rbp)
+	cmpl	$0, -28(%rbp)
+	js	.L232
+	movq	-40(%rbp), %rax
+	movq	152(%rax), %rax
+	testq	%rax, %rax
+	je	.L233
+	movq	-40(%rbp), %rax
+	movq	152(%rax), %rax
+	movq	-40(%rbp), %rdx
+	movq	160(%rdx), %rcx
+	movl	-8(%rbp), %edx
+	movl	-4(%rbp), %esi
+	addl	%esi, %edx
+	addl	$3, %edx
+	movl	%edx, %edi
+	movq	-40(%rbp), %rdx
+	movl	(%rdx), %esi
+	movq	-40(%rbp), %r8
+	movq	-16(%rbp), %rdx
+	movq	%rcx, (%rsp)
+	movq	%r8, %r9
+	movq	%rdi, %r8
+	movq	%rdx, %rcx
+	movl	$24, %edx
+	movl	$1, %edi
+	call	*%rax
+.L233:
+	movq	-40(%rbp), %rax
+	movq	%rax, %rdi
+	call	dtls1_start_timer
+	movq	-40(%rbp), %rax
+	movl	$1, 676(%rax)
+.L232:
+	movq	-16(%rbp), %rax
+	movq	%rax, %rdi
+	call	CRYPTO_free
+	movl	-28(%rbp), %eax
+.L227:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE33:
+	.size	dtls1_heartbeat, .-dtls1_heartbeat
+	.globl	main
+	.type	main, @function
+main:
+.LFB34:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	movl	$0, %eax
+	popq	%rbp
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE34:
+	.size	main, .-main
+	.ident	"GCC: (GNU) 4.8.3 20140911 (Red Hat 4.8.3-9)"
+	.section	.note.GNU-stack,"",@progbits
