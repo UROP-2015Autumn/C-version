@@ -1,0 +1,6 @@
+#include "e_os.h"
+
+int main(){
+
+	return 0;
+}
