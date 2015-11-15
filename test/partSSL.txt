@@ -1,0 +1,24 @@
+  404964:	callq  401900 <partStart>
+  404969:	mov    -0x8(%rbp),%rax
+  40496d:	lea    0x1(%rax),%rdx
+  404971:	mov    %rdx,-0x8(%rbp)
+  404975:	movzbl (%rax),%eax
+  404978:	movzbl %al,%eax
+  40497b:	mov    %ax,-0xe(%rbp)
+  40497f:	mov    -0x8(%rbp),%rax
+  404983:	movzbl (%rax),%eax
+  404986:	movzbl %al,%eax
+  404989:	shl    $0x8,%eax
+  40498c:	mov    %eax,%edx
+  40498e:	mov    -0x8(%rbp),%rax
+  404992:	add    $0x1,%rax
+  404996:	movzbl (%rax),%eax
+  404999:	movzbl %al,%eax
+  40499c:	or     %edx,%eax
+  40499e:	mov    %eax,-0x14(%rbp)
+  4049a1:	addq   $0x2,-0x8(%rbp)
+  4049a6:	mov    -0x8(%rbp),%rax
+  4049aa:	mov    %rax,-0x20(%rbp)
+  4049ae:	mov    $0x0,%eax
+  4049b3:	callq  401906 <partEnd>
+  
