@@ -1,0 +1,3807 @@
+
+both2:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+00000000004014f0 <_init>:
+  4014f0:	sub    $0x8,%rsp
+  4014f4:	mov    0x204afd(%rip),%rax        # 605ff8 <_DYNAMIC+0x1f0>
+  4014fb:	test   %rax,%rax
+  4014fe:	je     401505 <_init+0x15>
+  401500:	callq  4017d0 <__gmon_start__@plt>
+  401505:	add    $0x8,%rsp
+  401509:	retq   
+
+Disassembly of section .plt:
+
+0000000000401510 <EVP_CIPHER_CTX_free@plt-0x10>:
+  401510:	pushq  0x204af2(%rip)        # 606008 <_GLOBAL_OFFSET_TABLE_+0x8>
+  401516:	jmpq   *0x204af4(%rip)        # 606010 <_GLOBAL_OFFSET_TABLE_+0x10>
+  40151c:	nopl   0x0(%rax)
+
+0000000000401520 <EVP_CIPHER_CTX_free@plt>:
+  401520:	jmpq   *0x204af2(%rip)        # 606018 <_GLOBAL_OFFSET_TABLE_+0x18>
+  401526:	pushq  $0x0
+  40152b:	jmpq   401510 <_init+0x20>
+
+0000000000401530 <ERR_clear_error@plt>:
+  401530:	jmpq   *0x204aea(%rip)        # 606020 <_GLOBAL_OFFSET_TABLE_+0x20>
+  401536:	pushq  $0x1
+  40153b:	jmpq   401510 <_init+0x20>
+
+0000000000401540 <BIO_ctrl@plt>:
+  401540:	jmpq   *0x204ae2(%rip)        # 606028 <_GLOBAL_OFFSET_TABLE_+0x28>
+  401546:	pushq  $0x2
+  40154b:	jmpq   401510 <_init+0x20>
+
+0000000000401550 <sk_value@plt>:
+  401550:	jmpq   *0x204ada(%rip)        # 606030 <_GLOBAL_OFFSET_TABLE_+0x30>
+  401556:	pushq  $0x3
+  40155b:	jmpq   401510 <_init+0x20>
+
+0000000000401560 <X509_STORE_CTX_init@plt>:
+  401560:	jmpq   *0x204ad2(%rip)        # 606038 <_GLOBAL_OFFSET_TABLE_+0x38>
+  401566:	pushq  $0x4
+  40156b:	jmpq   401510 <_init+0x20>
+
+0000000000401570 <X509_verify_cert@plt>:
+  401570:	jmpq   *0x204aca(%rip)        # 606040 <_GLOBAL_OFFSET_TABLE_+0x40>
+  401576:	pushq  $0x5
+  40157b:	jmpq   401510 <_init+0x20>
+
+0000000000401580 <X509_STORE_CTX_cleanup@plt>:
+  401580:	jmpq   *0x204ac2(%rip)        # 606048 <_GLOBAL_OFFSET_TABLE_+0x48>
+  401586:	pushq  $0x6
+  40158b:	jmpq   401510 <_init+0x20>
+
+0000000000401590 <memset@plt>:
+  401590:	jmpq   *0x204aba(%rip)        # 606050 <_GLOBAL_OFFSET_TABLE_+0x50>
+  401596:	pushq  $0x7
+  40159b:	jmpq   401510 <_init+0x20>
+
+00000000004015a0 <pqueue_peek@plt>:
+  4015a0:	jmpq   *0x204ab2(%rip)        # 606058 <_GLOBAL_OFFSET_TABLE_+0x58>
+  4015a6:	pushq  $0x8
+  4015ab:	jmpq   401510 <_init+0x20>
+
+00000000004015b0 <SSL_get_wbio@plt>:
+  4015b0:	jmpq   *0x204aaa(%rip)        # 606060 <_GLOBAL_OFFSET_TABLE_+0x60>
+  4015b6:	pushq  $0x9
+  4015bb:	jmpq   401510 <_init+0x20>
+
+00000000004015c0 <CRYPTO_malloc@plt>:
+  4015c0:	jmpq   *0x204aa2(%rip)        # 606068 <_GLOBAL_OFFSET_TABLE_+0x68>
+  4015c6:	pushq  $0xa
+  4015cb:	jmpq   401510 <_init+0x20>
+
+00000000004015d0 <ssl3_finish_mac@plt>:
+  4015d0:	jmpq   *0x204a9a(%rip)        # 606070 <_GLOBAL_OFFSET_TABLE_+0x70>
+  4015d6:	pushq  $0xb
+  4015db:	jmpq   401510 <_init+0x20>
+
+00000000004015e0 <EVP_CIPHER_flags@plt>:
+  4015e0:	jmpq   *0x204a92(%rip)        # 606078 <_GLOBAL_OFFSET_TABLE_+0x78>
+  4015e6:	pushq  $0xc
+  4015eb:	jmpq   401510 <_init+0x20>
+
+00000000004015f0 <EVP_MD_CTX_md@plt>:
+  4015f0:	jmpq   *0x204a8a(%rip)        # 606080 <_GLOBAL_OFFSET_TABLE_+0x80>
+  4015f6:	pushq  $0xd
+  4015fb:	jmpq   401510 <_init+0x20>
+
+0000000000401600 <dtls1_write_bytes@plt>:
+  401600:	jmpq   *0x204a82(%rip)        # 606088 <_GLOBAL_OFFSET_TABLE_+0x88>
+  401606:	pushq  $0xe
+  40160b:	jmpq   401510 <_init+0x20>
+
+0000000000401610 <dtls1_start_timer@plt>:
+  401610:	jmpq   *0x204a7a(%rip)        # 606090 <_GLOBAL_OFFSET_TABLE_+0x90>
+  401616:	pushq  $0xf
+  40161b:	jmpq   401510 <_init+0x20>
+
+0000000000401620 <memcpy@plt>:
+  401620:	jmpq   *0x204a72(%rip)        # 606098 <_GLOBAL_OFFSET_TABLE_+0x98>
+  401626:	pushq  $0x10
+  40162b:	jmpq   401510 <_init+0x20>
+
+0000000000401630 <EVP_MD_size@plt>:
+  401630:	jmpq   *0x204a6a(%rip)        # 6060a0 <_GLOBAL_OFFSET_TABLE_+0xa0>
+  401636:	pushq  $0x11
+  40163b:	jmpq   401510 <_init+0x20>
+
+0000000000401640 <BUF_MEM_grow_clean@plt>:
+  401640:	jmpq   *0x204a62(%rip)        # 6060a8 <_GLOBAL_OFFSET_TABLE_+0xa8>
+  401646:	pushq  $0x12
+  40164b:	jmpq   401510 <_init+0x20>
+
+0000000000401650 <OpenSSLDie@plt>:
+  401650:	jmpq   *0x204a5a(%rip)        # 6060b0 <_GLOBAL_OFFSET_TABLE_+0xb0>
+  401656:	pushq  $0x13
+  40165b:	jmpq   401510 <_init+0x20>
+
+0000000000401660 <pitem_free@plt>:
+  401660:	jmpq   *0x204a52(%rip)        # 6060b8 <_GLOBAL_OFFSET_TABLE_+0xb8>
+  401666:	pushq  $0x14
+  40166b:	jmpq   401510 <_init+0x20>
+
+0000000000401670 <EVP_MD_CTX_destroy@plt>:
+  401670:	jmpq   *0x204a4a(%rip)        # 6060c0 <_GLOBAL_OFFSET_TABLE_+0xc0>
+  401676:	pushq  $0x15
+  40167b:	jmpq   401510 <_init+0x20>
+
+0000000000401680 <pitem_new@plt>:
+  401680:	jmpq   *0x204a42(%rip)        # 6060c8 <_GLOBAL_OFFSET_TABLE_+0xc8>
+  401686:	pushq  $0x16
+  40168b:	jmpq   401510 <_init+0x20>
+
+0000000000401690 <ssl3_send_alert@plt>:
+  401690:	jmpq   *0x204a3a(%rip)        # 6060d0 <_GLOBAL_OFFSET_TABLE_+0xd0>
+  401696:	pushq  $0x17
+  40169b:	jmpq   401510 <_init+0x20>
+
+00000000004016a0 <ERR_put_error@plt>:
+  4016a0:	jmpq   *0x204a32(%rip)        # 6060d8 <_GLOBAL_OFFSET_TABLE_+0xd8>
+  4016a6:	pushq  $0x18
+  4016ab:	jmpq   401510 <_init+0x20>
+
+00000000004016b0 <dtls1_stop_timer@plt>:
+  4016b0:	jmpq   *0x204a2a(%rip)        # 6060e0 <_GLOBAL_OFFSET_TABLE_+0xe0>
+  4016b6:	pushq  $0x19
+  4016bb:	jmpq   401510 <_init+0x20>
+
+00000000004016c0 <CRYPTO_free@plt>:
+  4016c0:	jmpq   *0x204a22(%rip)        # 6060e8 <_GLOBAL_OFFSET_TABLE_+0xe8>
+  4016c6:	pushq  $0x1a
+  4016cb:	jmpq   401510 <_init+0x20>
+
+00000000004016d0 <dtls1_is_timer_expired@plt>:
+  4016d0:	jmpq   *0x204a1a(%rip)        # 6060f0 <_GLOBAL_OFFSET_TABLE_+0xf0>
+  4016d6:	pushq  $0x1b
+  4016db:	jmpq   401510 <_init+0x20>
+
+00000000004016e0 <pqueue_insert@plt>:
+  4016e0:	jmpq   *0x204a12(%rip)        # 6060f8 <_GLOBAL_OFFSET_TABLE_+0xf8>
+  4016e6:	pushq  $0x1c
+  4016eb:	jmpq   401510 <_init+0x20>
+
+00000000004016f0 <pqueue_iterator@plt>:
+  4016f0:	jmpq   *0x204a0a(%rip)        # 606100 <_GLOBAL_OFFSET_TABLE_+0x100>
+  4016f6:	pushq  $0x1d
+  4016fb:	jmpq   401510 <_init+0x20>
+
+0000000000401700 <RAND_pseudo_bytes@plt>:
+  401700:	jmpq   *0x204a02(%rip)        # 606108 <_GLOBAL_OFFSET_TABLE_+0x108>
+  401706:	pushq  $0x1e
+  40170b:	jmpq   401510 <_init+0x20>
+
+0000000000401710 <fprintf@plt>:
+  401710:	jmpq   *0x2049fa(%rip)        # 606110 <_GLOBAL_OFFSET_TABLE_+0x110>
+  401716:	pushq  $0x1f
+  40171b:	jmpq   401510 <_init+0x20>
+
+0000000000401720 <sk_num@plt>:
+  401720:	jmpq   *0x2049f2(%rip)        # 606118 <_GLOBAL_OFFSET_TABLE_+0x118>
+  401726:	pushq  $0x20
+  40172b:	jmpq   401510 <_init+0x20>
+
+0000000000401730 <pqueue_find@plt>:
+  401730:	jmpq   *0x2049ea(%rip)        # 606120 <_GLOBAL_OFFSET_TABLE_+0x120>
+  401736:	pushq  $0x21
+  40173b:	jmpq   401510 <_init+0x20>
+
+0000000000401740 <pqueue_pop@plt>:
+  401740:	jmpq   *0x2049e2(%rip)        # 606128 <_GLOBAL_OFFSET_TABLE_+0x128>
+  401746:	pushq  $0x22
+  40174b:	jmpq   401510 <_init+0x20>
+
+0000000000401750 <SSL_state@plt>:
+  401750:	jmpq   *0x2049da(%rip)        # 606130 <_GLOBAL_OFFSET_TABLE_+0x130>
+  401756:	pushq  $0x23
+  40175b:	jmpq   401510 <_init+0x20>
+
+0000000000401760 <SSL_get_rbio@plt>:
+  401760:	jmpq   *0x2049d2(%rip)        # 606138 <_GLOBAL_OFFSET_TABLE_+0x138>
+  401766:	pushq  $0x24
+  40176b:	jmpq   401510 <_init+0x20>
+
+0000000000401770 <EVP_CIPHER_block_size@plt>:
+  401770:	jmpq   *0x2049ca(%rip)        # 606140 <_GLOBAL_OFFSET_TABLE_+0x140>
+  401776:	pushq  $0x25
+  40177b:	jmpq   401510 <_init+0x20>
+
+0000000000401780 <i2d_X509@plt>:
+  401780:	jmpq   *0x2049c2(%rip)        # 606148 <_GLOBAL_OFFSET_TABLE_+0x148>
+  401786:	pushq  $0x26
+  40178b:	jmpq   401510 <_init+0x20>
+
+0000000000401790 <dtls1_handle_timeout@plt>:
+  401790:	jmpq   *0x2049ba(%rip)        # 606150 <_GLOBAL_OFFSET_TABLE_+0x150>
+  401796:	pushq  $0x27
+  40179b:	jmpq   401510 <_init+0x20>
+
+00000000004017a0 <SSL_ctrl@plt>:
+  4017a0:	jmpq   *0x2049b2(%rip)        # 606158 <_GLOBAL_OFFSET_TABLE_+0x158>
+  4017a6:	pushq  $0x28
+  4017ab:	jmpq   401510 <_init+0x20>
+
+00000000004017b0 <BIO_set_flags@plt>:
+  4017b0:	jmpq   *0x2049aa(%rip)        # 606160 <_GLOBAL_OFFSET_TABLE_+0x160>
+  4017b6:	pushq  $0x29
+  4017bb:	jmpq   401510 <_init+0x20>
+
+00000000004017c0 <__libc_start_main@plt>:
+  4017c0:	jmpq   *0x2049a2(%rip)        # 606168 <_GLOBAL_OFFSET_TABLE_+0x168>
+  4017c6:	pushq  $0x2a
+  4017cb:	jmpq   401510 <_init+0x20>
+
+00000000004017d0 <__gmon_start__@plt>:
+  4017d0:	jmpq   *0x20499a(%rip)        # 606170 <_GLOBAL_OFFSET_TABLE_+0x170>
+  4017d6:	pushq  $0x2b
+  4017db:	jmpq   401510 <_init+0x20>
+
+00000000004017e0 <ssl3_shutdown@plt>:
+  4017e0:	jmpq   *0x204992(%rip)        # 606178 <_GLOBAL_OFFSET_TABLE_+0x178>
+  4017e6:	pushq  $0x2c
+  4017eb:	jmpq   401510 <_init+0x20>
+
+00000000004017f0 <fwrite@plt>:
+  4017f0:	jmpq   *0x20498a(%rip)        # 606180 <_GLOBAL_OFFSET_TABLE_+0x180>
+  4017f6:	pushq  $0x2d
+  4017fb:	jmpq   401510 <_init+0x20>
+
+0000000000401800 <pqueue_next@plt>:
+  401800:	jmpq   *0x204982(%rip)        # 606188 <_GLOBAL_OFFSET_TABLE_+0x188>
+  401806:	pushq  $0x2e
+  40180b:	jmpq   401510 <_init+0x20>
+
+Disassembly of section .text:
+
+0000000000401810 <_start>:
+  401810:	xor    %ebp,%ebp
+  401812:	mov    %rdx,%r9
+  401815:	pop    %rsi
+  401816:	mov    %rsp,%rdx
+  401819:	and    $0xfffffffffffffff0,%rsp
+  40181d:	push   %rax
+  40181e:	push   %rsp
+  40181f:	mov    $0x404eb0,%r8
+  401826:	mov    $0x404e40,%rcx
+  40182d:	mov    $0x404e33,%rdi
+  401834:	callq  4017c0 <__libc_start_main@plt>
+  401839:	hlt    
+  40183a:	xchg   %ax,%ax
+  40183c:	nopl   0x0(%rax)
+
+0000000000401840 <deregister_tm_clones>:
+  401840:	mov    $0x6061b7,%eax
+  401845:	push   %rbp
+  401846:	sub    $0x6061b0,%rax
+  40184c:	cmp    $0xe,%rax
+  401850:	mov    %rsp,%rbp
+  401853:	ja     401857 <deregister_tm_clones+0x17>
+  401855:	pop    %rbp
+  401856:	retq   
+  401857:	mov    $0x0,%eax
+  40185c:	test   %rax,%rax
+  40185f:	je     401855 <deregister_tm_clones+0x15>
+  401861:	pop    %rbp
+  401862:	mov    $0x6061b0,%edi
+  401867:	jmpq   *%rax
+  401869:	nopl   0x0(%rax)
+
+0000000000401870 <register_tm_clones>:
+  401870:	mov    $0x6061b0,%eax
+  401875:	push   %rbp
+  401876:	sub    $0x6061b0,%rax
+  40187c:	sar    $0x3,%rax
+  401880:	mov    %rsp,%rbp
+  401883:	mov    %rax,%rdx
+  401886:	shr    $0x3f,%rdx
+  40188a:	add    %rdx,%rax
+  40188d:	sar    %rax
+  401890:	jne    401894 <register_tm_clones+0x24>
+  401892:	pop    %rbp
+  401893:	retq   
+  401894:	mov    $0x0,%edx
+  401899:	test   %rdx,%rdx
+  40189c:	je     401892 <register_tm_clones+0x22>
+  40189e:	pop    %rbp
+  40189f:	mov    %rax,%rsi
+  4018a2:	mov    $0x6061b0,%edi
+  4018a7:	jmpq   *%rdx
+  4018a9:	nopl   0x0(%rax)
+
+00000000004018b0 <__do_global_dtors_aux>:
+  4018b0:	cmpb   $0x0,0x204901(%rip)        # 6061b8 <completed.6337>
+  4018b7:	jne    4018ca <__do_global_dtors_aux+0x1a>
+  4018b9:	push   %rbp
+  4018ba:	mov    %rsp,%rbp
+  4018bd:	callq  401840 <deregister_tm_clones>
+  4018c2:	pop    %rbp
+  4018c3:	movb   $0x1,0x2048ee(%rip)        # 6061b8 <completed.6337>
+  4018ca:	repz retq 
+  4018cc:	nopl   0x0(%rax)
+
+00000000004018d0 <frame_dummy>:
+  4018d0:	cmpq   $0x0,0x204528(%rip)        # 605e00 <__JCR_END__>
+  4018d8:	je     4018f8 <frame_dummy+0x28>
+  4018da:	mov    $0x0,%eax
+  4018df:	test   %rax,%rax
+  4018e2:	je     4018f8 <frame_dummy+0x28>
+  4018e4:	push   %rbp
+  4018e5:	mov    $0x605e00,%edi
+  4018ea:	mov    %rsp,%rbp
+  4018ed:	callq  *%rax
+  4018ef:	pop    %rbp
+  4018f0:	jmpq   401870 <register_tm_clones>
+  4018f5:	nopl   (%rax)
+  4018f8:	jmpq   401870 <register_tm_clones>
+  4018fd:	nopl   (%rax)
+
+0000000000401900 <partStart>:
+  401900:	push   %rbp
+  401901:	mov    %rsp,%rbp
+  401904:	pop    %rbp
+  401905:	retq   
+
+0000000000401906 <partEnd>:
+  401906:	push   %rbp
+  401907:	mov    %rsp,%rbp
+  40190a:	pop    %rbp
+  40190b:	retq   
+
+000000000040190c <dtls1_hm_fragment_new>:
+  40190c:	push   %rbp
+  40190d:	mov    %rsp,%rbp
+  401910:	sub    $0x30,%rsp
+  401914:	mov    %rdi,-0x28(%rbp)
+  401918:	mov    %esi,-0x2c(%rbp)
+  40191b:	movq   $0x0,-0x18(%rbp)
+  401923:	movq   $0x0,-0x8(%rbp)
+  40192b:	movq   $0x0,-0x10(%rbp)
+  401933:	mov    $0xb8,%edx
+  401938:	mov    $0x404ed0,%esi
+  40193d:	mov    $0x68,%edi
+  401942:	callq  4015c0 <CRYPTO_malloc@plt>
+  401947:	mov    %rax,-0x18(%rbp)
+  40194b:	cmpq   $0x0,-0x18(%rbp)
+  401950:	jne    40195c <dtls1_hm_fragment_new+0x50>
+  401952:	mov    $0x0,%eax
+  401957:	jmpq   401a29 <dtls1_hm_fragment_new+0x11d>
+  40195c:	cmpq   $0x0,-0x28(%rbp)
+  401961:	je     401999 <dtls1_hm_fragment_new+0x8d>
+  401963:	mov    -0x28(%rbp),%rax
+  401967:	mov    $0xbe,%edx
+  40196c:	mov    $0x404ed0,%esi
+  401971:	mov    %eax,%edi
+  401973:	callq  4015c0 <CRYPTO_malloc@plt>
+  401978:	mov    %rax,-0x8(%rbp)
+  40197c:	cmpq   $0x0,-0x8(%rbp)
+  401981:	jne    401999 <dtls1_hm_fragment_new+0x8d>
+  401983:	mov    -0x18(%rbp),%rax
+  401987:	mov    %rax,%rdi
+  40198a:	callq  4016c0 <CRYPTO_free@plt>
+  40198f:	mov    $0x0,%eax
+  401994:	jmpq   401a29 <dtls1_hm_fragment_new+0x11d>
+  401999:	mov    -0x18(%rbp),%rax
+  40199d:	mov    -0x8(%rbp),%rdx
+  4019a1:	mov    %rdx,0x58(%rax)
+  4019a5:	cmpl   $0x0,-0x2c(%rbp)
+  4019a9:	je     401a19 <dtls1_hm_fragment_new+0x10d>
+  4019ab:	mov    -0x28(%rbp),%rax
+  4019af:	add    $0x7,%rax
+  4019b3:	shr    $0x3,%rax
+  4019b7:	mov    $0xcc,%edx
+  4019bc:	mov    $0x404ed0,%esi
+  4019c1:	mov    %eax,%edi
+  4019c3:	callq  4015c0 <CRYPTO_malloc@plt>
+  4019c8:	mov    %rax,-0x10(%rbp)
+  4019cc:	cmpq   $0x0,-0x10(%rbp)
+  4019d1:	jne    4019f9 <dtls1_hm_fragment_new+0xed>
+  4019d3:	cmpq   $0x0,-0x8(%rbp)
+  4019d8:	je     4019e6 <dtls1_hm_fragment_new+0xda>
+  4019da:	mov    -0x8(%rbp),%rax
+  4019de:	mov    %rax,%rdi
+  4019e1:	callq  4016c0 <CRYPTO_free@plt>
+  4019e6:	mov    -0x18(%rbp),%rax
+  4019ea:	mov    %rax,%rdi
+  4019ed:	callq  4016c0 <CRYPTO_free@plt>
+  4019f2:	mov    $0x0,%eax
+  4019f7:	jmp    401a29 <dtls1_hm_fragment_new+0x11d>
+  4019f9:	mov    -0x28(%rbp),%rax
+  4019fd:	add    $0x7,%rax
+  401a01:	shr    $0x3,%rax
+  401a05:	mov    %rax,%rdx
+  401a08:	mov    -0x10(%rbp),%rax
+  401a0c:	mov    $0x0,%esi
+  401a11:	mov    %rax,%rdi
+  401a14:	callq  401590 <memset@plt>
+  401a19:	mov    -0x18(%rbp),%rax
+  401a1d:	mov    -0x10(%rbp),%rdx
+  401a21:	mov    %rdx,0x60(%rax)
+  401a25:	mov    -0x18(%rbp),%rax
+  401a29:	leaveq 
+  401a2a:	retq   
+
+0000000000401a2b <dtls1_hm_fragment_free>:
+  401a2b:	push   %rbp
+  401a2c:	mov    %rsp,%rbp
+  401a2f:	sub    $0x10,%rsp
+  401a33:	mov    %rdi,-0x8(%rbp)
+  401a37:	mov    -0x8(%rbp),%rax
+  401a3b:	mov    0x28(%rax),%eax
+  401a3e:	test   %eax,%eax
+  401a40:	je     401a62 <dtls1_hm_fragment_free+0x37>
+  401a42:	mov    -0x8(%rbp),%rax
+  401a46:	mov    0x30(%rax),%rax
+  401a4a:	mov    %rax,%rdi
+  401a4d:	callq  401520 <EVP_CIPHER_CTX_free@plt>
+  401a52:	mov    -0x8(%rbp),%rax
+  401a56:	mov    0x38(%rax),%rax
+  401a5a:	mov    %rax,%rdi
+  401a5d:	callq  401670 <EVP_MD_CTX_destroy@plt>
+  401a62:	mov    -0x8(%rbp),%rax
+  401a66:	mov    0x58(%rax),%rax
+  401a6a:	test   %rax,%rax
+  401a6d:	je     401a7f <dtls1_hm_fragment_free+0x54>
+  401a6f:	mov    -0x8(%rbp),%rax
+  401a73:	mov    0x58(%rax),%rax
+  401a77:	mov    %rax,%rdi
+  401a7a:	callq  4016c0 <CRYPTO_free@plt>
+  401a7f:	mov    -0x8(%rbp),%rax
+  401a83:	mov    0x60(%rax),%rax
+  401a87:	test   %rax,%rax
+  401a8a:	je     401a9c <dtls1_hm_fragment_free+0x71>
+  401a8c:	mov    -0x8(%rbp),%rax
+  401a90:	mov    0x60(%rax),%rax
+  401a94:	mov    %rax,%rdi
+  401a97:	callq  4016c0 <CRYPTO_free@plt>
+  401a9c:	mov    -0x8(%rbp),%rax
+  401aa0:	mov    %rax,%rdi
+  401aa3:	callq  4016c0 <CRYPTO_free@plt>
+  401aa8:	leaveq 
+  401aa9:	retq   
+
+0000000000401aaa <dtls1_do_write>:
+  401aaa:	push   %rbp
+  401aab:	mov    %rsp,%rbp
+  401aae:	push   %rbx
+  401aaf:	sub    $0x58,%rsp
+  401ab3:	mov    %rdi,-0x48(%rbp)
+  401ab7:	mov    %esi,-0x4c(%rbp)
+  401aba:	mov    -0x48(%rbp),%rax
+  401abe:	mov    0x88(%rax),%rax
+  401ac5:	mov    0x280(%rax),%ebx
+  401acb:	callq  404750 <dtls1_min_mtu>
+  401ad0:	cmp    %eax,%ebx
+  401ad2:	jae    401bc1 <dtls1_do_write+0x117>
+  401ad8:	mov    -0x48(%rbp),%rax
+  401adc:	mov    $0x0,%ecx
+  401ae1:	mov    $0x0,%edx
+  401ae6:	mov    $0x20,%esi
+  401aeb:	mov    %rax,%rdi
+  401aee:	callq  4017a0 <SSL_ctrl@plt>
+  401af3:	and    $0x1000,%eax
+  401af8:	test   %rax,%rax
+  401afb:	jne    401bc1 <dtls1_do_write+0x117>
+  401b01:	mov    -0x48(%rbp),%rax
+  401b05:	mov    0x88(%rax),%rbx
+  401b0c:	mov    -0x48(%rbp),%rax
+  401b10:	mov    %rax,%rdi
+  401b13:	callq  4015b0 <SSL_get_wbio@plt>
+  401b18:	mov    $0x0,%ecx
+  401b1d:	mov    $0x0,%edx
+  401b22:	mov    $0x28,%esi
+  401b27:	mov    %rax,%rdi
+  401b2a:	callq  401540 <BIO_ctrl@plt>
+  401b2f:	mov    %eax,0x280(%rbx)
+  401b35:	mov    -0x48(%rbp),%rax
+  401b39:	mov    0x88(%rax),%rax
+  401b40:	mov    0x280(%rax),%ebx
+  401b46:	callq  404750 <dtls1_min_mtu>
+  401b4b:	cmp    %eax,%ebx
+  401b4d:	jae    401bc1 <dtls1_do_write+0x117>
+  401b4f:	mov    -0x48(%rbp),%rax
+  401b53:	mov    0x88(%rax),%rax
+  401b5a:	movl   $0x0,0x280(%rax)
+  401b64:	mov    -0x48(%rbp),%rax
+  401b68:	mov    0x88(%rax),%rbx
+  401b6f:	mov    -0x48(%rbp),%rax
+  401b73:	mov    0x88(%rax),%rax
+  401b7a:	mov    0x280(%rax),%eax
+  401b80:	mov    %eax,%edi
+  401b82:	callq  40475c <dtls1_guess_mtu>
+  401b87:	mov    %eax,0x280(%rbx)
+  401b8d:	mov    -0x48(%rbp),%rax
+  401b91:	mov    0x88(%rax),%rax
+  401b98:	mov    0x280(%rax),%eax
+  401b9e:	mov    %eax,%ebx
+  401ba0:	mov    -0x48(%rbp),%rax
+  401ba4:	mov    %rax,%rdi
+  401ba7:	callq  4015b0 <SSL_get_wbio@plt>
+  401bac:	mov    $0x0,%ecx
+  401bb1:	mov    %rbx,%rdx
+  401bb4:	mov    $0x2a,%esi
+  401bb9:	mov    %rax,%rdi
+  401bbc:	callq  401540 <BIO_ctrl@plt>
+  401bc1:	mov    -0x48(%rbp),%rax
+  401bc5:	mov    0x88(%rax),%rax
+  401bcc:	mov    0x280(%rax),%ebx
+  401bd2:	callq  404750 <dtls1_min_mtu>
+  401bd7:	cmp    %eax,%ebx
+  401bd9:	jae    401bef <dtls1_do_write+0x145>
+  401bdb:	mov    $0x404eda,%edx
+  401be0:	mov    $0x117,%esi
+  401be5:	mov    $0x404ed0,%edi
+  401bea:	callq  401650 <OpenSSLDie@plt>
+  401bef:	mov    -0x48(%rbp),%rax
+  401bf3:	mov    0x64(%rax),%eax
+  401bf6:	test   %eax,%eax
+  401bf8:	jne    401c34 <dtls1_do_write+0x18a>
+  401bfa:	cmpl   $0x16,-0x4c(%rbp)
+  401bfe:	jne    401c34 <dtls1_do_write+0x18a>
+  401c00:	mov    -0x48(%rbp),%rax
+  401c04:	mov    0x60(%rax),%edx
+  401c07:	mov    -0x48(%rbp),%rax
+  401c0b:	mov    0x88(%rax),%rax
+  401c12:	mov    0x290(%rax),%rax
+  401c19:	add    $0xc,%eax
+  401c1c:	cmp    %eax,%edx
+  401c1e:	je     401c34 <dtls1_do_write+0x18a>
+  401c20:	mov    $0x404ef8,%edx
+  401c25:	mov    $0x11b,%esi
+  401c2a:	mov    $0x404ed0,%edi
+  401c2f:	callq  401650 <OpenSSLDie@plt>
+  401c34:	mov    -0x48(%rbp),%rax
+  401c38:	mov    0xf0(%rax),%rax
+  401c3f:	test   %rax,%rax
+  401c42:	je     401c64 <dtls1_do_write+0x1ba>
+  401c44:	mov    -0x48(%rbp),%rax
+  401c48:	mov    0xf0(%rax),%rax
+  401c4f:	mov    %rax,%rdi
+  401c52:	callq  4015f0 <EVP_MD_CTX_md@plt>
+  401c57:	mov    %rax,%rdi
+  401c5a:	callq  401630 <EVP_MD_size@plt>
+  401c5f:	mov    %eax,-0x20(%rbp)
+  401c62:	jmp    401c6b <dtls1_do_write+0x1c1>
+  401c64:	movl   $0x0,-0x20(%rbp)
+  401c6b:	mov    -0x48(%rbp),%rax
+  401c6f:	mov    0xe8(%rax),%rax
+  401c76:	test   %rax,%rax
+  401c79:	je     401cb6 <dtls1_do_write+0x20c>
+  401c7b:	mov    -0x48(%rbp),%rax
+  401c7f:	mov    0xe8(%rax),%rax
+  401c86:	mov    (%rax),%rax
+  401c89:	mov    %rax,%rdi
+  401c8c:	callq  4015e0 <EVP_CIPHER_flags@plt>
+  401c91:	and    $0x2,%eax
+  401c94:	test   %rax,%rax
+  401c97:	je     401cb6 <dtls1_do_write+0x20c>
+  401c99:	mov    -0x48(%rbp),%rax
+  401c9d:	mov    0xe8(%rax),%rax
+  401ca4:	mov    (%rax),%rax
+  401ca7:	mov    %rax,%rdi
+  401caa:	callq  401770 <EVP_CIPHER_block_size@plt>
+  401caf:	add    %eax,%eax
+  401cb1:	mov    %eax,-0x24(%rbp)
+  401cb4:	jmp    401cbd <dtls1_do_write+0x213>
+  401cb6:	movl   $0x0,-0x24(%rbp)
+  401cbd:	movl   $0x0,-0x1c(%rbp)
+  401cc4:	jmpq   40214c <dtls1_do_write+0x6a2>
+  401cc9:	mov    -0x48(%rbp),%rax
+  401ccd:	mov    0x88(%rax),%rax
+  401cd4:	mov    0x280(%rax),%ebx
+  401cda:	mov    -0x48(%rbp),%rax
+  401cde:	mov    %rax,%rdi
+  401ce1:	callq  4015b0 <SSL_get_wbio@plt>
+  401ce6:	mov    $0x0,%ecx
+  401ceb:	mov    $0x0,%edx
+  401cf0:	mov    $0xd,%esi
+  401cf5:	mov    %rax,%rdi
+  401cf8:	callq  401540 <BIO_ctrl@plt>
+  401cfd:	sub    %eax,%ebx
+  401cff:	mov    %ebx,%eax
+  401d01:	sub    -0x20(%rbp),%eax
+  401d04:	sub    -0x24(%rbp),%eax
+  401d07:	sub    $0xd,%eax
+  401d0a:	mov    %eax,-0x14(%rbp)
+  401d0d:	cmpl   $0xc,-0x14(%rbp)
+  401d11:	jg     401d64 <dtls1_do_write+0x2ba>
+  401d13:	mov    -0x48(%rbp),%rax
+  401d17:	mov    %rax,%rdi
+  401d1a:	callq  4015b0 <SSL_get_wbio@plt>
+  401d1f:	mov    $0x0,%ecx
+  401d24:	mov    $0x0,%edx
+  401d29:	mov    $0xb,%esi
+  401d2e:	mov    %rax,%rdi
+  401d31:	callq  401540 <BIO_ctrl@plt>
+  401d36:	mov    %eax,-0x38(%rbp)
+  401d39:	cmpl   $0x0,-0x38(%rbp)
+  401d3d:	jg     401d47 <dtls1_do_write+0x29d>
+  401d3f:	mov    -0x38(%rbp),%eax
+  401d42:	jmpq   402160 <dtls1_do_write+0x6b6>
+  401d47:	mov    -0x48(%rbp),%rax
+  401d4b:	mov    0x88(%rax),%rax
+  401d52:	mov    0x280(%rax),%eax
+  401d58:	sub    -0x20(%rbp),%eax
+  401d5b:	sub    -0x24(%rbp),%eax
+  401d5e:	sub    $0xd,%eax
+  401d61:	mov    %eax,-0x14(%rbp)
+  401d64:	mov    -0x48(%rbp),%rax
+  401d68:	mov    0x60(%rax),%eax
+  401d6b:	cmp    -0x14(%rbp),%eax
+  401d6e:	jle    401d78 <dtls1_do_write+0x2ce>
+  401d70:	mov    -0x14(%rbp),%eax
+  401d73:	mov    %eax,-0x18(%rbp)
+  401d76:	jmp    401d82 <dtls1_do_write+0x2d8>
+  401d78:	mov    -0x48(%rbp),%rax
+  401d7c:	mov    0x60(%rax),%eax
+  401d7f:	mov    %eax,-0x18(%rbp)
+  401d82:	cmpl   $0x16,-0x4c(%rbp)
+  401d86:	jne    401e52 <dtls1_do_write+0x3a8>
+  401d8c:	mov    -0x48(%rbp),%rax
+  401d90:	mov    0x64(%rax),%eax
+  401d93:	test   %eax,%eax
+  401d95:	je     401df7 <dtls1_do_write+0x34d>
+  401d97:	mov    -0x48(%rbp),%rax
+  401d9b:	mov    0x64(%rax),%eax
+  401d9e:	cmp    $0xc,%eax
+  401da1:	jg     401db7 <dtls1_do_write+0x30d>
+  401da3:	mov    $0x404f40,%edx
+  401da8:	mov    $0x143,%esi
+  401dad:	mov    $0x404ed0,%edi
+  401db2:	callq  401650 <OpenSSLDie@plt>
+  401db7:	mov    -0x48(%rbp),%rax
+  401dbb:	mov    0x64(%rax),%eax
+  401dbe:	lea    -0xc(%rax),%edx
+  401dc1:	mov    -0x48(%rbp),%rax
+  401dc5:	mov    %edx,0x64(%rax)
+  401dc8:	mov    -0x48(%rbp),%rax
+  401dcc:	mov    0x60(%rax),%eax
+  401dcf:	lea    0xc(%rax),%edx
+  401dd2:	mov    -0x48(%rbp),%rax
+  401dd6:	mov    %edx,0x60(%rax)
+  401dd9:	mov    -0x48(%rbp),%rax
+  401ddd:	mov    0x60(%rax),%eax
+  401de0:	cmp    -0x14(%rbp),%eax
+  401de3:	jle    401ded <dtls1_do_write+0x343>
+  401de5:	mov    -0x14(%rbp),%eax
+  401de8:	mov    %eax,-0x18(%rbp)
+  401deb:	jmp    401df7 <dtls1_do_write+0x34d>
+  401ded:	mov    -0x48(%rbp),%rax
+  401df1:	mov    0x60(%rax),%eax
+  401df4:	mov    %eax,-0x18(%rbp)
+  401df7:	mov    -0x18(%rbp),%eax
+  401dfa:	sub    $0xc,%eax
+  401dfd:	mov    %eax,%edx
+  401dff:	mov    -0x1c(%rbp),%ecx
+  401e02:	mov    -0x48(%rbp),%rax
+  401e06:	mov    %rcx,%rsi
+  401e09:	mov    %rax,%rdi
+  401e0c:	callq  4045e7 <dtls1_fix_message_header>
+  401e11:	mov    -0x48(%rbp),%rax
+  401e15:	mov    0x50(%rax),%rax
+  401e19:	mov    0x8(%rax),%rdx
+  401e1d:	mov    -0x48(%rbp),%rax
+  401e21:	mov    0x64(%rax),%eax
+  401e24:	cltq   
+  401e26:	add    %rax,%rdx
+  401e29:	mov    -0x48(%rbp),%rax
+  401e2d:	mov    %rdx,%rsi
+  401e30:	mov    %rax,%rdi
+  401e33:	callq  404626 <dtls1_write_message_header>
+  401e38:	cmpl   $0xb,-0x18(%rbp)
+  401e3c:	ja     401e52 <dtls1_do_write+0x3a8>
+  401e3e:	mov    $0x404f65,%edx
+  401e43:	mov    $0x152,%esi
+  401e48:	mov    $0x404ed0,%edi
+  401e4d:	callq  401650 <OpenSSLDie@plt>
+  401e52:	mov    -0x18(%rbp),%edx
+  401e55:	mov    -0x48(%rbp),%rax
+  401e59:	mov    0x50(%rax),%rax
+  401e5d:	mov    0x8(%rax),%rcx
+  401e61:	mov    -0x48(%rbp),%rax
+  401e65:	mov    0x64(%rax),%eax
+  401e68:	cltq   
+  401e6a:	lea    (%rcx,%rax,1),%rdi
+  401e6e:	mov    -0x4c(%rbp),%esi
+  401e71:	mov    -0x48(%rbp),%rax
+  401e75:	mov    %edx,%ecx
+  401e77:	mov    %rdi,%rdx
+  401e7a:	mov    %rax,%rdi
+  401e7d:	callq  401600 <dtls1_write_bytes@plt>
+  401e82:	mov    %eax,-0x38(%rbp)
+  401e85:	cmpl   $0x0,-0x38(%rbp)
+  401e89:	jns    401ef6 <dtls1_do_write+0x44c>
+  401e8b:	mov    -0x48(%rbp),%rax
+  401e8f:	mov    %rax,%rdi
+  401e92:	callq  4015b0 <SSL_get_wbio@plt>
+  401e97:	mov    $0x0,%ecx
+  401e9c:	mov    $0x0,%edx
+  401ea1:	mov    $0x2b,%esi
+  401ea6:	mov    %rax,%rdi
+  401ea9:	callq  401540 <BIO_ctrl@plt>
+  401eae:	test   %rax,%rax
+  401eb1:	jle    401eec <dtls1_do_write+0x442>
+  401eb3:	mov    -0x48(%rbp),%rax
+  401eb7:	mov    0x88(%rax),%rbx
+  401ebe:	mov    -0x48(%rbp),%rax
+  401ec2:	mov    %rax,%rdi
+  401ec5:	callq  4015b0 <SSL_get_wbio@plt>
+  401eca:	mov    $0x0,%ecx
+  401ecf:	mov    $0x0,%edx
+  401ed4:	mov    $0x28,%esi
+  401ed9:	mov    %rax,%rdi
+  401edc:	callq  401540 <BIO_ctrl@plt>
+  401ee1:	mov    %eax,0x280(%rbx)
+  401ee7:	jmpq   40214c <dtls1_do_write+0x6a2>
+  401eec:	mov    $0xffffffff,%eax
+  401ef1:	jmpq   402160 <dtls1_do_write+0x6b6>
+  401ef6:	mov    -0x38(%rbp),%eax
+  401ef9:	cmp    -0x18(%rbp),%eax
+  401efc:	je     401f12 <dtls1_do_write+0x468>
+  401efe:	mov    $0x404f83,%edx
+  401f03:	mov    $0x16b,%esi
+  401f08:	mov    $0x404ed0,%edi
+  401f0d:	callq  401650 <OpenSSLDie@plt>
+  401f12:	cmpl   $0x16,-0x4c(%rbp)
+  401f16:	jne    402096 <dtls1_do_write+0x5ec>
+  401f1c:	mov    -0x48(%rbp),%rax
+  401f20:	mov    0x88(%rax),%rax
+  401f27:	mov    0x370(%rax),%eax
+  401f2d:	test   %eax,%eax
+  401f2f:	jne    402096 <dtls1_do_write+0x5ec>
+  401f35:	mov    -0x48(%rbp),%rax
+  401f39:	mov    0x50(%rax),%rax
+  401f3d:	mov    0x8(%rax),%rdx
+  401f41:	mov    -0x48(%rbp),%rax
+  401f45:	mov    0x64(%rax),%eax
+  401f48:	cltq   
+  401f4a:	add    %rdx,%rax
+  401f4d:	mov    %rax,-0x30(%rbp)
+  401f51:	mov    -0x48(%rbp),%rax
+  401f55:	mov    0x88(%rax),%rax
+  401f5c:	add    $0x288,%rax
+  401f62:	mov    %rax,-0x40(%rbp)
+  401f66:	cmpl   $0x0,-0x1c(%rbp)
+  401f6a:	jne    402072 <dtls1_do_write+0x5c8>
+  401f70:	mov    -0x48(%rbp),%rax
+  401f74:	mov    (%rax),%eax
+  401f76:	cmp    $0x100,%eax
+  401f7b:	je     402072 <dtls1_do_write+0x5c8>
+  401f81:	mov    -0x30(%rbp),%rax
+  401f85:	lea    0x1(%rax),%rdx
+  401f89:	mov    %rdx,-0x30(%rbp)
+  401f8d:	mov    -0x40(%rbp),%rdx
+  401f91:	movzbl (%rdx),%edx
+  401f94:	mov    %dl,(%rax)
+  401f96:	mov    -0x40(%rbp),%rax
+  401f9a:	mov    0x8(%rax),%rax
+  401f9e:	shr    $0x10,%rax
+  401fa2:	mov    %eax,%edx
+  401fa4:	mov    -0x30(%rbp),%rax
+  401fa8:	mov    %dl,(%rax)
+  401faa:	mov    -0x30(%rbp),%rax
+  401fae:	lea    0x1(%rax),%rdx
+  401fb2:	mov    -0x40(%rbp),%rax
+  401fb6:	mov    0x8(%rax),%rax
+  401fba:	shr    $0x8,%rax
+  401fbe:	mov    %al,(%rdx)
+  401fc0:	mov    -0x30(%rbp),%rax
+  401fc4:	lea    0x2(%rax),%rdx
+  401fc8:	mov    -0x40(%rbp),%rax
+  401fcc:	mov    0x8(%rax),%rax
+  401fd0:	mov    %al,(%rdx)
+  401fd2:	addq   $0x3,-0x30(%rbp)
+  401fd7:	mov    -0x40(%rbp),%rax
+  401fdb:	movzwl 0x10(%rax),%eax
+  401fdf:	shr    $0x8,%ax
+  401fe3:	mov    %eax,%edx
+  401fe5:	mov    -0x30(%rbp),%rax
+  401fe9:	mov    %dl,(%rax)
+  401feb:	mov    -0x30(%rbp),%rax
+  401fef:	lea    0x1(%rax),%rdx
+  401ff3:	mov    -0x40(%rbp),%rax
+  401ff7:	movzwl 0x10(%rax),%eax
+  401ffb:	mov    %al,(%rdx)
+  401ffd:	addq   $0x2,-0x30(%rbp)
+  402002:	mov    -0x30(%rbp),%rax
+  402006:	movb   $0x0,(%rax)
+  402009:	mov    -0x30(%rbp),%rax
+  40200d:	add    $0x1,%rax
+  402011:	movb   $0x0,(%rax)
+  402014:	mov    -0x30(%rbp),%rax
+  402018:	add    $0x2,%rax
+  40201c:	movb   $0x0,(%rax)
+  40201f:	addq   $0x3,-0x30(%rbp)
+  402024:	mov    -0x40(%rbp),%rax
+  402028:	mov    0x8(%rax),%rax
+  40202c:	shr    $0x10,%rax
+  402030:	mov    %eax,%edx
+  402032:	mov    -0x30(%rbp),%rax
+  402036:	mov    %dl,(%rax)
+  402038:	mov    -0x30(%rbp),%rax
+  40203c:	lea    0x1(%rax),%rdx
+  402040:	mov    -0x40(%rbp),%rax
+  402044:	mov    0x8(%rax),%rax
+  402048:	shr    $0x8,%rax
+  40204c:	mov    %al,(%rdx)
+  40204e:	mov    -0x30(%rbp),%rax
+  402052:	lea    0x2(%rax),%rdx
+  402056:	mov    -0x40(%rbp),%rax
+  40205a:	mov    0x8(%rax),%rax
+  40205e:	mov    %al,(%rdx)
+  402060:	addq   $0x3,-0x30(%rbp)
+  402065:	subq   $0xc,-0x30(%rbp)
+  40206a:	mov    -0x38(%rbp),%eax
+  40206d:	mov    %eax,-0x34(%rbp)
+  402070:	jmp    402080 <dtls1_do_write+0x5d6>
+  402072:	addq   $0xc,-0x30(%rbp)
+  402077:	mov    -0x38(%rbp),%eax
+  40207a:	sub    $0xc,%eax
+  40207d:	mov    %eax,-0x34(%rbp)
+  402080:	mov    -0x34(%rbp),%edx
+  402083:	mov    -0x30(%rbp),%rcx
+  402087:	mov    -0x48(%rbp),%rax
+  40208b:	mov    %rcx,%rsi
+  40208e:	mov    %rax,%rdi
+  402091:	callq  4015d0 <ssl3_finish_mac@plt>
+  402096:	mov    -0x48(%rbp),%rax
+  40209a:	mov    0x60(%rax),%eax
+  40209d:	cmp    -0x38(%rbp),%eax
+  4020a0:	jne    40211c <dtls1_do_write+0x672>
+  4020a2:	mov    -0x48(%rbp),%rax
+  4020a6:	mov    0x98(%rax),%rax
+  4020ad:	test   %rax,%rax
+  4020b0:	je     4020ff <dtls1_do_write+0x655>
+  4020b2:	mov    -0x48(%rbp),%rax
+  4020b6:	mov    0x98(%rax),%rax
+  4020bd:	mov    -0x48(%rbp),%rdx
+  4020c1:	mov    0xa0(%rdx),%rdi
+  4020c8:	mov    -0x48(%rbp),%rdx
+  4020cc:	mov    0x64(%rdx),%ecx
+  4020cf:	mov    -0x48(%rbp),%rdx
+  4020d3:	mov    0x60(%rdx),%edx
+  4020d6:	add    %ecx,%edx
+  4020d8:	movslq %edx,%r8
+  4020db:	mov    -0x48(%rbp),%rdx
+  4020df:	mov    0x50(%rdx),%rdx
+  4020e3:	mov    0x8(%rdx),%rcx
+  4020e7:	mov    -0x48(%rbp),%rdx
+  4020eb:	mov    (%rdx),%esi
+  4020ed:	mov    -0x48(%rbp),%r9
+  4020f1:	mov    -0x4c(%rbp),%edx
+  4020f4:	mov    %rdi,(%rsp)
+  4020f8:	mov    $0x1,%edi
+  4020fd:	callq  *%rax
+  4020ff:	mov    -0x48(%rbp),%rax
+  402103:	movl   $0x0,0x64(%rax)
+  40210a:	mov    -0x48(%rbp),%rax
+  40210e:	movl   $0x0,0x60(%rax)
+  402115:	mov    $0x1,%eax
+  40211a:	jmp    402160 <dtls1_do_write+0x6b6>
+  40211c:	mov    -0x48(%rbp),%rax
+  402120:	mov    0x64(%rax),%edx
+  402123:	mov    -0x38(%rbp),%eax
+  402126:	add    %eax,%edx
+  402128:	mov    -0x48(%rbp),%rax
+  40212c:	mov    %edx,0x64(%rax)
+  40212f:	mov    -0x48(%rbp),%rax
+  402133:	mov    0x60(%rax),%eax
+  402136:	sub    -0x38(%rbp),%eax
+  402139:	mov    %eax,%edx
+  40213b:	mov    -0x48(%rbp),%rax
+  40213f:	mov    %edx,0x60(%rax)
+  402142:	subl   $0xc,-0x38(%rbp)
+  402146:	mov    -0x38(%rbp),%eax
+  402149:	add    %eax,-0x1c(%rbp)
+  40214c:	mov    -0x48(%rbp),%rax
+  402150:	mov    0x60(%rax),%eax
+  402153:	test   %eax,%eax
+  402155:	jne    401cc9 <dtls1_do_write+0x21f>
+  40215b:	mov    $0x0,%eax
+  402160:	add    $0x58,%rsp
+  402164:	pop    %rbx
+  402165:	pop    %rbp
+  402166:	retq   
+
+0000000000402167 <dtls1_get_message>:
+  402167:	push   %rbp
+  402168:	mov    %rsp,%rbp
+  40216b:	sub    $0x60,%rsp
+  40216f:	mov    %rdi,-0x38(%rbp)
+  402173:	mov    %esi,-0x3c(%rbp)
+  402176:	mov    %edx,-0x40(%rbp)
+  402179:	mov    %ecx,-0x44(%rbp)
+  40217c:	mov    %r8,-0x50(%rbp)
+  402180:	mov    %r9,-0x58(%rbp)
+  402184:	mov    -0x38(%rbp),%rax
+  402188:	mov    0x80(%rax),%rax
+  40218f:	mov    0x3c4(%rax),%eax
+  402195:	test   %eax,%eax
+  402197:	je     40226a <dtls1_get_message+0x103>
+  40219d:	mov    -0x38(%rbp),%rax
+  4021a1:	mov    0x80(%rax),%rax
+  4021a8:	movl   $0x0,0x3c4(%rax)
+  4021b2:	cmpl   $0x0,-0x44(%rbp)
+  4021b6:	js     40221f <dtls1_get_message+0xb8>
+  4021b8:	mov    -0x38(%rbp),%rax
+  4021bc:	mov    0x80(%rax),%rax
+  4021c3:	mov    0x3a0(%rax),%eax
+  4021c9:	cmp    -0x44(%rbp),%eax
+  4021cc:	je     40221f <dtls1_get_message+0xb8>
+  4021ce:	movl   $0xa,-0x14(%rbp)
+  4021d5:	mov    $0x1b3,%r8d
+  4021db:	mov    $0x404ed0,%ecx
+  4021e0:	mov    $0xf4,%edx
+  4021e5:	mov    $0xfc,%esi
+  4021ea:	mov    $0x14,%edi
+  4021ef:	callq  4016a0 <ERR_put_error@plt>
+  4021f4:	nop
+  4021f5:	mov    -0x14(%rbp),%edx
+  4021f8:	mov    -0x38(%rbp),%rax
+  4021fc:	mov    $0x2,%esi
+  402201:	mov    %rax,%rdi
+  402204:	callq  401690 <ssl3_send_alert@plt>
+  402209:	mov    -0x58(%rbp),%rax
+  40220d:	movl   $0x0,(%rax)
+  402213:	mov    $0xffffffffffffffff,%rax
+  40221a:	jmpq   4024ac <dtls1_get_message+0x345>
+  40221f:	mov    -0x58(%rbp),%rax
+  402223:	movl   $0x1,(%rax)
+  402229:	mov    -0x38(%rbp),%rax
+  40222d:	mov    0x50(%rax),%rax
+  402231:	mov    0x8(%rax),%rax
+  402235:	lea    0xc(%rax),%rdx
+  402239:	mov    -0x38(%rbp),%rax
+  40223d:	mov    %rdx,0x58(%rax)
+  402241:	mov    -0x38(%rbp),%rax
+  402245:	mov    0x80(%rax),%rax
+  40224c:	mov    0x398(%rax),%rax
+  402253:	mov    %eax,%edx
+  402255:	mov    -0x38(%rbp),%rax
+  402259:	mov    %edx,0x60(%rax)
+  40225c:	mov    -0x38(%rbp),%rax
+  402260:	mov    0x60(%rax),%eax
+  402263:	cltq   
+  402265:	jmpq   4024ac <dtls1_get_message+0x345>
+  40226a:	mov    -0x38(%rbp),%rax
+  40226e:	mov    0x88(%rax),%rax
+  402275:	add    $0x2e0,%rax
+  40227b:	mov    %rax,-0x20(%rbp)
+  40227f:	mov    -0x20(%rbp),%rax
+  402283:	mov    $0x58,%edx
+  402288:	mov    $0x0,%esi
+  40228d:	mov    %rax,%rdi
+  402290:	callq  401590 <memset@plt>
+  402295:	mov    -0x58(%rbp),%rdi
+  402299:	mov    -0x50(%rbp),%rcx
+  40229d:	mov    -0x40(%rbp),%edx
+  4022a0:	mov    -0x3c(%rbp),%esi
+  4022a3:	mov    -0x38(%rbp),%rax
+  4022a7:	mov    %rdi,%r8
+  4022aa:	mov    %rax,%rdi
+  4022ad:	callq  4030fb <dtls1_get_message_fragment>
+  4022b2:	mov    %eax,-0x24(%rbp)
+  4022b5:	cmpl   $0xfffffffe,-0x24(%rbp)
+  4022b9:	je     402295 <dtls1_get_message+0x12e>
+  4022bb:	cmpl   $0xfffffffd,-0x24(%rbp)
+  4022bf:	je     402295 <dtls1_get_message+0x12e>
+  4022c1:	cmpl   $0x0,-0x24(%rbp)
+  4022c5:	jg     4022db <dtls1_get_message+0x174>
+  4022c7:	mov    -0x58(%rbp),%rax
+  4022cb:	mov    (%rax),%eax
+  4022cd:	test   %eax,%eax
+  4022cf:	jne    4022db <dtls1_get_message+0x174>
+  4022d1:	mov    -0x24(%rbp),%eax
+  4022d4:	cltq   
+  4022d6:	jmpq   4024ac <dtls1_get_message+0x345>
+  4022db:	mov    -0x38(%rbp),%rax
+  4022df:	mov    0x50(%rax),%rax
+  4022e3:	mov    0x8(%rax),%rax
+  4022e7:	mov    %rax,-0x8(%rbp)
+  4022eb:	mov    -0x20(%rbp),%rax
+  4022ef:	mov    0x8(%rax),%rax
+  4022f3:	mov    %rax,-0x10(%rbp)
+  4022f7:	mov    -0x8(%rbp),%rax
+  4022fb:	lea    0x1(%rax),%rdx
+  4022ff:	mov    %rdx,-0x8(%rbp)
+  402303:	mov    -0x20(%rbp),%rdx
+  402307:	movzbl (%rdx),%edx
+  40230a:	mov    %dl,(%rax)
+  40230c:	mov    -0x10(%rbp),%rax
+  402310:	shr    $0x10,%rax
+  402314:	mov    %eax,%edx
+  402316:	mov    -0x8(%rbp),%rax
+  40231a:	mov    %dl,(%rax)
+  40231c:	mov    -0x8(%rbp),%rax
+  402320:	lea    0x1(%rax),%rdx
+  402324:	mov    -0x10(%rbp),%rax
+  402328:	shr    $0x8,%rax
+  40232c:	mov    %al,(%rdx)
+  40232e:	mov    -0x8(%rbp),%rax
+  402332:	lea    0x2(%rax),%rdx
+  402336:	mov    -0x10(%rbp),%rax
+  40233a:	mov    %al,(%rdx)
+  40233c:	addq   $0x3,-0x8(%rbp)
+  402341:	mov    -0x20(%rbp),%rax
+  402345:	movzwl 0x10(%rax),%eax
+  402349:	shr    $0x8,%ax
+  40234d:	mov    %eax,%edx
+  40234f:	mov    -0x8(%rbp),%rax
+  402353:	mov    %dl,(%rax)
+  402355:	mov    -0x8(%rbp),%rax
+  402359:	lea    0x1(%rax),%rdx
+  40235d:	mov    -0x20(%rbp),%rax
+  402361:	movzwl 0x10(%rax),%eax
+  402365:	mov    %al,(%rdx)
+  402367:	addq   $0x2,-0x8(%rbp)
+  40236c:	mov    -0x8(%rbp),%rax
+  402370:	movb   $0x0,(%rax)
+  402373:	mov    -0x8(%rbp),%rax
+  402377:	add    $0x1,%rax
+  40237b:	movb   $0x0,(%rax)
+  40237e:	mov    -0x8(%rbp),%rax
+  402382:	add    $0x2,%rax
+  402386:	movb   $0x0,(%rax)
+  402389:	addq   $0x3,-0x8(%rbp)
+  40238e:	mov    -0x10(%rbp),%rax
+  402392:	shr    $0x10,%rax
+  402396:	mov    %eax,%edx
+  402398:	mov    -0x8(%rbp),%rax
+  40239c:	mov    %dl,(%rax)
+  40239e:	mov    -0x8(%rbp),%rax
+  4023a2:	lea    0x1(%rax),%rdx
+  4023a6:	mov    -0x10(%rbp),%rax
+  4023aa:	shr    $0x8,%rax
+  4023ae:	mov    %al,(%rdx)
+  4023b0:	mov    -0x8(%rbp),%rax
+  4023b4:	lea    0x2(%rax),%rdx
+  4023b8:	mov    -0x10(%rbp),%rax
+  4023bc:	mov    %al,(%rdx)
+  4023be:	addq   $0x3,-0x8(%rbp)
+  4023c3:	mov    -0x38(%rbp),%rax
+  4023c7:	mov    (%rax),%eax
+  4023c9:	cmp    $0x100,%eax
+  4023ce:	je     4023da <dtls1_get_message+0x273>
+  4023d0:	subq   $0xc,-0x8(%rbp)
+  4023d5:	addq   $0xc,-0x10(%rbp)
+  4023da:	mov    -0x10(%rbp),%rax
+  4023de:	mov    %eax,%edx
+  4023e0:	mov    -0x8(%rbp),%rcx
+  4023e4:	mov    -0x38(%rbp),%rax
+  4023e8:	mov    %rcx,%rsi
+  4023eb:	mov    %rax,%rdi
+  4023ee:	callq  4015d0 <ssl3_finish_mac@plt>
+  4023f3:	mov    -0x38(%rbp),%rax
+  4023f7:	mov    0x98(%rax),%rax
+  4023fe:	test   %rax,%rax
+  402401:	je     402444 <dtls1_get_message+0x2dd>
+  402403:	mov    -0x38(%rbp),%rax
+  402407:	mov    0x98(%rax),%rax
+  40240e:	mov    -0x38(%rbp),%rdx
+  402412:	mov    0xa0(%rdx),%rcx
+  402419:	mov    -0x38(%rbp),%rdx
+  40241d:	mov    (%rdx),%esi
+  40241f:	mov    -0x38(%rbp),%r8
+  402423:	mov    -0x10(%rbp),%rdi
+  402427:	mov    -0x8(%rbp),%rdx
+  40242b:	mov    %rcx,(%rsp)
+  40242f:	mov    %r8,%r9
+  402432:	mov    %rdi,%r8
+  402435:	mov    %rdx,%rcx
+  402438:	mov    $0x16,%edx
+  40243d:	mov    $0x0,%edi
+  402442:	callq  *%rax
+  402444:	mov    -0x20(%rbp),%rax
+  402448:	mov    $0x58,%edx
+  40244d:	mov    $0x0,%esi
+  402452:	mov    %rax,%rdi
+  402455:	callq  401590 <memset@plt>
+  40245a:	mov    -0x38(%rbp),%rax
+  40245e:	mov    0x88(%rax),%rax
+  402465:	mov    0x378(%rax),%eax
+  40246b:	test   %eax,%eax
+  40246d:	jne    40248b <dtls1_get_message+0x324>
+  40246f:	mov    -0x38(%rbp),%rax
+  402473:	mov    0x88(%rax),%rax
+  40247a:	movzwl 0x234(%rax),%edx
+  402481:	add    $0x1,%edx
+  402484:	mov    %dx,0x234(%rax)
+  40248b:	mov    -0x38(%rbp),%rax
+  40248f:	mov    0x50(%rax),%rax
+  402493:	mov    0x8(%rax),%rax
+  402497:	lea    0xc(%rax),%rdx
+  40249b:	mov    -0x38(%rbp),%rax
+  40249f:	mov    %rdx,0x58(%rax)
+  4024a3:	mov    -0x38(%rbp),%rax
+  4024a7:	mov    0x60(%rax),%eax
+  4024aa:	cltq   
+  4024ac:	leaveq 
+  4024ad:	retq   
+
+00000000004024ae <dtls1_preprocess_fragment>:
+  4024ae:	push   %rbp
+  4024af:	mov    %rsp,%rbp
+  4024b2:	sub    $0x40,%rsp
+  4024b6:	mov    %rdi,-0x28(%rbp)
+  4024ba:	mov    %rsi,-0x30(%rbp)
+  4024be:	mov    %edx,-0x34(%rbp)
+  4024c1:	mov    -0x30(%rbp),%rax
+  4024c5:	mov    0x8(%rax),%rax
+  4024c9:	mov    %rax,-0x8(%rbp)
+  4024cd:	mov    -0x30(%rbp),%rax
+  4024d1:	mov    0x18(%rax),%rax
+  4024d5:	mov    %rax,-0x10(%rbp)
+  4024d9:	mov    -0x30(%rbp),%rax
+  4024dd:	mov    0x20(%rax),%rax
+  4024e1:	mov    %rax,-0x18(%rbp)
+  4024e5:	mov    -0x18(%rbp),%rax
+  4024e9:	mov    -0x10(%rbp),%rdx
+  4024ed:	add    %rdx,%rax
+  4024f0:	cmp    -0x8(%rbp),%rax
+  4024f4:	jbe    40251f <dtls1_preprocess_fragment+0x71>
+  4024f6:	mov    $0x1f6,%r8d
+  4024fc:	mov    $0x404ed0,%ecx
+  402501:	mov    $0x98,%edx
+  402506:	mov    $0x120,%esi
+  40250b:	mov    $0x14,%edi
+  402510:	callq  4016a0 <ERR_put_error@plt>
+  402515:	mov    $0x2f,%eax
+  40251a:	jmpq   40267e <dtls1_preprocess_fragment+0x1d0>
+  40251f:	mov    -0x18(%rbp),%rax
+  402523:	mov    -0x10(%rbp),%rdx
+  402527:	add    %rax,%rdx
+  40252a:	mov    -0x34(%rbp),%eax
+  40252d:	cltq   
+  40252f:	cmp    %rax,%rdx
+  402532:	jbe    40255d <dtls1_preprocess_fragment+0xaf>
+  402534:	mov    $0x1fc,%r8d
+  40253a:	mov    $0x404ed0,%ecx
+  40253f:	mov    $0x98,%edx
+  402544:	mov    $0x120,%esi
+  402549:	mov    $0x14,%edi
+  40254e:	callq  4016a0 <ERR_put_error@plt>
+  402553:	mov    $0x2f,%eax
+  402558:	jmpq   40267e <dtls1_preprocess_fragment+0x1d0>
+  40255d:	mov    -0x28(%rbp),%rax
+  402561:	mov    0x88(%rax),%rax
+  402568:	mov    0x2f8(%rax),%rax
+  40256f:	test   %rax,%rax
+  402572:	jne    40263b <dtls1_preprocess_fragment+0x18d>
+  402578:	mov    -0x8(%rbp),%rax
+  40257c:	lea    0xc(%rax),%rdx
+  402580:	mov    -0x28(%rbp),%rax
+  402584:	mov    0x50(%rax),%rax
+  402588:	mov    %rdx,%rsi
+  40258b:	mov    %rax,%rdi
+  40258e:	callq  401640 <BUF_MEM_grow_clean@plt>
+  402593:	test   %eax,%eax
+  402595:	jne    4025c0 <dtls1_preprocess_fragment+0x112>
+  402597:	mov    $0x206,%r8d
+  40259d:	mov    $0x404ed0,%ecx
+  4025a2:	mov    $0x7,%edx
+  4025a7:	mov    $0x120,%esi
+  4025ac:	mov    $0x14,%edi
+  4025b1:	callq  4016a0 <ERR_put_error@plt>
+  4025b6:	mov    $0x50,%eax
+  4025bb:	jmpq   40267e <dtls1_preprocess_fragment+0x1d0>
+  4025c0:	mov    -0x28(%rbp),%rax
+  4025c4:	mov    0x80(%rax),%rax
+  4025cb:	mov    -0x8(%rbp),%rdx
+  4025cf:	mov    %rdx,0x398(%rax)
+  4025d6:	mov    -0x28(%rbp),%rax
+  4025da:	mov    0x88(%rax),%rax
+  4025e1:	mov    -0x8(%rbp),%rdx
+  4025e5:	mov    %rdx,0x2e8(%rax)
+  4025ec:	mov    -0x28(%rbp),%rax
+  4025f0:	mov    0x80(%rax),%rax
+  4025f7:	mov    -0x30(%rbp),%rdx
+  4025fb:	movzbl (%rdx),%edx
+  4025fe:	movzbl %dl,%edx
+  402601:	mov    %edx,0x3a0(%rax)
+  402607:	mov    -0x28(%rbp),%rax
+  40260b:	mov    0x88(%rax),%rax
+  402612:	mov    -0x30(%rbp),%rdx
+  402616:	movzbl (%rdx),%edx
+  402619:	mov    %dl,0x2e0(%rax)
+  40261f:	mov    -0x28(%rbp),%rax
+  402623:	mov    0x88(%rax),%rax
+  40262a:	mov    -0x30(%rbp),%rdx
+  40262e:	movzwl 0x10(%rdx),%edx
+  402632:	mov    %dx,0x2f0(%rax)
+  402639:	jmp    402679 <dtls1_preprocess_fragment+0x1cb>
+  40263b:	mov    -0x28(%rbp),%rax
+  40263f:	mov    0x88(%rax),%rax
+  402646:	mov    0x2e8(%rax),%rax
+  40264d:	cmp    -0x8(%rbp),%rax
+  402651:	je     402679 <dtls1_preprocess_fragment+0x1cb>
+  402653:	mov    $0x214,%r8d
+  402659:	mov    $0x404ed0,%ecx
+  40265e:	mov    $0x98,%edx
+  402663:	mov    $0x120,%esi
+  402668:	mov    $0x14,%edi
+  40266d:	callq  4016a0 <ERR_put_error@plt>
+  402672:	mov    $0x2f,%eax
+  402677:	jmp    40267e <dtls1_preprocess_fragment+0x1d0>
+  402679:	mov    $0x0,%eax
+  40267e:	leaveq 
+  40267f:	retq   
+
+0000000000402680 <dtls1_retrieve_buffered_fragment>:
+  402680:	push   %rbp
+  402681:	mov    %rsp,%rbp
+  402684:	sub    $0x50,%rsp
+  402688:	mov    %rdi,-0x38(%rbp)
+  40268c:	mov    %rsi,-0x40(%rbp)
+  402690:	mov    %rdx,-0x48(%rbp)
+  402694:	mov    -0x48(%rbp),%rax
+  402698:	movl   $0x0,(%rax)
+  40269e:	mov    -0x38(%rbp),%rax
+  4026a2:	mov    0x88(%rax),%rax
+  4026a9:	mov    0x260(%rax),%rax
+  4026b0:	mov    %rax,%rdi
+  4026b3:	callq  4015a0 <pqueue_peek@plt>
+  4026b8:	mov    %rax,-0x8(%rbp)
+  4026bc:	cmpq   $0x0,-0x8(%rbp)
+  4026c1:	jne    4026cd <dtls1_retrieve_buffered_fragment+0x4d>
+  4026c3:	mov    $0x0,%eax
+  4026c8:	jmpq   4027fc <dtls1_retrieve_buffered_fragment+0x17c>
+  4026cd:	mov    -0x8(%rbp),%rax
+  4026d1:	mov    0x8(%rax),%rax
+  4026d5:	mov    %rax,-0x10(%rbp)
+  4026d9:	mov    -0x10(%rbp),%rax
+  4026dd:	mov    0x60(%rax),%rax
+  4026e1:	test   %rax,%rax
+  4026e4:	je     4026f0 <dtls1_retrieve_buffered_fragment+0x70>
+  4026e6:	mov    $0x0,%eax
+  4026eb:	jmpq   4027fc <dtls1_retrieve_buffered_fragment+0x17c>
+  4026f0:	mov    -0x38(%rbp),%rax
+  4026f4:	mov    0x88(%rax),%rax
+  4026fb:	movzwl 0x234(%rax),%edx
+  402702:	mov    -0x10(%rbp),%rax
+  402706:	movzwl 0x10(%rax),%eax
+  40270a:	cmp    %ax,%dx
+  40270d:	jne    4027f7 <dtls1_retrieve_buffered_fragment+0x177>
+  402713:	mov    -0x10(%rbp),%rax
+  402717:	mov    0x20(%rax),%rax
+  40271b:	mov    %rax,-0x18(%rbp)
+  40271f:	mov    -0x38(%rbp),%rax
+  402723:	mov    0x88(%rax),%rax
+  40272a:	mov    0x260(%rax),%rax
+  402731:	mov    %rax,%rdi
+  402734:	callq  401740 <pqueue_pop@plt>
+  402739:	mov    -0x40(%rbp),%rax
+  40273d:	mov    %eax,%edx
+  40273f:	mov    -0x10(%rbp),%rcx
+  402743:	mov    -0x38(%rbp),%rax
+  402747:	mov    %rcx,%rsi
+  40274a:	mov    %rax,%rdi
+  40274d:	callq  4024ae <dtls1_preprocess_fragment>
+  402752:	mov    %eax,-0x1c(%rbp)
+  402755:	cmpl   $0x0,-0x1c(%rbp)
+  402759:	jne    402799 <dtls1_retrieve_buffered_fragment+0x119>
+  40275b:	mov    -0x38(%rbp),%rax
+  40275f:	mov    0x50(%rax),%rax
+  402763:	mov    0x8(%rax),%rax
+  402767:	add    $0xc,%rax
+  40276b:	mov    %rax,-0x28(%rbp)
+  40276f:	mov    -0x10(%rbp),%rax
+  402773:	mov    0x20(%rax),%rdx
+  402777:	mov    -0x10(%rbp),%rax
+  40277b:	mov    0x58(%rax),%rax
+  40277f:	mov    -0x10(%rbp),%rcx
+  402783:	mov    0x18(%rcx),%rsi
+  402787:	mov    -0x28(%rbp),%rcx
+  40278b:	add    %rsi,%rcx
+  40278e:	mov    %rax,%rsi
+  402791:	mov    %rcx,%rdi
+  402794:	callq  401620 <memcpy@plt>
+  402799:	mov    -0x10(%rbp),%rax
+  40279d:	mov    %rax,%rdi
+  4027a0:	callq  401a2b <dtls1_hm_fragment_free>
+  4027a5:	mov    -0x8(%rbp),%rax
+  4027a9:	mov    %rax,%rdi
+  4027ac:	callq  401660 <pitem_free@plt>
+  4027b1:	cmpl   $0x0,-0x1c(%rbp)
+  4027b5:	jne    4027c7 <dtls1_retrieve_buffered_fragment+0x147>
+  4027b7:	mov    -0x48(%rbp),%rax
+  4027bb:	movl   $0x1,(%rax)
+  4027c1:	mov    -0x18(%rbp),%rax
+  4027c5:	jmp    4027fc <dtls1_retrieve_buffered_fragment+0x17c>
+  4027c7:	mov    -0x1c(%rbp),%edx
+  4027ca:	mov    -0x38(%rbp),%rax
+  4027ce:	mov    $0x2,%esi
+  4027d3:	mov    %rax,%rdi
+  4027d6:	callq  401690 <ssl3_send_alert@plt>
+  4027db:	mov    -0x38(%rbp),%rax
+  4027df:	movl   $0x0,0x60(%rax)
+  4027e6:	mov    -0x48(%rbp),%rax
+  4027ea:	movl   $0x0,(%rax)
+  4027f0:	mov    $0xffffffff,%eax
+  4027f5:	jmp    4027fc <dtls1_retrieve_buffered_fragment+0x17c>
+  4027f7:	mov    $0x0,%eax
+  4027fc:	leaveq 
+  4027fd:	retq   
+
+00000000004027fe <dtls1_reassemble_fragment>:
+  4027fe:	push   %rbp
+  4027ff:	mov    %rsp,%rbp
+  402802:	sub    $0x170,%rsp
+  402809:	mov    %rdi,-0x158(%rbp)
+  402810:	mov    %rsi,-0x160(%rbp)
+  402817:	mov    %rdx,-0x168(%rbp)
+  40281e:	movq   $0x0,-0x8(%rbp)
+  402826:	movq   $0x0,-0x10(%rbp)
+  40282e:	movl   $0xffffffff,-0x14(%rbp)
+  402835:	mov    -0x160(%rbp),%rax
+  40283c:	mov    0x20(%rax),%rax
+  402840:	mov    %rax,-0x20(%rbp)
+  402844:	mov    -0x160(%rbp),%rax
+  40284b:	mov    0x18(%rax),%rdx
+  40284f:	mov    -0x20(%rbp),%rax
+  402853:	add    %rax,%rdx
+  402856:	mov    -0x160(%rbp),%rax
+  40285d:	mov    0x8(%rax),%rax
+  402861:	cmp    %rax,%rdx
+  402864:	jbe    40286b <dtls1_reassemble_fragment+0x6d>
+  402866:	jmpq   402d6f <dtls1_reassemble_fragment+0x571>
+  40286b:	mov    -0x158(%rbp),%rax
+  402872:	mov    0x1c0(%rax),%rax
+  402879:	cmp    $0x454c,%rax
+  40287f:	jle    402895 <dtls1_reassemble_fragment+0x97>
+  402881:	mov    -0x158(%rbp),%rax
+  402888:	mov    0x1c0(%rax),%rax
+  40288f:	mov    %rax,-0x28(%rbp)
+  402893:	jmp    40289d <dtls1_reassemble_fragment+0x9f>
+  402895:	movq   $0x454c,-0x28(%rbp)
+  40289d:	mov    -0x160(%rbp),%rax
+  4028a4:	mov    0x18(%rax),%rdx
+  4028a8:	mov    -0x20(%rbp),%rax
+  4028ac:	add    %rdx,%rax
+  4028af:	cmp    -0x28(%rbp),%rax
+  4028b3:	jbe    4028ba <dtls1_reassemble_fragment+0xbc>
+  4028b5:	jmpq   402d6f <dtls1_reassemble_fragment+0x571>
+  4028ba:	lea    -0x50(%rbp),%rax
+  4028be:	mov    $0x8,%edx
+  4028c3:	mov    $0x0,%esi
+  4028c8:	mov    %rax,%rdi
+  4028cb:	callq  401590 <memset@plt>
+  4028d0:	mov    -0x160(%rbp),%rax
+  4028d7:	movzwl 0x10(%rax),%eax
+  4028db:	shr    $0x8,%ax
+  4028df:	mov    %al,-0x4a(%rbp)
+  4028e2:	mov    -0x160(%rbp),%rax
+  4028e9:	movzwl 0x10(%rax),%eax
+  4028ed:	mov    %al,-0x49(%rbp)
+  4028f0:	mov    -0x158(%rbp),%rax
+  4028f7:	mov    0x88(%rax),%rax
+  4028fe:	mov    0x260(%rax),%rax
+  402905:	lea    -0x50(%rbp),%rdx
+  402909:	mov    %rdx,%rsi
+  40290c:	mov    %rax,%rdi
+  40290f:	callq  401730 <pqueue_find@plt>
+  402914:	mov    %rax,-0x10(%rbp)
+  402918:	cmpq   $0x0,-0x10(%rbp)
+  40291d:	jne    402980 <dtls1_reassemble_fragment+0x182>
+  40291f:	mov    -0x160(%rbp),%rax
+  402926:	mov    0x8(%rax),%rax
+  40292a:	mov    $0x1,%esi
+  40292f:	mov    %rax,%rdi
+  402932:	callq  40190c <dtls1_hm_fragment_new>
+  402937:	mov    %rax,-0x8(%rbp)
+  40293b:	cmpq   $0x0,-0x8(%rbp)
+  402940:	jne    402947 <dtls1_reassemble_fragment+0x149>
+  402942:	jmpq   402d6f <dtls1_reassemble_fragment+0x571>
+  402947:	mov    -0x8(%rbp),%rax
+  40294b:	mov    -0x160(%rbp),%rcx
+  402952:	mov    $0x58,%edx
+  402957:	mov    %rcx,%rsi
+  40295a:	mov    %rax,%rdi
+  40295d:	callq  401620 <memcpy@plt>
+  402962:	mov    -0x8(%rbp),%rax
+  402966:	mov    0x8(%rax),%rdx
+  40296a:	mov    -0x8(%rbp),%rax
+  40296e:	mov    %rdx,0x20(%rax)
+  402972:	mov    -0x8(%rbp),%rax
+  402976:	movq   $0x0,0x18(%rax)
+  40297e:	jmp    40298c <dtls1_reassemble_fragment+0x18e>
+  402980:	mov    -0x10(%rbp),%rax
+  402984:	mov    0x8(%rax),%rax
+  402988:	mov    %rax,-0x8(%rbp)
+  40298c:	mov    -0x8(%rbp),%rax
+  402990:	mov    0x60(%rax),%rax
+  402994:	test   %rax,%rax
+  402997:	jne    402a00 <dtls1_reassemble_fragment+0x202>
+  402999:	jmp    4029ef <dtls1_reassemble_fragment+0x1f1>
+  40299b:	mov    -0x158(%rbp),%rax
+  4029a2:	mov    0x8(%rax),%rax
+  4029a6:	mov    0x68(%rax),%rax
+  4029aa:	mov    $0x100,%edx
+  4029af:	cmpq   $0x100,-0x20(%rbp)
+  4029b7:	cmovbe -0x20(%rbp),%rdx
+  4029bc:	mov    %edx,%ecx
+  4029be:	lea    -0x150(%rbp),%rdx
+  4029c5:	mov    -0x158(%rbp),%rdi
+  4029cc:	mov    $0x0,%r8d
+  4029d2:	mov    $0x16,%esi
+  4029d7:	callq  *%rax
+  4029d9:	mov    %eax,-0x14(%rbp)
+  4029dc:	cmpl   $0x0,-0x14(%rbp)
+  4029e0:	jle    402d6f <dtls1_reassemble_fragment+0x571>
+  4029e6:	mov    -0x14(%rbp),%eax
+  4029e9:	cltq   
+  4029eb:	sub    %rax,-0x20(%rbp)
+  4029ef:	cmpq   $0x0,-0x20(%rbp)
+  4029f4:	jne    40299b <dtls1_reassemble_fragment+0x19d>
+  4029f6:	mov    $0xfffffffd,%eax
+  4029fb:	jmpq   402da5 <dtls1_reassemble_fragment+0x5a7>
+  402a00:	mov    -0x158(%rbp),%rax
+  402a07:	mov    0x8(%rax),%rax
+  402a0b:	mov    0x68(%rax),%rax
+  402a0f:	mov    -0x20(%rbp),%rdx
+  402a13:	mov    -0x8(%rbp),%rcx
+  402a17:	mov    0x58(%rcx),%rsi
+  402a1b:	mov    -0x160(%rbp),%rcx
+  402a22:	mov    0x18(%rcx),%rcx
+  402a26:	add    %rcx,%rsi
+  402a29:	mov    -0x158(%rbp),%rdi
+  402a30:	mov    $0x0,%r8d
+  402a36:	mov    %edx,%ecx
+  402a38:	mov    %rsi,%rdx
+  402a3b:	mov    $0x16,%esi
+  402a40:	callq  *%rax
+  402a42:	mov    %eax,-0x14(%rbp)
+  402a45:	cmpl   $0x0,-0x14(%rbp)
+  402a49:	jle    402d6f <dtls1_reassemble_fragment+0x571>
+  402a4f:	mov    -0x14(%rbp),%eax
+  402a52:	cltq   
+  402a54:	cmp    -0x20(%rbp),%rax
+  402a58:	jne    402d6f <dtls1_reassemble_fragment+0x571>
+  402a5e:	mov    -0x160(%rbp),%rax
+  402a65:	mov    0x18(%rax),%rdx
+  402a69:	mov    -0x20(%rbp),%rax
+  402a6d:	add    %rdx,%rax
+  402a70:	mov    %rax,%rdx
+  402a73:	mov    -0x160(%rbp),%rax
+  402a7a:	mov    0x18(%rax),%rax
+  402a7e:	sub    %rax,%rdx
+  402a81:	mov    %rdx,%rax
+  402a84:	cmp    $0x8,%rax
+  402a88:	jg     402afe <dtls1_reassemble_fragment+0x300>
+  402a8a:	mov    -0x160(%rbp),%rax
+  402a91:	mov    0x18(%rax),%rax
+  402a95:	mov    %rax,-0x30(%rbp)
+  402a99:	jmp    402ae1 <dtls1_reassemble_fragment+0x2e3>
+  402a9b:	mov    -0x8(%rbp),%rax
+  402a9f:	mov    0x60(%rax),%rdx
+  402aa3:	mov    -0x30(%rbp),%rax
+  402aa7:	sar    $0x3,%rax
+  402aab:	add    %rax,%rdx
+  402aae:	mov    -0x8(%rbp),%rax
+  402ab2:	mov    0x60(%rax),%rcx
+  402ab6:	mov    -0x30(%rbp),%rax
+  402aba:	sar    $0x3,%rax
+  402abe:	add    %rcx,%rax
+  402ac1:	movzbl (%rax),%eax
+  402ac4:	mov    %eax,%esi
+  402ac6:	mov    -0x30(%rbp),%rax
+  402aca:	and    $0x7,%eax
+  402acd:	mov    $0x1,%edi
+  402ad2:	mov    %eax,%ecx
+  402ad4:	shl    %cl,%edi
+  402ad6:	mov    %edi,%eax
+  402ad8:	or     %esi,%eax
+  402ada:	mov    %al,(%rdx)
+  402adc:	addq   $0x1,-0x30(%rbp)
+  402ae1:	mov    -0x160(%rbp),%rax
+  402ae8:	mov    0x18(%rax),%rdx
+  402aec:	mov    -0x20(%rbp),%rax
+  402af0:	add    %rdx,%rax
+  402af3:	cmp    -0x30(%rbp),%rax
+  402af7:	jg     402a9b <dtls1_reassemble_fragment+0x29d>
+  402af9:	jmpq   402c0b <dtls1_reassemble_fragment+0x40d>
+  402afe:	mov    -0x8(%rbp),%rax
+  402b02:	mov    0x60(%rax),%rdx
+  402b06:	mov    -0x160(%rbp),%rax
+  402b0d:	mov    0x18(%rax),%rax
+  402b11:	sar    $0x3,%rax
+  402b15:	add    %rax,%rdx
+  402b18:	mov    -0x8(%rbp),%rax
+  402b1c:	mov    0x60(%rax),%rcx
+  402b20:	mov    -0x160(%rbp),%rax
+  402b27:	mov    0x18(%rax),%rax
+  402b2b:	sar    $0x3,%rax
+  402b2f:	add    %rcx,%rax
+  402b32:	movzbl (%rax),%ecx
+  402b35:	mov    -0x160(%rbp),%rax
+  402b3c:	mov    0x18(%rax),%rax
+  402b40:	and    $0x7,%eax
+  402b43:	movzbl 0x606194(%rax),%eax
+  402b4a:	or     %ecx,%eax
+  402b4c:	mov    %al,(%rdx)
+  402b4e:	mov    -0x160(%rbp),%rax
+  402b55:	mov    0x18(%rax),%rax
+  402b59:	sar    $0x3,%rax
+  402b5d:	add    $0x1,%rax
+  402b61:	mov    %rax,-0x38(%rbp)
+  402b65:	jmp    402b7e <dtls1_reassemble_fragment+0x380>
+  402b67:	mov    -0x8(%rbp),%rax
+  402b6b:	mov    0x60(%rax),%rdx
+  402b6f:	mov    -0x38(%rbp),%rax
+  402b73:	add    %rdx,%rax
+  402b76:	movb   $0xff,(%rax)
+  402b79:	addq   $0x1,-0x38(%rbp)
+  402b7e:	mov    -0x160(%rbp),%rax
+  402b85:	mov    0x18(%rax),%rdx
+  402b89:	mov    -0x20(%rbp),%rax
+  402b8d:	add    %rdx,%rax
+  402b90:	sub    $0x1,%rax
+  402b94:	sar    $0x3,%rax
+  402b98:	cmp    -0x38(%rbp),%rax
+  402b9c:	jg     402b67 <dtls1_reassemble_fragment+0x369>
+  402b9e:	mov    -0x8(%rbp),%rax
+  402ba2:	mov    0x60(%rax),%rdx
+  402ba6:	mov    -0x160(%rbp),%rax
+  402bad:	mov    0x18(%rax),%rcx
+  402bb1:	mov    -0x20(%rbp),%rax
+  402bb5:	add    %rcx,%rax
+  402bb8:	sub    $0x1,%rax
+  402bbc:	sar    $0x3,%rax
+  402bc0:	add    %rax,%rdx
+  402bc3:	mov    -0x8(%rbp),%rax
+  402bc7:	mov    0x60(%rax),%rcx
+  402bcb:	mov    -0x160(%rbp),%rax
+  402bd2:	mov    0x18(%rax),%rsi
+  402bd6:	mov    -0x20(%rbp),%rax
+  402bda:	add    %rsi,%rax
+  402bdd:	sub    $0x1,%rax
+  402be1:	sar    $0x3,%rax
+  402be5:	add    %rcx,%rax
+  402be8:	movzbl (%rax),%ecx
+  402beb:	mov    -0x160(%rbp),%rax
+  402bf2:	mov    0x18(%rax),%rsi
+  402bf6:	mov    -0x20(%rbp),%rax
+  402bfa:	add    %rsi,%rax
+  402bfd:	and    $0x7,%eax
+  402c00:	movzbl 0x60619c(%rax),%eax
+  402c07:	or     %ecx,%eax
+  402c09:	mov    %al,(%rdx)
+  402c0b:	mov    -0x160(%rbp),%rax
+  402c12:	mov    0x8(%rax),%rax
+  402c16:	test   %rax,%rax
+  402c19:	jg     402c2f <dtls1_reassemble_fragment+0x431>
+  402c1b:	mov    $0x404f9c,%edx
+  402c20:	mov    $0x299,%esi
+  402c25:	mov    $0x404ed0,%edi
+  402c2a:	callq  401650 <OpenSSLDie@plt>
+  402c2f:	movl   $0x1,-0x18(%rbp)
+  402c36:	mov    -0x8(%rbp),%rax
+  402c3a:	mov    0x60(%rax),%rdx
+  402c3e:	mov    -0x160(%rbp),%rax
+  402c45:	mov    0x8(%rax),%rax
+  402c49:	sub    $0x1,%rax
+  402c4d:	sar    $0x3,%rax
+  402c51:	add    %rdx,%rax
+  402c54:	movzbl (%rax),%edx
+  402c57:	mov    -0x160(%rbp),%rax
+  402c5e:	mov    0x8(%rax),%rax
+  402c62:	and    $0x7,%eax
+  402c65:	movzbl 0x60619c(%rax),%eax
+  402c6c:	cmp    %al,%dl
+  402c6e:	je     402c77 <dtls1_reassemble_fragment+0x479>
+  402c70:	movl   $0x0,-0x18(%rbp)
+  402c77:	cmpl   $0x0,-0x18(%rbp)
+  402c7b:	je     402cc5 <dtls1_reassemble_fragment+0x4c7>
+  402c7d:	mov    -0x160(%rbp),%rax
+  402c84:	mov    0x8(%rax),%rax
+  402c88:	sub    $0x1,%rax
+  402c8c:	sar    $0x3,%rax
+  402c90:	sub    $0x1,%rax
+  402c94:	mov    %rax,-0x40(%rbp)
+  402c98:	jmp    402cbe <dtls1_reassemble_fragment+0x4c0>
+  402c9a:	mov    -0x8(%rbp),%rax
+  402c9e:	mov    0x60(%rax),%rdx
+  402ca2:	mov    -0x40(%rbp),%rax
+  402ca6:	add    %rdx,%rax
+  402ca9:	movzbl (%rax),%eax
+  402cac:	cmp    $0xff,%al
+  402cae:	je     402cb9 <dtls1_reassemble_fragment+0x4bb>
+  402cb0:	movl   $0x0,-0x18(%rbp)
+  402cb7:	jmp    402cc5 <dtls1_reassemble_fragment+0x4c7>
+  402cb9:	subq   $0x1,-0x40(%rbp)
+  402cbe:	cmpq   $0x0,-0x40(%rbp)
+  402cc3:	jns    402c9a <dtls1_reassemble_fragment+0x49c>
+  402cc5:	cmpl   $0x0,-0x18(%rbp)
+  402cc9:	je     402ce7 <dtls1_reassemble_fragment+0x4e9>
+  402ccb:	mov    -0x8(%rbp),%rax
+  402ccf:	mov    0x60(%rax),%rax
+  402cd3:	mov    %rax,%rdi
+  402cd6:	callq  4016c0 <CRYPTO_free@plt>
+  402cdb:	mov    -0x8(%rbp),%rax
+  402cdf:	movq   $0x0,0x60(%rax)
+  402ce7:	cmpq   $0x0,-0x10(%rbp)
+  402cec:	jne    402d68 <dtls1_reassemble_fragment+0x56a>
+  402cee:	lea    -0x50(%rbp),%rax
+  402cf2:	mov    $0x8,%edx
+  402cf7:	mov    $0x0,%esi
+  402cfc:	mov    %rax,%rdi
+  402cff:	callq  401590 <memset@plt>
+  402d04:	mov    -0x160(%rbp),%rax
+  402d0b:	movzwl 0x10(%rax),%eax
+  402d0f:	shr    $0x8,%ax
+  402d13:	mov    %al,-0x4a(%rbp)
+  402d16:	mov    -0x160(%rbp),%rax
+  402d1d:	movzwl 0x10(%rax),%eax
+  402d21:	mov    %al,-0x49(%rbp)
+  402d24:	mov    -0x8(%rbp),%rdx
+  402d28:	lea    -0x50(%rbp),%rax
+  402d2c:	mov    %rdx,%rsi
+  402d2f:	mov    %rax,%rdi
+  402d32:	callq  401680 <pitem_new@plt>
+  402d37:	mov    %rax,-0x10(%rbp)
+  402d3b:	cmpq   $0x0,-0x10(%rbp)
+  402d40:	jne    402d44 <dtls1_reassemble_fragment+0x546>
+  402d42:	jmp    402d6f <dtls1_reassemble_fragment+0x571>
+  402d44:	mov    -0x158(%rbp),%rax
+  402d4b:	mov    0x88(%rax),%rax
+  402d52:	mov    0x260(%rax),%rax
+  402d59:	mov    -0x10(%rbp),%rdx
+  402d5d:	mov    %rdx,%rsi
+  402d60:	mov    %rax,%rdi
+  402d63:	callq  4016e0 <pqueue_insert@plt>
+  402d68:	mov    $0xfffffffd,%eax
+  402d6d:	jmp    402da5 <dtls1_reassemble_fragment+0x5a7>
+  402d6f:	cmpq   $0x0,-0x8(%rbp)
+  402d74:	je     402d82 <dtls1_reassemble_fragment+0x584>
+  402d76:	mov    -0x8(%rbp),%rax
+  402d7a:	mov    %rax,%rdi
+  402d7d:	callq  401a2b <dtls1_hm_fragment_free>
+  402d82:	cmpq   $0x0,-0x10(%rbp)
+  402d87:	je     402d95 <dtls1_reassemble_fragment+0x597>
+  402d89:	mov    -0x10(%rbp),%rax
+  402d8d:	mov    %rax,%rdi
+  402d90:	callq  4016c0 <CRYPTO_free@plt>
+  402d95:	mov    -0x168(%rbp),%rax
+  402d9c:	movl   $0x0,(%rax)
+  402da2:	mov    -0x14(%rbp),%eax
+  402da5:	leaveq 
+  402da6:	retq   
+
+0000000000402da7 <dtls1_process_out_of_seq_message>:
+  402da7:	push   %rbp
+  402da8:	mov    %rsp,%rbp
+  402dab:	sub    $0x150,%rsp
+  402db2:	mov    %rdi,-0x138(%rbp)
+  402db9:	mov    %rsi,-0x140(%rbp)
+  402dc0:	mov    %rdx,-0x148(%rbp)
+  402dc7:	movl   $0xffffffff,-0x4(%rbp)
+  402dce:	movq   $0x0,-0x10(%rbp)
+  402dd6:	movq   $0x0,-0x18(%rbp)
+  402dde:	mov    -0x140(%rbp),%rax
+  402de5:	mov    0x20(%rax),%rax
+  402de9:	mov    %rax,-0x20(%rbp)
+  402ded:	mov    -0x140(%rbp),%rax
+  402df4:	mov    0x18(%rax),%rdx
+  402df8:	mov    -0x20(%rbp),%rax
+  402dfc:	add    %rax,%rdx
+  402dff:	mov    -0x140(%rbp),%rax
+  402e06:	mov    0x8(%rax),%rax
+  402e0a:	cmp    %rax,%rdx
+  402e0d:	jbe    402e14 <dtls1_process_out_of_seq_message+0x6d>
+  402e0f:	jmpq   4030c3 <dtls1_process_out_of_seq_message+0x31c>
+  402e14:	lea    -0x30(%rbp),%rax
+  402e18:	mov    $0x8,%edx
+  402e1d:	mov    $0x0,%esi
+  402e22:	mov    %rax,%rdi
+  402e25:	callq  401590 <memset@plt>
+  402e2a:	mov    -0x140(%rbp),%rax
+  402e31:	movzwl 0x10(%rax),%eax
+  402e35:	shr    $0x8,%ax
+  402e39:	mov    %al,-0x2a(%rbp)
+  402e3c:	mov    -0x140(%rbp),%rax
+  402e43:	movzwl 0x10(%rax),%eax
+  402e47:	mov    %al,-0x29(%rbp)
+  402e4a:	mov    -0x138(%rbp),%rax
+  402e51:	mov    0x88(%rax),%rax
+  402e58:	mov    0x260(%rax),%rax
+  402e5f:	lea    -0x30(%rbp),%rdx
+  402e63:	mov    %rdx,%rsi
+  402e66:	mov    %rax,%rdi
+  402e69:	callq  401730 <pqueue_find@plt>
+  402e6e:	mov    %rax,-0x18(%rbp)
+  402e72:	cmpq   $0x0,-0x18(%rbp)
+  402e77:	je     402e92 <dtls1_process_out_of_seq_message+0xeb>
+  402e79:	mov    -0x140(%rbp),%rax
+  402e80:	mov    0x8(%rax),%rax
+  402e84:	cmp    -0x20(%rbp),%rax
+  402e88:	jbe    402e92 <dtls1_process_out_of_seq_message+0xeb>
+  402e8a:	movq   $0x0,-0x18(%rbp)
+  402e92:	mov    -0x140(%rbp),%rax
+  402e99:	movzwl 0x10(%rax),%edx
+  402e9d:	mov    -0x138(%rbp),%rax
+  402ea4:	mov    0x88(%rax),%rax
+  402eab:	movzwl 0x234(%rax),%eax
+  402eb2:	cmp    %ax,%dx
+  402eb5:	jbe    402f13 <dtls1_process_out_of_seq_message+0x16c>
+  402eb7:	mov    -0x140(%rbp),%rax
+  402ebe:	movzwl 0x10(%rax),%eax
+  402ec2:	movzwl %ax,%edx
+  402ec5:	mov    -0x138(%rbp),%rax
+  402ecc:	mov    0x88(%rax),%rax
+  402ed3:	movzwl 0x234(%rax),%eax
+  402eda:	movzwl %ax,%eax
+  402edd:	add    $0xa,%eax
+  402ee0:	cmp    %eax,%edx
+  402ee2:	jg     402f13 <dtls1_process_out_of_seq_message+0x16c>
+  402ee4:	cmpq   $0x0,-0x18(%rbp)
+  402ee9:	jne    402f13 <dtls1_process_out_of_seq_message+0x16c>
+  402eeb:	mov    -0x138(%rbp),%rax
+  402ef2:	mov    0x88(%rax),%rax
+  402ef9:	movzwl 0x234(%rax),%eax
+  402f00:	test   %ax,%ax
+  402f03:	jne    402f75 <dtls1_process_out_of_seq_message+0x1ce>
+  402f05:	mov    -0x140(%rbp),%rax
+  402f0c:	movzbl (%rax),%eax
+  402f0f:	cmp    $0x14,%al
+  402f11:	jne    402f75 <dtls1_process_out_of_seq_message+0x1ce>
+  402f13:	jmp    402f69 <dtls1_process_out_of_seq_message+0x1c2>
+  402f15:	mov    -0x138(%rbp),%rax
+  402f1c:	mov    0x8(%rax),%rax
+  402f20:	mov    0x68(%rax),%rax
+  402f24:	mov    $0x100,%edx
+  402f29:	cmpq   $0x100,-0x20(%rbp)
+  402f31:	cmovbe -0x20(%rbp),%rdx
+  402f36:	mov    %edx,%ecx
+  402f38:	lea    -0x130(%rbp),%rdx
+  402f3f:	mov    -0x138(%rbp),%rdi
+  402f46:	mov    $0x0,%r8d
+  402f4c:	mov    $0x16,%esi
+  402f51:	callq  *%rax
+  402f53:	mov    %eax,-0x4(%rbp)
+  402f56:	cmpl   $0x0,-0x4(%rbp)
+  402f5a:	jle    4030c3 <dtls1_process_out_of_seq_message+0x31c>
+  402f60:	mov    -0x4(%rbp),%eax
+  402f63:	cltq   
+  402f65:	sub    %rax,-0x20(%rbp)
+  402f69:	cmpq   $0x0,-0x20(%rbp)
+  402f6e:	jne    402f15 <dtls1_process_out_of_seq_message+0x16e>
+  402f70:	jmpq   4030bc <dtls1_process_out_of_seq_message+0x315>
+  402f75:	cmpq   $0x0,-0x20(%rbp)
+  402f7a:	je     402fb2 <dtls1_process_out_of_seq_message+0x20b>
+  402f7c:	mov    -0x140(%rbp),%rax
+  402f83:	mov    0x8(%rax),%rax
+  402f87:	cmp    -0x20(%rbp),%rax
+  402f8b:	jbe    402fb2 <dtls1_process_out_of_seq_message+0x20b>
+  402f8d:	mov    -0x148(%rbp),%rdx
+  402f94:	mov    -0x140(%rbp),%rcx
+  402f9b:	mov    -0x138(%rbp),%rax
+  402fa2:	mov    %rcx,%rsi
+  402fa5:	mov    %rax,%rdi
+  402fa8:	callq  4027fe <dtls1_reassemble_fragment>
+  402fad:	jmpq   4030f9 <dtls1_process_out_of_seq_message+0x352>
+  402fb2:	mov    -0x20(%rbp),%rax
+  402fb6:	mov    $0x0,%esi
+  402fbb:	mov    %rax,%rdi
+  402fbe:	callq  40190c <dtls1_hm_fragment_new>
+  402fc3:	mov    %rax,-0x10(%rbp)
+  402fc7:	cmpq   $0x0,-0x10(%rbp)
+  402fcc:	jne    402fd3 <dtls1_process_out_of_seq_message+0x22c>
+  402fce:	jmpq   4030c3 <dtls1_process_out_of_seq_message+0x31c>
+  402fd3:	mov    -0x10(%rbp),%rax
+  402fd7:	mov    -0x140(%rbp),%rcx
+  402fde:	mov    $0x58,%edx
+  402fe3:	mov    %rcx,%rsi
+  402fe6:	mov    %rax,%rdi
+  402fe9:	callq  401620 <memcpy@plt>
+  402fee:	cmpq   $0x0,-0x20(%rbp)
+  402ff3:	je     403042 <dtls1_process_out_of_seq_message+0x29b>
+  402ff5:	mov    -0x138(%rbp),%rax
+  402ffc:	mov    0x8(%rax),%rax
+  403000:	mov    0x68(%rax),%rax
+  403004:	mov    -0x20(%rbp),%rdx
+  403008:	mov    %edx,%ecx
+  40300a:	mov    -0x10(%rbp),%rdx
+  40300e:	mov    0x58(%rdx),%rdx
+  403012:	mov    -0x138(%rbp),%rdi
+  403019:	mov    $0x0,%r8d
+  40301f:	mov    $0x16,%esi
+  403024:	callq  *%rax
+  403026:	mov    %eax,-0x4(%rbp)
+  403029:	cmpl   $0x0,-0x4(%rbp)
+  40302d:	jle    4030c3 <dtls1_process_out_of_seq_message+0x31c>
+  403033:	mov    -0x4(%rbp),%eax
+  403036:	cltq   
+  403038:	cmp    -0x20(%rbp),%rax
+  40303c:	jne    4030c3 <dtls1_process_out_of_seq_message+0x31c>
+  403042:	lea    -0x30(%rbp),%rax
+  403046:	mov    $0x8,%edx
+  40304b:	mov    $0x0,%esi
+  403050:	mov    %rax,%rdi
+  403053:	callq  401590 <memset@plt>
+  403058:	mov    -0x140(%rbp),%rax
+  40305f:	movzwl 0x10(%rax),%eax
+  403063:	shr    $0x8,%ax
+  403067:	mov    %al,-0x2a(%rbp)
+  40306a:	mov    -0x140(%rbp),%rax
+  403071:	movzwl 0x10(%rax),%eax
+  403075:	mov    %al,-0x29(%rbp)
+  403078:	mov    -0x10(%rbp),%rdx
+  40307c:	lea    -0x30(%rbp),%rax
+  403080:	mov    %rdx,%rsi
+  403083:	mov    %rax,%rdi
+  403086:	callq  401680 <pitem_new@plt>
+  40308b:	mov    %rax,-0x18(%rbp)
+  40308f:	cmpq   $0x0,-0x18(%rbp)
+  403094:	jne    403098 <dtls1_process_out_of_seq_message+0x2f1>
+  403096:	jmp    4030c3 <dtls1_process_out_of_seq_message+0x31c>
+  403098:	mov    -0x138(%rbp),%rax
+  40309f:	mov    0x88(%rax),%rax
+  4030a6:	mov    0x260(%rax),%rax
+  4030ad:	mov    -0x18(%rbp),%rdx
+  4030b1:	mov    %rdx,%rsi
+  4030b4:	mov    %rax,%rdi
+  4030b7:	callq  4016e0 <pqueue_insert@plt>
+  4030bc:	mov    $0xfffffffd,%eax
+  4030c1:	jmp    4030f9 <dtls1_process_out_of_seq_message+0x352>
+  4030c3:	cmpq   $0x0,-0x10(%rbp)
+  4030c8:	je     4030d6 <dtls1_process_out_of_seq_message+0x32f>
+  4030ca:	mov    -0x10(%rbp),%rax
+  4030ce:	mov    %rax,%rdi
+  4030d1:	callq  401a2b <dtls1_hm_fragment_free>
+  4030d6:	cmpq   $0x0,-0x18(%rbp)
+  4030db:	je     4030e9 <dtls1_process_out_of_seq_message+0x342>
+  4030dd:	mov    -0x18(%rbp),%rax
+  4030e1:	mov    %rax,%rdi
+  4030e4:	callq  4016c0 <CRYPTO_free@plt>
+  4030e9:	mov    -0x148(%rbp),%rax
+  4030f0:	movl   $0x0,(%rax)
+  4030f6:	mov    -0x4(%rbp),%eax
+  4030f9:	leaveq 
+  4030fa:	retq   
+
+00000000004030fb <dtls1_get_message_fragment>:
+  4030fb:	push   %rbp
+  4030fc:	mov    %rsp,%rbp
+  4030ff:	sub    $0xd0,%rsp
+  403106:	mov    %rdi,-0xa8(%rbp)
+  40310d:	mov    %esi,-0xac(%rbp)
+  403113:	mov    %edx,-0xb0(%rbp)
+  403119:	mov    %rcx,-0xb8(%rbp)
+  403120:	mov    %r8,-0xc0(%rbp)
+  403127:	mov    -0xc0(%rbp),%rdx
+  40312e:	mov    -0xb8(%rbp),%rcx
+  403135:	mov    -0xa8(%rbp),%rax
+  40313c:	mov    %rcx,%rsi
+  40313f:	mov    %rax,%rdi
+  403142:	callq  402680 <dtls1_retrieve_buffered_fragment>
+  403147:	cltq   
+  403149:	mov    %rax,-0x10(%rbp)
+  40314d:	cmpq   $0x0,-0x10(%rbp)
+  403152:	jne    403161 <dtls1_get_message_fragment+0x66>
+  403154:	mov    -0xc0(%rbp),%rax
+  40315b:	mov    (%rax),%eax
+  40315d:	test   %eax,%eax
+  40315f:	je     403187 <dtls1_get_message_fragment+0x8c>
+  403161:	mov    -0xc0(%rbp),%rax
+  403168:	mov    (%rax),%eax
+  40316a:	test   %eax,%eax
+  40316c:	je     40317e <dtls1_get_message_fragment+0x83>
+  40316e:	mov    -0x10(%rbp),%rax
+  403172:	mov    %eax,%edx
+  403174:	mov    -0xa8(%rbp),%rax
+  40317b:	mov    %edx,0x60(%rax)
+  40317e:	mov    -0x10(%rbp),%rax
+  403182:	jmpq   40356d <dtls1_get_message_fragment+0x472>
+  403187:	mov    -0xa8(%rbp),%rax
+  40318e:	mov    0x8(%rax),%rax
+  403192:	mov    0x68(%rax),%rax
+  403196:	lea    -0x40(%rbp),%rdx
+  40319a:	mov    -0xa8(%rbp),%rdi
+  4031a1:	mov    $0x0,%r8d
+  4031a7:	mov    $0xc,%ecx
+  4031ac:	mov    $0x16,%esi
+  4031b1:	callq  *%rax
+  4031b3:	mov    %eax,-0x4(%rbp)
+  4031b6:	cmpl   $0x0,-0x4(%rbp)
+  4031ba:	jg     4031e1 <dtls1_get_message_fragment+0xe6>
+  4031bc:	mov    -0xa8(%rbp),%rax
+  4031c3:	movl   $0x3,0x28(%rax)
+  4031ca:	mov    -0xc0(%rbp),%rax
+  4031d1:	movl   $0x0,(%rax)
+  4031d7:	mov    -0x4(%rbp),%eax
+  4031da:	cltq   
+  4031dc:	jmpq   40356d <dtls1_get_message_fragment+0x472>
+  4031e1:	cmpl   $0xc,-0x4(%rbp)
+  4031e5:	je     403212 <dtls1_get_message_fragment+0x117>
+  4031e7:	movl   $0xa,-0x8(%rbp)
+  4031ee:	mov    $0x32c,%r8d
+  4031f4:	mov    $0x404ed0,%ecx
+  4031f9:	mov    $0xf4,%edx
+  4031fe:	mov    $0xfd,%esi
+  403203:	mov    $0x14,%edi
+  403208:	callq  4016a0 <ERR_put_error@plt>
+  40320d:	jmpq   403534 <dtls1_get_message_fragment+0x439>
+  403212:	lea    -0xa0(%rbp),%rdx
+  403219:	lea    -0x40(%rbp),%rax
+  40321d:	mov    %rdx,%rsi
+  403220:	mov    %rax,%rdi
+  403223:	callq  4047a4 <dtls1_get_message_header>
+  403228:	movzwl -0x90(%rbp),%edx
+  40322f:	mov    -0xa8(%rbp),%rax
+  403236:	mov    0x88(%rax),%rax
+  40323d:	movzwl 0x234(%rax),%eax
+  403244:	cmp    %ax,%dx
+  403247:	je     403295 <dtls1_get_message_fragment+0x19a>
+  403249:	mov    -0xa8(%rbp),%rax
+  403250:	mov    0x88(%rax),%rax
+  403257:	mov    0x378(%rax),%eax
+  40325d:	test   %eax,%eax
+  40325f:	je     40326e <dtls1_get_message_fragment+0x173>
+  403261:	movzwl -0x90(%rbp),%eax
+  403268:	cmp    $0x1,%ax
+  40326c:	je     403295 <dtls1_get_message_fragment+0x19a>
+  40326e:	mov    -0xc0(%rbp),%rdx
+  403275:	lea    -0xa0(%rbp),%rcx
+  40327c:	mov    -0xa8(%rbp),%rax
+  403283:	mov    %rcx,%rsi
+  403286:	mov    %rax,%rdi
+  403289:	callq  402da7 <dtls1_process_out_of_seq_message>
+  40328e:	cltq   
+  403290:	jmpq   40356d <dtls1_get_message_fragment+0x472>
+  403295:	mov    -0x98(%rbp),%rax
+  40329c:	mov    %rax,-0x18(%rbp)
+  4032a0:	mov    -0x88(%rbp),%rax
+  4032a7:	mov    %rax,-0x20(%rbp)
+  4032ab:	mov    -0x80(%rbp),%rax
+  4032af:	mov    %rax,-0x10(%rbp)
+  4032b3:	cmpq   $0x0,-0x10(%rbp)
+  4032b8:	je     4032eb <dtls1_get_message_fragment+0x1f0>
+  4032ba:	mov    -0x10(%rbp),%rax
+  4032be:	cmp    -0x18(%rbp),%rax
+  4032c2:	jae    4032eb <dtls1_get_message_fragment+0x1f0>
+  4032c4:	mov    -0xc0(%rbp),%rdx
+  4032cb:	lea    -0xa0(%rbp),%rcx
+  4032d2:	mov    -0xa8(%rbp),%rax
+  4032d9:	mov    %rcx,%rsi
+  4032dc:	mov    %rax,%rdi
+  4032df:	callq  4027fe <dtls1_reassemble_fragment>
+  4032e4:	cltq   
+  4032e6:	jmpq   40356d <dtls1_get_message_fragment+0x472>
+  4032eb:	mov    -0xa8(%rbp),%rax
+  4032f2:	mov    0x38(%rax),%eax
+  4032f5:	test   %eax,%eax
+  4032f7:	jne    403414 <dtls1_get_message_fragment+0x319>
+  4032fd:	mov    -0xa8(%rbp),%rax
+  403304:	mov    0x88(%rax),%rax
+  40330b:	mov    0x2f8(%rax),%rax
+  403312:	test   %rax,%rax
+  403315:	jne    403414 <dtls1_get_message_fragment+0x319>
+  40331b:	movzbl -0x40(%rbp),%eax
+  40331f:	test   %al,%al
+  403321:	jne    403414 <dtls1_get_message_fragment+0x319>
+  403327:	movzbl -0x3f(%rbp),%eax
+  40332b:	test   %al,%al
+  40332d:	jne    4033e9 <dtls1_get_message_fragment+0x2ee>
+  403333:	movzbl -0x3e(%rbp),%eax
+  403337:	test   %al,%al
+  403339:	jne    4033e9 <dtls1_get_message_fragment+0x2ee>
+  40333f:	movzbl -0x3d(%rbp),%eax
+  403343:	test   %al,%al
+  403345:	jne    4033e9 <dtls1_get_message_fragment+0x2ee>
+  40334b:	mov    -0xa8(%rbp),%rax
+  403352:	mov    0x98(%rax),%rax
+  403359:	test   %rax,%rax
+  40335c:	je     4033aa <dtls1_get_message_fragment+0x2af>
+  40335e:	mov    -0xa8(%rbp),%rax
+  403365:	mov    0x98(%rax),%rax
+  40336c:	mov    -0xa8(%rbp),%rdx
+  403373:	mov    0xa0(%rdx),%rcx
+  40337a:	mov    -0xa8(%rbp),%rdx
+  403381:	mov    (%rdx),%esi
+  403383:	mov    -0xa8(%rbp),%rdi
+  40338a:	lea    -0x40(%rbp),%rdx
+  40338e:	mov    %rcx,(%rsp)
+  403392:	mov    %rdi,%r9
+  403395:	mov    $0xc,%r8d
+  40339b:	mov    %rdx,%rcx
+  40339e:	mov    $0x16,%edx
+  4033a3:	mov    $0x0,%edi
+  4033a8:	callq  *%rax
+  4033aa:	mov    -0xa8(%rbp),%rax
+  4033b1:	movl   $0x0,0x60(%rax)
+  4033b8:	mov    -0xc0(%rbp),%rdi
+  4033bf:	mov    -0xb8(%rbp),%rcx
+  4033c6:	mov    -0xb0(%rbp),%edx
+  4033cc:	mov    -0xac(%rbp),%esi
+  4033d2:	mov    -0xa8(%rbp),%rax
+  4033d9:	mov    %rdi,%r8
+  4033dc:	mov    %rax,%rdi
+  4033df:	callq  4030fb <dtls1_get_message_fragment>
+  4033e4:	jmpq   40356d <dtls1_get_message_fragment+0x472>
+  4033e9:	movl   $0xa,-0x8(%rbp)
+  4033f0:	mov    $0x358,%r8d
+  4033f6:	mov    $0x404ed0,%ecx
+  4033fb:	mov    $0xf4,%edx
+  403400:	mov    $0xfd,%esi
+  403405:	mov    $0x14,%edi
+  40340a:	callq  4016a0 <ERR_put_error@plt>
+  40340f:	jmpq   403534 <dtls1_get_message_fragment+0x439>
+  403414:	mov    -0xb8(%rbp),%rax
+  40341b:	mov    %eax,%edx
+  40341d:	lea    -0xa0(%rbp),%rcx
+  403424:	mov    -0xa8(%rbp),%rax
+  40342b:	mov    %rcx,%rsi
+  40342e:	mov    %rax,%rdi
+  403431:	callq  4024ae <dtls1_preprocess_fragment>
+  403436:	mov    %eax,-0x8(%rbp)
+  403439:	cmpl   $0x0,-0x8(%rbp)
+  40343d:	je     403444 <dtls1_get_message_fragment+0x349>
+  40343f:	jmpq   403534 <dtls1_get_message_fragment+0x439>
+  403444:	mov    -0xa8(%rbp),%rax
+  40344b:	mov    -0xb0(%rbp),%edx
+  403451:	mov    %edx,0x48(%rax)
+  403454:	cmpq   $0x0,-0x10(%rbp)
+  403459:	je     4034d9 <dtls1_get_message_fragment+0x3de>
+  40345b:	mov    -0xa8(%rbp),%rax
+  403462:	mov    0x50(%rax),%rax
+  403466:	mov    0x8(%rax),%rax
+  40346a:	add    $0xc,%rax
+  40346e:	mov    %rax,-0x28(%rbp)
+  403472:	mov    -0xa8(%rbp),%rax
+  403479:	mov    0x8(%rax),%rax
+  40347d:	mov    0x68(%rax),%rax
+  403481:	mov    -0x10(%rbp),%rdx
+  403485:	mov    -0x20(%rbp),%rcx
+  403489:	mov    -0x28(%rbp),%rsi
+  40348d:	add    %rcx,%rsi
+  403490:	mov    -0xa8(%rbp),%rdi
+  403497:	mov    $0x0,%r8d
+  40349d:	mov    %edx,%ecx
+  40349f:	mov    %rsi,%rdx
+  4034a2:	mov    $0x16,%esi
+  4034a7:	callq  *%rax
+  4034a9:	mov    %eax,-0x4(%rbp)
+  4034ac:	cmpl   $0x0,-0x4(%rbp)
+  4034b0:	jg     4034d7 <dtls1_get_message_fragment+0x3dc>
+  4034b2:	mov    -0xa8(%rbp),%rax
+  4034b9:	movl   $0x3,0x28(%rax)
+  4034c0:	mov    -0xc0(%rbp),%rax
+  4034c7:	movl   $0x0,(%rax)
+  4034cd:	mov    -0x4(%rbp),%eax
+  4034d0:	cltq   
+  4034d2:	jmpq   40356d <dtls1_get_message_fragment+0x472>
+  4034d7:	jmp    4034e0 <dtls1_get_message_fragment+0x3e5>
+  4034d9:	movl   $0x0,-0x4(%rbp)
+  4034e0:	mov    -0x10(%rbp),%rax
+  4034e4:	cmp    -0x4(%rbp),%eax
+  4034e7:	je     403511 <dtls1_get_message_fragment+0x416>
+  4034e9:	movl   $0x2f,-0x8(%rbp)
+  4034f0:	mov    $0x379,%r8d
+  4034f6:	mov    $0x404ed0,%ecx
+  4034fb:	mov    $0x2f,%edx
+  403500:	mov    $0xfd,%esi
+  403505:	mov    $0x14,%edi
+  40350a:	callq  4016a0 <ERR_put_error@plt>
+  40350f:	jmp    403534 <dtls1_get_message_fragment+0x439>
+  403511:	mov    -0xc0(%rbp),%rax
+  403518:	movl   $0x1,(%rax)
+  40351e:	mov    -0x10(%rbp),%rax
+  403522:	mov    %eax,%edx
+  403524:	mov    -0xa8(%rbp),%rax
+  40352b:	mov    %edx,0x60(%rax)
+  40352e:	mov    -0x10(%rbp),%rax
+  403532:	jmp    40356d <dtls1_get_message_fragment+0x472>
+  403534:	mov    -0x8(%rbp),%edx
+  403537:	mov    -0xa8(%rbp),%rax
+  40353e:	mov    $0x2,%esi
+  403543:	mov    %rax,%rdi
+  403546:	callq  401690 <ssl3_send_alert@plt>
+  40354b:	mov    -0xa8(%rbp),%rax
+  403552:	movl   $0x0,0x60(%rax)
+  403559:	mov    -0xc0(%rbp),%rax
+  403560:	movl   $0x0,(%rax)
+  403566:	mov    $0xffffffffffffffff,%rax
+  40356d:	leaveq 
+  40356e:	retq   
+
+000000000040356f <dtls1_send_finished>:
+  40356f:	push   %rbp
+  403570:	mov    %rsp,%rbp
+  403573:	sub    $0x40,%rsp
+  403577:	mov    %rdi,-0x28(%rbp)
+  40357b:	mov    %esi,-0x2c(%rbp)
+  40357e:	mov    %edx,-0x30(%rbp)
+  403581:	mov    %rcx,-0x38(%rbp)
+  403585:	mov    %r8d,-0x3c(%rbp)
+  403589:	mov    -0x28(%rbp),%rax
+  40358d:	mov    0x48(%rax),%eax
+  403590:	cmp    -0x2c(%rbp),%eax
+  403593:	jne    40376c <dtls1_send_finished+0x1fd>
+  403599:	mov    -0x28(%rbp),%rax
+  40359d:	mov    0x50(%rax),%rax
+  4035a1:	mov    0x8(%rax),%rax
+  4035a5:	mov    %rax,-0x8(%rbp)
+  4035a9:	mov    -0x8(%rbp),%rax
+  4035ad:	add    $0xc,%rax
+  4035b1:	mov    %rax,-0x10(%rbp)
+  4035b5:	mov    -0x28(%rbp),%rax
+  4035b9:	mov    0x8(%rax),%rax
+  4035bd:	mov    0xc8(%rax),%rax
+  4035c4:	mov    0x28(%rax),%rax
+  4035c8:	mov    -0x28(%rbp),%rdx
+  4035cc:	mov    0x80(%rdx),%rdx
+  4035d3:	lea    0x290(%rdx),%rcx
+  4035da:	mov    -0x3c(%rbp),%edx
+  4035dd:	mov    -0x38(%rbp),%rsi
+  4035e1:	mov    -0x28(%rbp),%rdi
+  4035e5:	callq  *%rax
+  4035e7:	mov    %eax,-0x14(%rbp)
+  4035ea:	mov    -0x28(%rbp),%rax
+  4035ee:	mov    0x80(%rax),%rax
+  4035f5:	mov    -0x14(%rbp),%edx
+  4035f8:	mov    %edx,0x310(%rax)
+  4035fe:	mov    -0x14(%rbp),%eax
+  403601:	movslq %eax,%rdx
+  403604:	mov    -0x28(%rbp),%rax
+  403608:	mov    0x80(%rax),%rax
+  40360f:	lea    0x290(%rax),%rcx
+  403616:	mov    -0x10(%rbp),%rax
+  40361a:	mov    %rcx,%rsi
+  40361d:	mov    %rax,%rdi
+  403620:	callq  401620 <memcpy@plt>
+  403625:	mov    -0x14(%rbp),%eax
+  403628:	cltq   
+  40362a:	add    %rax,-0x10(%rbp)
+  40362e:	mov    -0x14(%rbp),%eax
+  403631:	cltq   
+  403633:	mov    %rax,-0x20(%rbp)
+  403637:	mov    -0x28(%rbp),%rax
+  40363b:	mov    0x4(%rax),%eax
+  40363e:	cmp    $0x1000,%eax
+  403643:	jne    4036a9 <dtls1_send_finished+0x13a>
+  403645:	cmpl   $0x40,-0x14(%rbp)
+  403649:	jle    40365f <dtls1_send_finished+0xf0>
+  40364b:	mov    $0x404fb9,%edx
+  403650:	mov    $0x3a5,%esi
+  403655:	mov    $0x404ed0,%edi
+  40365a:	callq  401650 <OpenSSLDie@plt>
+  40365f:	mov    -0x14(%rbp),%eax
+  403662:	cltq   
+  403664:	mov    -0x28(%rbp),%rdx
+  403668:	mov    0x80(%rdx),%rdx
+  40366f:	lea    0x290(%rdx),%rsi
+  403676:	mov    -0x28(%rbp),%rdx
+  40367a:	mov    0x80(%rdx),%rdx
+  403681:	lea    0x420(%rdx),%rcx
+  403688:	mov    %rax,%rdx
+  40368b:	mov    %rcx,%rdi
+  40368e:	callq  401620 <memcpy@plt>
+  403693:	mov    -0x28(%rbp),%rax
+  403697:	mov    0x80(%rax),%rax
+  40369e:	mov    -0x14(%rbp),%edx
+  4036a1:	mov    %dl,0x460(%rax)
+  4036a7:	jmp    40370b <dtls1_send_finished+0x19c>
+  4036a9:	cmpl   $0x40,-0x14(%rbp)
+  4036ad:	jle    4036c3 <dtls1_send_finished+0x154>
+  4036af:	mov    $0x404fb9,%edx
+  4036b4:	mov    $0x3ac,%esi
+  4036b9:	mov    $0x404ed0,%edi
+  4036be:	callq  401650 <OpenSSLDie@plt>
+  4036c3:	mov    -0x14(%rbp),%eax
+  4036c6:	cltq   
+  4036c8:	mov    -0x28(%rbp),%rdx
+  4036cc:	mov    0x80(%rdx),%rdx
+  4036d3:	lea    0x290(%rdx),%rsi
+  4036da:	mov    -0x28(%rbp),%rdx
+  4036de:	mov    0x80(%rdx),%rdx
+  4036e5:	lea    0x461(%rdx),%rcx
+  4036ec:	mov    %rax,%rdx
+  4036ef:	mov    %rcx,%rdi
+  4036f2:	callq  401620 <memcpy@plt>
+  4036f7:	mov    -0x28(%rbp),%rax
+  4036fb:	mov    0x80(%rax),%rax
+  403702:	mov    -0x14(%rbp),%edx
+  403705:	mov    %dl,0x4a1(%rax)
+  40370b:	mov    -0x20(%rbp),%rcx
+  40370f:	mov    -0x20(%rbp),%rdx
+  403713:	mov    -0x8(%rbp),%rsi
+  403717:	mov    -0x28(%rbp),%rax
+  40371b:	mov    %rcx,%r9
+  40371e:	mov    $0x0,%r8d
+  403724:	mov    %rdx,%rcx
+  403727:	mov    $0x14,%edx
+  40372c:	mov    %rax,%rdi
+  40372f:	callq  4044b9 <dtls1_set_message_header>
+  403734:	mov    %rax,-0x8(%rbp)
+  403738:	mov    -0x20(%rbp),%rax
+  40373c:	lea    0xc(%rax),%edx
+  40373f:	mov    -0x28(%rbp),%rax
+  403743:	mov    %edx,0x60(%rax)
+  403746:	mov    -0x28(%rbp),%rax
+  40374a:	movl   $0x0,0x64(%rax)
+  403751:	mov    -0x28(%rbp),%rax
+  403755:	mov    $0x0,%esi
+  40375a:	mov    %rax,%rdi
+  40375d:	callq  403dfd <dtls1_buffer_message>
+  403762:	mov    -0x28(%rbp),%rax
+  403766:	mov    -0x30(%rbp),%edx
+  403769:	mov    %edx,0x48(%rax)
+  40376c:	mov    -0x28(%rbp),%rax
+  403770:	mov    $0x16,%esi
+  403775:	mov    %rax,%rdi
+  403778:	callq  401aaa <dtls1_do_write>
+  40377d:	leaveq 
+  40377e:	retq   
+
+000000000040377f <dtls1_send_change_cipher_spec>:
+  40377f:	push   %rbp
+  403780:	mov    %rsp,%rbp
+  403783:	sub    $0x20,%rsp
+  403787:	mov    %rdi,-0x18(%rbp)
+  40378b:	mov    %esi,-0x1c(%rbp)
+  40378e:	mov    %edx,-0x20(%rbp)
+  403791:	mov    -0x18(%rbp),%rax
+  403795:	mov    0x48(%rax),%eax
+  403798:	cmp    -0x1c(%rbp),%eax
+  40379b:	jne    4038c7 <dtls1_send_change_cipher_spec+0x148>
+  4037a1:	mov    -0x18(%rbp),%rax
+  4037a5:	mov    0x50(%rax),%rax
+  4037a9:	mov    0x8(%rax),%rax
+  4037ad:	mov    %rax,-0x8(%rbp)
+  4037b1:	mov    -0x8(%rbp),%rax
+  4037b5:	lea    0x1(%rax),%rdx
+  4037b9:	mov    %rdx,-0x8(%rbp)
+  4037bd:	movb   $0x1,(%rax)
+  4037c0:	mov    -0x18(%rbp),%rax
+  4037c4:	mov    0x88(%rax),%rax
+  4037cb:	mov    -0x18(%rbp),%rdx
+  4037cf:	mov    0x88(%rdx),%rdx
+  4037d6:	movzwl 0x232(%rdx),%edx
+  4037dd:	mov    %dx,0x230(%rax)
+  4037e4:	mov    -0x18(%rbp),%rax
+  4037e8:	movl   $0x1,0x60(%rax)
+  4037ef:	mov    -0x18(%rbp),%rax
+  4037f3:	mov    (%rax),%eax
+  4037f5:	cmp    $0x100,%eax
+  4037fa:	jne    403868 <dtls1_send_change_cipher_spec+0xe9>
+  4037fc:	mov    -0x18(%rbp),%rax
+  403800:	mov    0x88(%rax),%rax
+  403807:	movzwl 0x232(%rax),%edx
+  40380e:	add    $0x1,%edx
+  403811:	mov    %dx,0x232(%rax)
+  403818:	mov    -0x18(%rbp),%rax
+  40381c:	mov    0x88(%rax),%rax
+  403823:	movzwl 0x230(%rax),%eax
+  40382a:	shr    $0x8,%ax
+  40382e:	mov    %eax,%edx
+  403830:	mov    -0x8(%rbp),%rax
+  403834:	mov    %dl,(%rax)
+  403836:	mov    -0x8(%rbp),%rax
+  40383a:	lea    0x1(%rax),%rdx
+  40383e:	mov    -0x18(%rbp),%rax
+  403842:	mov    0x88(%rax),%rax
+  403849:	movzwl 0x230(%rax),%eax
+  403850:	mov    %al,(%rdx)
+  403852:	addq   $0x2,-0x8(%rbp)
+  403857:	mov    -0x18(%rbp),%rax
+  40385b:	mov    0x60(%rax),%eax
+  40385e:	lea    0x2(%rax),%edx
+  403861:	mov    -0x18(%rbp),%rax
+  403865:	mov    %edx,0x60(%rax)
+  403868:	mov    -0x18(%rbp),%rax
+  40386c:	movl   $0x0,0x64(%rax)
+  403873:	mov    -0x18(%rbp),%rax
+  403877:	mov    0x88(%rax),%rax
+  40387e:	movzwl 0x230(%rax),%eax
+  403885:	movzwl %ax,%edx
+  403888:	mov    -0x18(%rbp),%rax
+  40388c:	mov    $0x0,%r9d
+  403892:	mov    $0x0,%r8d
+  403898:	mov    %edx,%ecx
+  40389a:	mov    $0x0,%edx
+  40389f:	mov    $0x1,%esi
+  4038a4:	mov    %rax,%rdi
+  4038a7:	callq  404578 <dtls1_set_message_header_int>
+  4038ac:	mov    -0x18(%rbp),%rax
+  4038b0:	mov    $0x1,%esi
+  4038b5:	mov    %rax,%rdi
+  4038b8:	callq  403dfd <dtls1_buffer_message>
+  4038bd:	mov    -0x18(%rbp),%rax
+  4038c1:	mov    -0x20(%rbp),%edx
+  4038c4:	mov    %edx,0x48(%rax)
+  4038c7:	mov    -0x18(%rbp),%rax
+  4038cb:	mov    $0x14,%esi
+  4038d0:	mov    %rax,%rdi
+  4038d3:	callq  401aaa <dtls1_do_write>
+  4038d8:	leaveq 
+  4038d9:	retq   
+
+00000000004038da <dtls1_add_cert_to_buf>:
+  4038da:	push   %rbp
+  4038db:	mov    %rsp,%rbp
+  4038de:	sub    $0x30,%rsp
+  4038e2:	mov    %rdi,-0x18(%rbp)
+  4038e6:	mov    %rsi,-0x20(%rbp)
+  4038ea:	mov    %rdx,-0x28(%rbp)
+  4038ee:	mov    -0x28(%rbp),%rax
+  4038f2:	mov    $0x0,%esi
+  4038f7:	mov    %rax,%rdi
+  4038fa:	callq  401780 <i2d_X509@plt>
+  4038ff:	mov    %eax,-0x4(%rbp)
+  403902:	mov    -0x20(%rbp),%rax
+  403906:	mov    (%rax),%rax
+  403909:	mov    %eax,%edx
+  40390b:	mov    -0x4(%rbp),%eax
+  40390e:	add    %edx,%eax
+  403910:	add    $0x3,%eax
+  403913:	movslq %eax,%rdx
+  403916:	mov    -0x18(%rbp),%rax
+  40391a:	mov    %rdx,%rsi
+  40391d:	mov    %rax,%rdi
+  403920:	callq  401640 <BUF_MEM_grow_clean@plt>
+  403925:	test   %eax,%eax
+  403927:	jne    40394f <dtls1_add_cert_to_buf+0x75>
+  403929:	mov    $0x3f7,%r8d
+  40392f:	mov    $0x404ed0,%ecx
+  403934:	mov    $0x7,%edx
+  403939:	mov    $0x127,%esi
+  40393e:	mov    $0x14,%edi
+  403943:	callq  4016a0 <ERR_put_error@plt>
+  403948:	mov    $0x0,%eax
+  40394d:	jmp    4039cb <dtls1_add_cert_to_buf+0xf1>
+  40394f:	mov    -0x18(%rbp),%rax
+  403953:	mov    0x8(%rax),%rdx
+  403957:	mov    -0x20(%rbp),%rax
+  40395b:	mov    (%rax),%rax
+  40395e:	add    %rdx,%rax
+  403961:	mov    %rax,-0x10(%rbp)
+  403965:	mov    -0x10(%rbp),%rax
+  403969:	mov    -0x4(%rbp),%edx
+  40396c:	sar    $0x10,%edx
+  40396f:	mov    %dl,(%rax)
+  403971:	mov    -0x10(%rbp),%rax
+  403975:	lea    0x1(%rax),%rdx
+  403979:	mov    -0x4(%rbp),%eax
+  40397c:	sar    $0x8,%eax
+  40397f:	mov    %al,(%rdx)
+  403981:	mov    -0x10(%rbp),%rax
+  403985:	lea    0x2(%rax),%rdx
+  403989:	mov    -0x4(%rbp),%eax
+  40398c:	mov    %al,(%rdx)
+  40398e:	mov    -0x10(%rbp),%rax
+  403992:	add    $0x3,%rax
+  403996:	mov    %rax,-0x10(%rbp)
+  40399a:	lea    -0x10(%rbp),%rdx
+  40399e:	mov    -0x28(%rbp),%rax
+  4039a2:	mov    %rdx,%rsi
+  4039a5:	mov    %rax,%rdi
+  4039a8:	callq  401780 <i2d_X509@plt>
+  4039ad:	mov    -0x20(%rbp),%rax
+  4039b1:	mov    (%rax),%rdx
+  4039b4:	mov    -0x4(%rbp),%eax
+  4039b7:	add    $0x3,%eax
+  4039ba:	cltq   
+  4039bc:	add    %rax,%rdx
+  4039bf:	mov    -0x20(%rbp),%rax
+  4039c3:	mov    %rdx,(%rax)
+  4039c6:	mov    $0x1,%eax
+  4039cb:	leaveq 
+  4039cc:	retq   
+
+00000000004039cd <dtls1_output_cert_chain>:
+  4039cd:	push   %rbp
+  4039ce:	mov    %rsp,%rbp
+  4039d1:	sub    $0x130,%rsp
+  4039d8:	mov    %rdi,-0x128(%rbp)
+  4039df:	mov    %rsi,-0x130(%rbp)
+  4039e6:	movq   $0xf,-0x20(%rbp)
+  4039ee:	mov    -0x128(%rbp),%rax
+  4039f5:	mov    0x50(%rax),%rax
+  4039f9:	mov    %rax,-0x10(%rbp)
+  4039fd:	mov    -0x10(%rbp),%rax
+  403a01:	mov    $0xa,%esi
+  403a06:	mov    %rax,%rdi
+  403a09:	callq  401640 <BUF_MEM_grow_clean@plt>
+  403a0e:	test   %eax,%eax
+  403a10:	jne    403a3b <dtls1_output_cert_chain+0x6e>
+  403a12:	mov    $0x40c,%r8d
+  403a18:	mov    $0x404ed0,%ecx
+  403a1d:	mov    $0x7,%edx
+  403a22:	mov    $0xff,%esi
+  403a27:	mov    $0x14,%edi
+  403a2c:	callq  4016a0 <ERR_put_error@plt>
+  403a31:	mov    $0x0,%eax
+  403a36:	jmpq   403c5c <dtls1_output_cert_chain+0x28f>
+  403a3b:	cmpq   $0x0,-0x130(%rbp)
+  403a43:	je     403b33 <dtls1_output_cert_chain+0x166>
+  403a49:	mov    -0x128(%rbp),%rax
+  403a50:	mov    0x178(%rax),%rax
+  403a57:	mov    0x18(%rax),%rsi
+  403a5b:	mov    -0x130(%rbp),%rdx
+  403a62:	lea    -0x120(%rbp),%rax
+  403a69:	mov    $0x0,%ecx
+  403a6e:	mov    %rax,%rdi
+  403a71:	callq  401560 <X509_STORE_CTX_init@plt>
+  403a76:	test   %eax,%eax
+  403a78:	jne    403aa3 <dtls1_output_cert_chain+0xd6>
+  403a7a:	mov    $0x415,%r8d
+  403a80:	mov    $0x404ed0,%ecx
+  403a85:	mov    $0xb,%edx
+  403a8a:	mov    $0xff,%esi
+  403a8f:	mov    $0x14,%edi
+  403a94:	callq  4016a0 <ERR_put_error@plt>
+  403a99:	mov    $0x0,%eax
+  403a9e:	jmpq   403c5c <dtls1_output_cert_chain+0x28f>
+  403aa3:	lea    -0x120(%rbp),%rax
+  403aaa:	mov    %rax,%rdi
+  403aad:	callq  401570 <X509_verify_cert@plt>
+  403ab2:	callq  401530 <ERR_clear_error@plt>
+  403ab7:	movl   $0x0,-0x4(%rbp)
+  403abe:	jmp    403b13 <dtls1_output_cert_chain+0x146>
+  403ac0:	mov    -0x80(%rbp),%rax
+  403ac4:	mov    -0x4(%rbp),%edx
+  403ac7:	mov    %edx,%esi
+  403ac9:	mov    %rax,%rdi
+  403acc:	callq  401550 <sk_value@plt>
+  403ad1:	mov    %rax,-0x130(%rbp)
+  403ad8:	mov    -0x130(%rbp),%rdx
+  403adf:	lea    -0x20(%rbp),%rcx
+  403ae3:	mov    -0x10(%rbp),%rax
+  403ae7:	mov    %rcx,%rsi
+  403aea:	mov    %rax,%rdi
+  403aed:	callq  4038da <dtls1_add_cert_to_buf>
+  403af2:	test   %eax,%eax
+  403af4:	jne    403b0f <dtls1_output_cert_chain+0x142>
+  403af6:	lea    -0x120(%rbp),%rax
+  403afd:	mov    %rax,%rdi
+  403b00:	callq  401580 <X509_STORE_CTX_cleanup@plt>
+  403b05:	mov    $0x0,%eax
+  403b0a:	jmpq   403c5c <dtls1_output_cert_chain+0x28f>
+  403b0f:	addl   $0x1,-0x4(%rbp)
+  403b13:	mov    -0x80(%rbp),%rax
+  403b17:	mov    %rax,%rdi
+  403b1a:	callq  401720 <sk_num@plt>
+  403b1f:	cmp    -0x4(%rbp),%eax
+  403b22:	jg     403ac0 <dtls1_output_cert_chain+0xf3>
+  403b24:	lea    -0x120(%rbp),%rax
+  403b2b:	mov    %rax,%rdi
+  403b2e:	callq  401580 <X509_STORE_CTX_cleanup@plt>
+  403b33:	movl   $0x0,-0x4(%rbp)
+  403b3a:	jmp    403b91 <dtls1_output_cert_chain+0x1c4>
+  403b3c:	mov    -0x128(%rbp),%rax
+  403b43:	mov    0x178(%rax),%rax
+  403b4a:	mov    0xf8(%rax),%rax
+  403b51:	mov    -0x4(%rbp),%edx
+  403b54:	mov    %edx,%esi
+  403b56:	mov    %rax,%rdi
+  403b59:	callq  401550 <sk_value@plt>
+  403b5e:	mov    %rax,-0x130(%rbp)
+  403b65:	mov    -0x130(%rbp),%rdx
+  403b6c:	lea    -0x20(%rbp),%rcx
+  403b70:	mov    -0x10(%rbp),%rax
+  403b74:	mov    %rcx,%rsi
+  403b77:	mov    %rax,%rdi
+  403b7a:	callq  4038da <dtls1_add_cert_to_buf>
+  403b7f:	test   %eax,%eax
+  403b81:	jne    403b8d <dtls1_output_cert_chain+0x1c0>
+  403b83:	mov    $0x0,%eax
+  403b88:	jmpq   403c5c <dtls1_output_cert_chain+0x28f>
+  403b8d:	addl   $0x1,-0x4(%rbp)
+  403b91:	mov    -0x128(%rbp),%rax
+  403b98:	mov    0x178(%rax),%rax
+  403b9f:	mov    0xf8(%rax),%rax
+  403ba6:	mov    %rax,%rdi
+  403ba9:	callq  401720 <sk_num@plt>
+  403bae:	cmp    -0x4(%rbp),%eax
+  403bb1:	jg     403b3c <dtls1_output_cert_chain+0x16f>
+  403bb3:	mov    -0x20(%rbp),%rax
+  403bb7:	sub    $0xf,%rax
+  403bbb:	mov    %rax,-0x20(%rbp)
+  403bbf:	mov    -0x10(%rbp),%rax
+  403bc3:	mov    0x8(%rax),%rax
+  403bc7:	add    $0xc,%rax
+  403bcb:	mov    %rax,-0x18(%rbp)
+  403bcf:	mov    -0x20(%rbp),%rax
+  403bd3:	shr    $0x10,%rax
+  403bd7:	mov    %eax,%edx
+  403bd9:	mov    -0x18(%rbp),%rax
+  403bdd:	mov    %dl,(%rax)
+  403bdf:	mov    -0x18(%rbp),%rax
+  403be3:	lea    0x1(%rax),%rdx
+  403be7:	mov    -0x20(%rbp),%rax
+  403beb:	shr    $0x8,%rax
+  403bef:	mov    %al,(%rdx)
+  403bf1:	mov    -0x18(%rbp),%rax
+  403bf5:	lea    0x2(%rax),%rdx
+  403bf9:	mov    -0x20(%rbp),%rax
+  403bfd:	mov    %al,(%rdx)
+  403bff:	addq   $0x3,-0x18(%rbp)
+  403c04:	mov    -0x20(%rbp),%rax
+  403c08:	add    $0x3,%rax
+  403c0c:	mov    %rax,-0x20(%rbp)
+  403c10:	mov    -0x10(%rbp),%rax
+  403c14:	mov    0x8(%rax),%rax
+  403c18:	mov    %rax,-0x18(%rbp)
+  403c1c:	mov    -0x20(%rbp),%rcx
+  403c20:	mov    -0x20(%rbp),%rdx
+  403c24:	mov    -0x18(%rbp),%rsi
+  403c28:	mov    -0x128(%rbp),%rax
+  403c2f:	mov    %rcx,%r9
+  403c32:	mov    $0x0,%r8d
+  403c38:	mov    %rdx,%rcx
+  403c3b:	mov    $0xb,%edx
+  403c40:	mov    %rax,%rdi
+  403c43:	callq  4044b9 <dtls1_set_message_header>
+  403c48:	mov    %rax,-0x18(%rbp)
+  403c4c:	mov    -0x20(%rbp),%rax
+  403c50:	add    $0xc,%rax
+  403c54:	mov    %rax,-0x20(%rbp)
+  403c58:	mov    -0x20(%rbp),%rax
+  403c5c:	leaveq 
+  403c5d:	retq   
+
+0000000000403c5e <dtls1_read_failed>:
+  403c5e:	push   %rbp
+  403c5f:	mov    %rsp,%rbp
+  403c62:	sub    $0x10,%rsp
+  403c66:	mov    %rdi,-0x8(%rbp)
+  403c6a:	mov    %esi,-0xc(%rbp)
+  403c6d:	cmpl   $0x0,-0xc(%rbp)
+  403c71:	jle    403c9d <dtls1_read_failed+0x3f>
+  403c73:	mov    0x202536(%rip),%rax        # 6061b0 <__TMC_END__>
+  403c7a:	mov    $0x440,%ecx
+  403c7f:	mov    $0x404ed0,%edx
+  403c84:	mov    $0x404fce,%esi
+  403c89:	mov    %rax,%rdi
+  403c8c:	mov    $0x0,%eax
+  403c91:	callq  401710 <fprintf@plt>
+  403c96:	mov    $0x1,%eax
+  403c9b:	jmp    403cff <dtls1_read_failed+0xa1>
+  403c9d:	mov    -0x8(%rbp),%rax
+  403ca1:	mov    %rax,%rdi
+  403ca4:	callq  4016d0 <dtls1_is_timer_expired@plt>
+  403ca9:	test   %eax,%eax
+  403cab:	jne    403cb2 <dtls1_read_failed+0x54>
+  403cad:	mov    -0xc(%rbp),%eax
+  403cb0:	jmp    403cff <dtls1_read_failed+0xa1>
+  403cb2:	mov    -0x8(%rbp),%rax
+  403cb6:	mov    %rax,%rdi
+  403cb9:	callq  401750 <SSL_state@plt>
+  403cbe:	and    $0x3000,%eax
+  403cc3:	test   %eax,%eax
+  403cc5:	jne    403cf3 <dtls1_read_failed+0x95>
+  403cc7:	mov    -0x8(%rbp),%rax
+  403ccb:	mov    0x2a4(%rax),%eax
+  403cd1:	test   %eax,%eax
+  403cd3:	jne    403cf3 <dtls1_read_failed+0x95>
+  403cd5:	mov    -0x8(%rbp),%rax
+  403cd9:	mov    %rax,%rdi
+  403cdc:	callq  401760 <SSL_get_rbio@plt>
+  403ce1:	mov    $0x1,%esi
+  403ce6:	mov    %rax,%rdi
+  403ce9:	callq  4017b0 <BIO_set_flags@plt>
+  403cee:	mov    -0xc(%rbp),%eax
+  403cf1:	jmp    403cff <dtls1_read_failed+0xa1>
+  403cf3:	mov    -0x8(%rbp),%rax
+  403cf7:	mov    %rax,%rdi
+  403cfa:	callq  401790 <dtls1_handle_timeout@plt>
+  403cff:	leaveq 
+  403d00:	retq   
+
+0000000000403d01 <dtls1_get_queue_priority>:
+  403d01:	push   %rbp
+  403d02:	mov    %rsp,%rbp
+  403d05:	mov    %edi,%eax
+  403d07:	mov    %esi,-0x8(%rbp)
+  403d0a:	mov    %ax,-0x4(%rbp)
+  403d0e:	movzwl -0x4(%rbp),%eax
+  403d12:	add    %eax,%eax
+  403d14:	sub    -0x8(%rbp),%eax
+  403d17:	pop    %rbp
+  403d18:	retq   
+
+0000000000403d19 <dtls1_retransmit_buffered_messages>:
+  403d19:	push   %rbp
+  403d1a:	mov    %rsp,%rbp
+  403d1d:	sub    $0x40,%rsp
+  403d21:	mov    %rdi,-0x38(%rbp)
+  403d25:	mov    -0x38(%rbp),%rax
+  403d29:	mov    0x88(%rax),%rax
+  403d30:	mov    0x268(%rax),%rax
+  403d37:	mov    %rax,-0x10(%rbp)
+  403d3b:	movl   $0x0,-0x24(%rbp)
+  403d42:	mov    -0x10(%rbp),%rax
+  403d46:	mov    %rax,%rdi
+  403d49:	callq  4016f0 <pqueue_iterator@plt>
+  403d4e:	mov    %rax,-0x20(%rbp)
+  403d52:	lea    -0x20(%rbp),%rax
+  403d56:	mov    %rax,%rdi
+  403d59:	callq  401800 <pqueue_next@plt>
+  403d5e:	mov    %rax,-0x8(%rbp)
+  403d62:	jmpq   403deb <dtls1_retransmit_buffered_messages+0xd2>
+  403d67:	mov    -0x8(%rbp),%rax
+  403d6b:	mov    0x8(%rax),%rax
+  403d6f:	mov    %rax,-0x18(%rbp)
+  403d73:	mov    -0x18(%rbp),%rax
+  403d77:	mov    0x28(%rax),%eax
+  403d7a:	mov    %eax,%edx
+  403d7c:	mov    -0x18(%rbp),%rax
+  403d80:	movzwl 0x10(%rax),%eax
+  403d84:	movzwl %ax,%eax
+  403d87:	mov    %edx,%esi
+  403d89:	mov    %eax,%edi
+  403d8b:	callq  403d01 <dtls1_get_queue_priority>
+  403d90:	movzwl %ax,%esi
+  403d93:	lea    -0x24(%rbp),%rdx
+  403d97:	mov    -0x38(%rbp),%rax
+  403d9b:	mov    %rdx,%rcx
+  403d9e:	mov    $0x0,%edx
+  403da3:	mov    %rax,%rdi
+  403da6:	callq  404092 <dtls1_retransmit_message>
+  403dab:	test   %eax,%eax
+  403dad:	jg     403ddb <dtls1_retransmit_buffered_messages+0xc2>
+  403daf:	mov    -0x24(%rbp),%eax
+  403db2:	test   %eax,%eax
+  403db4:	je     403ddb <dtls1_retransmit_buffered_messages+0xc2>
+  403db6:	mov    0x2023f3(%rip),%rax        # 6061b0 <__TMC_END__>
+  403dbd:	mov    %rax,%rcx
+  403dc0:	mov    $0x22,%edx
+  403dc5:	mov    $0x1,%esi
+  403dca:	mov    $0x404ff0,%edi
+  403dcf:	callq  4017f0 <fwrite@plt>
+  403dd4:	mov    $0xffffffff,%eax
+  403dd9:	jmp    403dfb <dtls1_retransmit_buffered_messages+0xe2>
+  403ddb:	lea    -0x20(%rbp),%rax
+  403ddf:	mov    %rax,%rdi
+  403de2:	callq  401800 <pqueue_next@plt>
+  403de7:	mov    %rax,-0x8(%rbp)
+  403deb:	cmpq   $0x0,-0x8(%rbp)
+  403df0:	jne    403d67 <dtls1_retransmit_buffered_messages+0x4e>
+  403df6:	mov    $0x1,%eax
+  403dfb:	leaveq 
+  403dfc:	retq   
+
+0000000000403dfd <dtls1_buffer_message>:
+  403dfd:	push   %rbp
+  403dfe:	mov    %rsp,%rbp
+  403e01:	sub    $0x30,%rsp
+  403e05:	mov    %rdi,-0x28(%rbp)
+  403e09:	mov    %esi,-0x2c(%rbp)
+  403e0c:	mov    -0x28(%rbp),%rax
+  403e10:	mov    0x64(%rax),%eax
+  403e13:	test   %eax,%eax
+  403e15:	je     403e2b <dtls1_buffer_message+0x2e>
+  403e17:	mov    $0x405013,%edx
+  403e1c:	mov    $0x498,%esi
+  403e21:	mov    $0x404ed0,%edi
+  403e26:	callq  401650 <OpenSSLDie@plt>
+  403e2b:	mov    -0x28(%rbp),%rax
+  403e2f:	mov    0x60(%rax),%eax
+  403e32:	cltq   
+  403e34:	mov    $0x0,%esi
+  403e39:	mov    %rax,%rdi
+  403e3c:	callq  40190c <dtls1_hm_fragment_new>
+  403e41:	mov    %rax,-0x8(%rbp)
+  403e45:	mov    -0x28(%rbp),%rax
+  403e49:	mov    0x60(%rax),%eax
+  403e4c:	movslq %eax,%rdx
+  403e4f:	mov    -0x28(%rbp),%rax
+  403e53:	mov    0x50(%rax),%rax
+  403e57:	mov    0x8(%rax),%rcx
+  403e5b:	mov    -0x8(%rbp),%rax
+  403e5f:	mov    0x58(%rax),%rax
+  403e63:	mov    %rcx,%rsi
+  403e66:	mov    %rax,%rdi
+  403e69:	callq  401620 <memcpy@plt>
+  403e6e:	cmpl   $0x0,-0x2c(%rbp)
+  403e72:	je     403ec6 <dtls1_buffer_message+0xc9>
+  403e74:	mov    -0x28(%rbp),%rax
+  403e78:	mov    0x88(%rax),%rax
+  403e7f:	mov    0x290(%rax),%rdx
+  403e86:	mov    -0x28(%rbp),%rax
+  403e8a:	mov    (%rax),%eax
+  403e8c:	cmp    $0xfeff,%eax
+  403e91:	jne    403e9a <dtls1_buffer_message+0x9d>
+  403e93:	mov    $0x1,%eax
+  403e98:	jmp    403e9f <dtls1_buffer_message+0xa2>
+  403e9a:	mov    $0x3,%eax
+  403e9f:	add    %rax,%rdx
+  403ea2:	mov    -0x28(%rbp),%rax
+  403ea6:	mov    0x60(%rax),%eax
+  403ea9:	mov    %eax,%eax
+  403eab:	cmp    %rax,%rdx
+  403eae:	je     403efe <dtls1_buffer_message+0x101>
+  403eb0:	mov    $0x405028,%edx
+  403eb5:	mov    $0x4a1,%esi
+  403eba:	mov    $0x404ed0,%edi
+  403ebf:	callq  401650 <OpenSSLDie@plt>
+  403ec4:	jmp    403efe <dtls1_buffer_message+0x101>
+  403ec6:	mov    -0x28(%rbp),%rax
+  403eca:	mov    0x88(%rax),%rax
+  403ed1:	mov    0x290(%rax),%rax
+  403ed8:	lea    0xc(%rax),%rdx
+  403edc:	mov    -0x28(%rbp),%rax
+  403ee0:	mov    0x60(%rax),%eax
+  403ee3:	mov    %eax,%eax
+  403ee5:	cmp    %rax,%rdx
+  403ee8:	je     403efe <dtls1_buffer_message+0x101>
+  403eea:	mov    $0x405098,%edx
+  403eef:	mov    $0x4a6,%esi
+  403ef4:	mov    $0x404ed0,%edi
+  403ef9:	callq  401650 <OpenSSLDie@plt>
+  403efe:	mov    -0x28(%rbp),%rax
+  403f02:	mov    0x88(%rax),%rax
+  403f09:	mov    0x290(%rax),%rdx
+  403f10:	mov    -0x8(%rbp),%rax
+  403f14:	mov    %rdx,0x8(%rax)
+  403f18:	mov    -0x28(%rbp),%rax
+  403f1c:	mov    0x88(%rax),%rax
+  403f23:	movzwl 0x298(%rax),%edx
+  403f2a:	mov    -0x8(%rbp),%rax
+  403f2e:	mov    %dx,0x10(%rax)
+  403f32:	mov    -0x28(%rbp),%rax
+  403f36:	mov    0x88(%rax),%rax
+  403f3d:	movzbl 0x288(%rax),%edx
+  403f44:	mov    -0x8(%rbp),%rax
+  403f48:	mov    %dl,(%rax)
+  403f4a:	mov    -0x8(%rbp),%rax
+  403f4e:	movq   $0x0,0x18(%rax)
+  403f56:	mov    -0x28(%rbp),%rax
+  403f5a:	mov    0x88(%rax),%rax
+  403f61:	mov    0x290(%rax),%rdx
+  403f68:	mov    -0x8(%rbp),%rax
+  403f6c:	mov    %rdx,0x20(%rax)
+  403f70:	mov    -0x2c(%rbp),%edx
+  403f73:	mov    -0x8(%rbp),%rax
+  403f77:	mov    %edx,0x28(%rax)
+  403f7a:	mov    -0x28(%rbp),%rax
+  403f7e:	mov    0xe8(%rax),%rdx
+  403f85:	mov    -0x8(%rbp),%rax
+  403f89:	mov    %rdx,0x30(%rax)
+  403f8d:	mov    -0x28(%rbp),%rax
+  403f91:	mov    0xf0(%rax),%rdx
+  403f98:	mov    -0x8(%rbp),%rax
+  403f9c:	mov    %rdx,0x38(%rax)
+  403fa0:	mov    -0x28(%rbp),%rax
+  403fa4:	mov    0xf8(%rax),%rdx
+  403fab:	mov    -0x8(%rbp),%rax
+  403faf:	mov    %rdx,0x40(%rax)
+  403fb3:	mov    -0x28(%rbp),%rax
+  403fb7:	mov    0x130(%rax),%rdx
+  403fbe:	mov    -0x8(%rbp),%rax
+  403fc2:	mov    %rdx,0x48(%rax)
+  403fc6:	mov    -0x28(%rbp),%rax
+  403fca:	mov    0x88(%rax),%rax
+  403fd1:	movzwl 0x20a(%rax),%edx
+  403fd8:	mov    -0x8(%rbp),%rax
+  403fdc:	mov    %dx,0x50(%rax)
+  403fe0:	lea    -0x20(%rbp),%rax
+  403fe4:	mov    $0x8,%edx
+  403fe9:	mov    $0x0,%esi
+  403fee:	mov    %rax,%rdi
+  403ff1:	callq  401590 <memset@plt>
+  403ff6:	mov    -0x8(%rbp),%rax
+  403ffa:	mov    0x28(%rax),%eax
+  403ffd:	mov    %eax,%edx
+  403fff:	mov    -0x8(%rbp),%rax
+  404003:	movzwl 0x10(%rax),%eax
+  404007:	movzwl %ax,%eax
+  40400a:	mov    %edx,%esi
+  40400c:	mov    %eax,%edi
+  40400e:	callq  403d01 <dtls1_get_queue_priority>
+  404013:	sar    $0x8,%eax
+  404016:	mov    %al,-0x1a(%rbp)
+  404019:	mov    -0x8(%rbp),%rax
+  40401d:	mov    0x28(%rax),%eax
+  404020:	mov    %eax,%edx
+  404022:	mov    -0x8(%rbp),%rax
+  404026:	movzwl 0x10(%rax),%eax
+  40402a:	movzwl %ax,%eax
+  40402d:	mov    %edx,%esi
+  40402f:	mov    %eax,%edi
+  404031:	callq  403d01 <dtls1_get_queue_priority>
+  404036:	mov    %al,-0x19(%rbp)
+  404039:	mov    -0x8(%rbp),%rdx
+  40403d:	lea    -0x20(%rbp),%rax
+  404041:	mov    %rdx,%rsi
+  404044:	mov    %rax,%rdi
+  404047:	callq  401680 <pitem_new@plt>
+  40404c:	mov    %rax,-0x10(%rbp)
+  404050:	cmpq   $0x0,-0x10(%rbp)
+  404055:	jne    40406a <dtls1_buffer_message+0x26d>
+  404057:	mov    -0x8(%rbp),%rax
+  40405b:	mov    %rax,%rdi
+  40405e:	callq  401a2b <dtls1_hm_fragment_free>
+  404063:	mov    $0x0,%eax
+  404068:	jmp    404090 <dtls1_buffer_message+0x293>
+  40406a:	mov    -0x28(%rbp),%rax
+  40406e:	mov    0x88(%rax),%rax
+  404075:	mov    0x268(%rax),%rax
+  40407c:	mov    -0x10(%rbp),%rdx
+  404080:	mov    %rdx,%rsi
+  404083:	mov    %rax,%rdi
+  404086:	callq  4016e0 <pqueue_insert@plt>
+  40408b:	mov    $0x1,%eax
+  404090:	leaveq 
+  404091:	retq   
+
+0000000000404092 <dtls1_retransmit_message>:
+  404092:	push   %rbp
+  404093:	mov    %rsp,%rbp
+  404096:	sub    $0x90,%rsp
+  40409d:	mov    %rdi,-0x78(%rbp)
+  4040a1:	mov    %esi,%eax
+  4040a3:	mov    %rdx,-0x88(%rbp)
+  4040aa:	mov    %rcx,-0x90(%rbp)
+  4040b1:	mov    %ax,-0x7c(%rbp)
+  4040b5:	lea    -0x30(%rbp),%rax
+  4040b9:	mov    $0x8,%edx
+  4040be:	mov    $0x0,%esi
+  4040c3:	mov    %rax,%rdi
+  4040c6:	callq  401590 <memset@plt>
+  4040cb:	movzwl -0x7c(%rbp),%eax
+  4040cf:	shr    $0x8,%ax
+  4040d3:	mov    %al,-0x2a(%rbp)
+  4040d6:	movzwl -0x7c(%rbp),%eax
+  4040da:	mov    %al,-0x29(%rbp)
+  4040dd:	mov    -0x78(%rbp),%rax
+  4040e1:	mov    0x88(%rax),%rax
+  4040e8:	mov    0x268(%rax),%rax
+  4040ef:	lea    -0x30(%rbp),%rdx
+  4040f3:	mov    %rdx,%rsi
+  4040f6:	mov    %rax,%rdi
+  4040f9:	callq  401730 <pqueue_find@plt>
+  4040fe:	mov    %rax,-0x10(%rbp)
+  404102:	cmpq   $0x0,-0x10(%rbp)
+  404107:	jne    40413d <dtls1_retransmit_message+0xab>
+  404109:	movzwl -0x7c(%rbp),%edx
+  40410d:	mov    0x20209c(%rip),%rax        # 6061b0 <__TMC_END__>
+  404114:	mov    $0x4050e8,%esi
+  404119:	mov    %rax,%rdi
+  40411c:	mov    $0x0,%eax
+  404121:	callq  401710 <fprintf@plt>
+  404126:	mov    -0x90(%rbp),%rax
+  40412d:	movl   $0x0,(%rax)
+  404133:	mov    $0x0,%eax
+  404138:	jmpq   404448 <dtls1_retransmit_message+0x3b6>
+  40413d:	mov    -0x90(%rbp),%rax
+  404144:	movl   $0x1,(%rax)
+  40414a:	mov    -0x10(%rbp),%rax
+  40414e:	mov    0x8(%rax),%rax
+  404152:	mov    %rax,-0x18(%rbp)
+  404156:	mov    -0x18(%rbp),%rax
+  40415a:	mov    0x28(%rax),%eax
+  40415d:	test   %eax,%eax
+  40415f:	je     40416b <dtls1_retransmit_message+0xd9>
+  404161:	movq   $0x1,-0x8(%rbp)
+  404169:	jmp    404173 <dtls1_retransmit_message+0xe1>
+  40416b:	movq   $0xc,-0x8(%rbp)
+  404173:	mov    -0x18(%rbp),%rax
+  404177:	mov    0x8(%rax),%rdx
+  40417b:	mov    -0x8(%rbp),%rax
+  40417f:	add    %rax,%rdx
+  404182:	mov    -0x18(%rbp),%rax
+  404186:	mov    0x58(%rax),%rcx
+  40418a:	mov    -0x78(%rbp),%rax
+  40418e:	mov    0x50(%rax),%rax
+  404192:	mov    0x8(%rax),%rax
+  404196:	mov    %rcx,%rsi
+  404199:	mov    %rax,%rdi
+  40419c:	callq  401620 <memcpy@plt>
+  4041a1:	mov    -0x18(%rbp),%rax
+  4041a5:	mov    0x8(%rax),%rax
+  4041a9:	mov    %eax,%edx
+  4041ab:	mov    -0x8(%rbp),%rax
+  4041af:	add    %edx,%eax
+  4041b1:	mov    %eax,%edx
+  4041b3:	mov    -0x78(%rbp),%rax
+  4041b7:	mov    %edx,0x60(%rax)
+  4041ba:	mov    -0x18(%rbp),%rax
+  4041be:	mov    0x20(%rax),%rdi
+  4041c2:	mov    -0x18(%rbp),%rax
+  4041c6:	movzwl 0x10(%rax),%eax
+  4041ca:	movzwl %ax,%ecx
+  4041cd:	mov    -0x18(%rbp),%rax
+  4041d1:	mov    0x8(%rax),%rdx
+  4041d5:	mov    -0x18(%rbp),%rax
+  4041d9:	movzbl (%rax),%eax
+  4041dc:	movzbl %al,%esi
+  4041df:	mov    -0x78(%rbp),%rax
+  4041e3:	mov    %rdi,%r9
+  4041e6:	mov    $0x0,%r8d
+  4041ec:	mov    %rax,%rdi
+  4041ef:	callq  404578 <dtls1_set_message_header_int>
+  4041f4:	mov    -0x78(%rbp),%rax
+  4041f8:	mov    0xe8(%rax),%rax
+  4041ff:	mov    %rax,-0x60(%rbp)
+  404203:	mov    -0x78(%rbp),%rax
+  404207:	mov    0xf0(%rax),%rax
+  40420e:	mov    %rax,-0x58(%rbp)
+  404212:	mov    -0x78(%rbp),%rax
+  404216:	mov    0xf8(%rax),%rax
+  40421d:	mov    %rax,-0x50(%rbp)
+  404221:	mov    -0x78(%rbp),%rax
+  404225:	mov    0x130(%rax),%rax
+  40422c:	mov    %rax,-0x48(%rbp)
+  404230:	mov    -0x78(%rbp),%rax
+  404234:	mov    0x88(%rax),%rax
+  40423b:	movzwl 0x20a(%rax),%eax
+  404242:	mov    %ax,-0x40(%rbp)
+  404246:	mov    -0x78(%rbp),%rax
+  40424a:	mov    0x88(%rax),%rax
+  404251:	movzwl 0x20a(%rax),%eax
+  404258:	mov    %ax,-0x40(%rbp)
+  40425c:	mov    -0x78(%rbp),%rax
+  404260:	mov    0x88(%rax),%rax
+  404267:	movl   $0x1,0x370(%rax)
+  404271:	mov    -0x18(%rbp),%rax
+  404275:	mov    0x30(%rax),%rdx
+  404279:	mov    -0x78(%rbp),%rax
+  40427d:	mov    %rdx,0xe8(%rax)
+  404284:	mov    -0x18(%rbp),%rax
+  404288:	mov    0x38(%rax),%rdx
+  40428c:	mov    -0x78(%rbp),%rax
+  404290:	mov    %rdx,0xf0(%rax)
+  404297:	mov    -0x18(%rbp),%rax
+  40429b:	mov    0x40(%rax),%rdx
+  40429f:	mov    -0x78(%rbp),%rax
+  4042a3:	mov    %rdx,0xf8(%rax)
+  4042aa:	mov    -0x18(%rbp),%rax
+  4042ae:	mov    0x48(%rax),%rdx
+  4042b2:	mov    -0x78(%rbp),%rax
+  4042b6:	mov    %rdx,0x130(%rax)
+  4042bd:	mov    -0x78(%rbp),%rax
+  4042c1:	mov    0x88(%rax),%rax
+  4042c8:	mov    -0x18(%rbp),%rdx
+  4042cc:	movzwl 0x50(%rdx),%edx
+  4042d0:	mov    %dx,0x20a(%rax)
+  4042d7:	mov    -0x18(%rbp),%rax
+  4042db:	movzwl 0x50(%rax),%eax
+  4042df:	movzwl %ax,%eax
+  4042e2:	movzwl -0x40(%rbp),%edx
+  4042e6:	movzwl %dx,%edx
+  4042e9:	sub    $0x1,%edx
+  4042ec:	cmp    %edx,%eax
+  4042ee:	jne    404334 <dtls1_retransmit_message+0x2a2>
+  4042f0:	mov    -0x78(%rbp),%rax
+  4042f4:	mov    0x80(%rax),%rax
+  4042fb:	mov    0x58(%rax),%rax
+  4042ff:	mov    %rax,-0x70(%rbp)
+  404303:	mov    -0x78(%rbp),%rax
+  404307:	mov    0x88(%rax),%rax
+  40430e:	lea    0x236(%rax),%rcx
+  404315:	mov    -0x78(%rbp),%rax
+  404319:	mov    0x80(%rax),%rax
+  404320:	add    $0x58,%rax
+  404324:	mov    $0x8,%edx
+  404329:	mov    %rcx,%rsi
+  40432c:	mov    %rax,%rdi
+  40432f:	callq  401620 <memcpy@plt>
+  404334:	mov    -0x18(%rbp),%rax
+  404338:	mov    0x28(%rax),%eax
+  40433b:	test   %eax,%eax
+  40433d:	je     404346 <dtls1_retransmit_message+0x2b4>
+  40433f:	mov    $0x14,%eax
+  404344:	jmp    40434b <dtls1_retransmit_message+0x2b9>
+  404346:	mov    $0x16,%eax
+  40434b:	mov    -0x78(%rbp),%rdx
+  40434f:	mov    %eax,%esi
+  404351:	mov    %rdx,%rdi
+  404354:	callq  401aaa <dtls1_do_write>
+  404359:	mov    %eax,-0x1c(%rbp)
+  40435c:	mov    -0x60(%rbp),%rdx
+  404360:	mov    -0x78(%rbp),%rax
+  404364:	mov    %rdx,0xe8(%rax)
+  40436b:	mov    -0x58(%rbp),%rdx
+  40436f:	mov    -0x78(%rbp),%rax
+  404373:	mov    %rdx,0xf0(%rax)
+  40437a:	mov    -0x50(%rbp),%rdx
+  40437e:	mov    -0x78(%rbp),%rax
+  404382:	mov    %rdx,0xf8(%rax)
+  404389:	mov    -0x48(%rbp),%rdx
+  40438d:	mov    -0x78(%rbp),%rax
+  404391:	mov    %rdx,0x130(%rax)
+  404398:	mov    -0x78(%rbp),%rax
+  40439c:	mov    0x88(%rax),%rax
+  4043a3:	movzwl -0x40(%rbp),%edx
+  4043a7:	mov    %dx,0x20a(%rax)
+  4043ae:	mov    -0x18(%rbp),%rax
+  4043b2:	movzwl 0x50(%rax),%eax
+  4043b6:	movzwl %ax,%eax
+  4043b9:	movzwl -0x40(%rbp),%edx
+  4043bd:	movzwl %dx,%edx
+  4043c0:	sub    $0x1,%edx
+  4043c3:	cmp    %edx,%eax
+  4043c5:	jne    40440d <dtls1_retransmit_message+0x37b>
+  4043c7:	mov    -0x78(%rbp),%rax
+  4043cb:	mov    0x80(%rax),%rax
+  4043d2:	lea    0x58(%rax),%rcx
+  4043d6:	mov    -0x78(%rbp),%rax
+  4043da:	mov    0x88(%rax),%rax
+  4043e1:	add    $0x236,%rax
+  4043e7:	mov    $0x8,%edx
+  4043ec:	mov    %rcx,%rsi
+  4043ef:	mov    %rax,%rdi
+  4043f2:	callq  401620 <memcpy@plt>
+  4043f7:	mov    -0x78(%rbp),%rax
+  4043fb:	mov    0x80(%rax),%rax
+  404402:	lea    0x58(%rax),%rdx
+  404406:	mov    -0x70(%rbp),%rax
+  40440a:	mov    %rax,(%rdx)
+  40440d:	mov    -0x78(%rbp),%rax
+  404411:	mov    0x88(%rax),%rax
+  404418:	movl   $0x0,0x370(%rax)
+  404422:	mov    -0x78(%rbp),%rax
+  404426:	mov    %rax,%rdi
+  404429:	callq  4015b0 <SSL_get_wbio@plt>
+  40442e:	mov    $0x0,%ecx
+  404433:	mov    $0x0,%edx
+  404438:	mov    $0xb,%esi
+  40443d:	mov    %rax,%rdi
+  404440:	callq  401540 <BIO_ctrl@plt>
+  404445:	mov    -0x1c(%rbp),%eax
+  404448:	leaveq 
+  404449:	retq   
+
+000000000040444a <dtls1_clear_record_buffer>:
+  40444a:	push   %rbp
+  40444b:	mov    %rsp,%rbp
+  40444e:	sub    $0x20,%rsp
+  404452:	mov    %rdi,-0x18(%rbp)
+  404456:	mov    -0x18(%rbp),%rax
+  40445a:	mov    0x88(%rax),%rax
+  404461:	mov    0x268(%rax),%rax
+  404468:	mov    %rax,%rdi
+  40446b:	callq  401740 <pqueue_pop@plt>
+  404470:	mov    %rax,-0x8(%rbp)
+  404474:	jmp    4044b0 <dtls1_clear_record_buffer+0x66>
+  404476:	mov    -0x8(%rbp),%rax
+  40447a:	mov    0x8(%rax),%rax
+  40447e:	mov    %rax,%rdi
+  404481:	callq  401a2b <dtls1_hm_fragment_free>
+  404486:	mov    -0x8(%rbp),%rax
+  40448a:	mov    %rax,%rdi
+  40448d:	callq  401660 <pitem_free@plt>
+  404492:	mov    -0x18(%rbp),%rax
+  404496:	mov    0x88(%rax),%rax
+  40449d:	mov    0x268(%rax),%rax
+  4044a4:	mov    %rax,%rdi
+  4044a7:	callq  401740 <pqueue_pop@plt>
+  4044ac:	mov    %rax,-0x8(%rbp)
+  4044b0:	cmpq   $0x0,-0x8(%rbp)
+  4044b5:	jne    404476 <dtls1_clear_record_buffer+0x2c>
+  4044b7:	leaveq 
+  4044b8:	retq   
+
+00000000004044b9 <dtls1_set_message_header>:
+  4044b9:	push   %rbp
+  4044ba:	mov    %rsp,%rbp
+  4044bd:	sub    $0x30,%rsp
+  4044c1:	mov    %rdi,-0x8(%rbp)
+  4044c5:	mov    %rsi,-0x10(%rbp)
+  4044c9:	mov    %edx,%eax
+  4044cb:	mov    %rcx,-0x20(%rbp)
+  4044cf:	mov    %r8,-0x28(%rbp)
+  4044d3:	mov    %r9,-0x30(%rbp)
+  4044d7:	mov    %al,-0x14(%rbp)
+  4044da:	cmpq   $0x0,-0x28(%rbp)
+  4044df:	jne    404536 <dtls1_set_message_header+0x7d>
+  4044e1:	mov    -0x8(%rbp),%rax
+  4044e5:	mov    0x88(%rax),%rax
+  4044ec:	mov    0x378(%rax),%eax
+  4044f2:	test   %eax,%eax
+  4044f4:	jne    404536 <dtls1_set_message_header+0x7d>
+  4044f6:	mov    -0x8(%rbp),%rax
+  4044fa:	mov    0x88(%rax),%rax
+  404501:	mov    -0x8(%rbp),%rdx
+  404505:	mov    0x88(%rdx),%rdx
+  40450c:	movzwl 0x232(%rdx),%edx
+  404513:	mov    %dx,0x230(%rax)
+  40451a:	mov    -0x8(%rbp),%rax
+  40451e:	mov    0x88(%rax),%rax
+  404525:	movzwl 0x232(%rax),%edx
+  40452c:	add    $0x1,%edx
+  40452f:	mov    %dx,0x232(%rax)
+  404536:	mov    -0x8(%rbp),%rax
+  40453a:	mov    0x88(%rax),%rax
+  404541:	movzwl 0x230(%rax),%eax
+  404548:	movzwl %ax,%ecx
+  40454b:	movzbl -0x14(%rbp),%esi
+  40454f:	mov    -0x30(%rbp),%r8
+  404553:	mov    -0x28(%rbp),%rdi
+  404557:	mov    -0x20(%rbp),%rdx
+  40455b:	mov    -0x8(%rbp),%rax
+  40455f:	mov    %r8,%r9
+  404562:	mov    %rdi,%r8
+  404565:	mov    %rax,%rdi
+  404568:	callq  404578 <dtls1_set_message_header_int>
+  40456d:	addq   $0xc,-0x10(%rbp)
+  404572:	mov    -0x10(%rbp),%rax
+  404576:	leaveq 
+  404577:	retq   
+
+0000000000404578 <dtls1_set_message_header_int>:
+  404578:	push   %rbp
+  404579:	mov    %rsp,%rbp
+  40457c:	mov    %rdi,-0x18(%rbp)
+  404580:	mov    %rdx,-0x28(%rbp)
+  404584:	mov    %ecx,%eax
+  404586:	mov    %r8,-0x30(%rbp)
+  40458a:	mov    %r9,-0x38(%rbp)
+  40458e:	mov    %sil,-0x1c(%rbp)
+  404592:	mov    %ax,-0x20(%rbp)
+  404596:	mov    -0x18(%rbp),%rax
+  40459a:	mov    0x88(%rax),%rax
+  4045a1:	add    $0x288,%rax
+  4045a7:	mov    %rax,-0x8(%rbp)
+  4045ab:	mov    -0x8(%rbp),%rax
+  4045af:	movzbl -0x1c(%rbp),%edx
+  4045b3:	mov    %dl,(%rax)
+  4045b5:	mov    -0x8(%rbp),%rax
+  4045b9:	mov    -0x28(%rbp),%rdx
+  4045bd:	mov    %rdx,0x8(%rax)
+  4045c1:	mov    -0x8(%rbp),%rax
+  4045c5:	movzwl -0x20(%rbp),%edx
+  4045c9:	mov    %dx,0x10(%rax)
+  4045cd:	mov    -0x8(%rbp),%rax
+  4045d1:	mov    -0x30(%rbp),%rdx
+  4045d5:	mov    %rdx,0x18(%rax)
+  4045d9:	mov    -0x8(%rbp),%rax
+  4045dd:	mov    -0x38(%rbp),%rdx
+  4045e1:	mov    %rdx,0x20(%rax)
+  4045e5:	pop    %rbp
+  4045e6:	retq   
+
+00000000004045e7 <dtls1_fix_message_header>:
+  4045e7:	push   %rbp
+  4045e8:	mov    %rsp,%rbp
+  4045eb:	mov    %rdi,-0x18(%rbp)
+  4045ef:	mov    %rsi,-0x20(%rbp)
+  4045f3:	mov    %rdx,-0x28(%rbp)
+  4045f7:	mov    -0x18(%rbp),%rax
+  4045fb:	mov    0x88(%rax),%rax
+  404602:	add    $0x288,%rax
+  404608:	mov    %rax,-0x8(%rbp)
+  40460c:	mov    -0x8(%rbp),%rax
+  404610:	mov    -0x20(%rbp),%rdx
+  404614:	mov    %rdx,0x18(%rax)
+  404618:	mov    -0x8(%rbp),%rax
+  40461c:	mov    -0x28(%rbp),%rdx
+  404620:	mov    %rdx,0x20(%rax)
+  404624:	pop    %rbp
+  404625:	retq   
+
+0000000000404626 <dtls1_write_message_header>:
+  404626:	push   %rbp
+  404627:	mov    %rsp,%rbp
+  40462a:	mov    %rdi,-0x18(%rbp)
+  40462e:	mov    %rsi,-0x20(%rbp)
+  404632:	mov    -0x18(%rbp),%rax
+  404636:	mov    0x88(%rax),%rax
+  40463d:	add    $0x288,%rax
+  404643:	mov    %rax,-0x8(%rbp)
+  404647:	mov    -0x20(%rbp),%rax
+  40464b:	lea    0x1(%rax),%rdx
+  40464f:	mov    %rdx,-0x20(%rbp)
+  404653:	mov    -0x8(%rbp),%rdx
+  404657:	movzbl (%rdx),%edx
+  40465a:	mov    %dl,(%rax)
+  40465c:	mov    -0x8(%rbp),%rax
+  404660:	mov    0x8(%rax),%rax
+  404664:	shr    $0x10,%rax
+  404668:	mov    %eax,%edx
+  40466a:	mov    -0x20(%rbp),%rax
+  40466e:	mov    %dl,(%rax)
+  404670:	mov    -0x20(%rbp),%rax
+  404674:	lea    0x1(%rax),%rdx
+  404678:	mov    -0x8(%rbp),%rax
+  40467c:	mov    0x8(%rax),%rax
+  404680:	shr    $0x8,%rax
+  404684:	mov    %al,(%rdx)
+  404686:	mov    -0x20(%rbp),%rax
+  40468a:	lea    0x2(%rax),%rdx
+  40468e:	mov    -0x8(%rbp),%rax
+  404692:	mov    0x8(%rax),%rax
+  404696:	mov    %al,(%rdx)
+  404698:	addq   $0x3,-0x20(%rbp)
+  40469d:	mov    -0x8(%rbp),%rax
+  4046a1:	movzwl 0x10(%rax),%eax
+  4046a5:	shr    $0x8,%ax
+  4046a9:	mov    %eax,%edx
+  4046ab:	mov    -0x20(%rbp),%rax
+  4046af:	mov    %dl,(%rax)
+  4046b1:	mov    -0x20(%rbp),%rax
+  4046b5:	lea    0x1(%rax),%rdx
+  4046b9:	mov    -0x8(%rbp),%rax
+  4046bd:	movzwl 0x10(%rax),%eax
+  4046c1:	mov    %al,(%rdx)
+  4046c3:	addq   $0x2,-0x20(%rbp)
+  4046c8:	mov    -0x8(%rbp),%rax
+  4046cc:	mov    0x18(%rax),%rax
+  4046d0:	shr    $0x10,%rax
+  4046d4:	mov    %eax,%edx
+  4046d6:	mov    -0x20(%rbp),%rax
+  4046da:	mov    %dl,(%rax)
+  4046dc:	mov    -0x20(%rbp),%rax
+  4046e0:	lea    0x1(%rax),%rdx
+  4046e4:	mov    -0x8(%rbp),%rax
+  4046e8:	mov    0x18(%rax),%rax
+  4046ec:	shr    $0x8,%rax
+  4046f0:	mov    %al,(%rdx)
+  4046f2:	mov    -0x20(%rbp),%rax
+  4046f6:	lea    0x2(%rax),%rdx
+  4046fa:	mov    -0x8(%rbp),%rax
+  4046fe:	mov    0x18(%rax),%rax
+  404702:	mov    %al,(%rdx)
+  404704:	addq   $0x3,-0x20(%rbp)
+  404709:	mov    -0x8(%rbp),%rax
+  40470d:	mov    0x20(%rax),%rax
+  404711:	shr    $0x10,%rax
+  404715:	mov    %eax,%edx
+  404717:	mov    -0x20(%rbp),%rax
+  40471b:	mov    %dl,(%rax)
+  40471d:	mov    -0x20(%rbp),%rax
+  404721:	lea    0x1(%rax),%rdx
+  404725:	mov    -0x8(%rbp),%rax
+  404729:	mov    0x20(%rax),%rax
+  40472d:	shr    $0x8,%rax
+  404731:	mov    %al,(%rdx)
+  404733:	mov    -0x20(%rbp),%rax
+  404737:	lea    0x2(%rax),%rdx
+  40473b:	mov    -0x8(%rbp),%rax
+  40473f:	mov    0x20(%rax),%rax
+  404743:	mov    %al,(%rdx)
+  404745:	addq   $0x3,-0x20(%rbp)
+  40474a:	mov    -0x20(%rbp),%rax
+  40474e:	pop    %rbp
+  40474f:	retq   
+
+0000000000404750 <dtls1_min_mtu>:
+  404750:	push   %rbp
+  404751:	mov    %rsp,%rbp
+  404754:	mov    0x201a52(%rip),%eax        # 6061ac <g_probable_mtu+0x8>
+  40475a:	pop    %rbp
+  40475b:	retq   
+
+000000000040475c <dtls1_guess_mtu>:
+  40475c:	push   %rbp
+  40475d:	mov    %rsp,%rbp
+  404760:	mov    %edi,-0x14(%rbp)
+  404763:	cmpl   $0x0,-0x14(%rbp)
+  404767:	jne    404771 <dtls1_guess_mtu+0x15>
+  404769:	mov    0x201a35(%rip),%eax        # 6061a4 <g_probable_mtu>
+  40476f:	jmp    4047a2 <dtls1_guess_mtu+0x46>
+  404771:	movl   $0x0,-0x4(%rbp)
+  404778:	jmp    404799 <dtls1_guess_mtu+0x3d>
+  40477a:	mov    -0x4(%rbp),%eax
+  40477d:	mov    0x6061a4(,%rax,4),%eax
+  404784:	cmp    -0x14(%rbp),%eax
+  404787:	jae    404795 <dtls1_guess_mtu+0x39>
+  404789:	mov    -0x4(%rbp),%eax
+  40478c:	mov    0x6061a4(,%rax,4),%eax
+  404793:	jmp    4047a2 <dtls1_guess_mtu+0x46>
+  404795:	addl   $0x1,-0x4(%rbp)
+  404799:	cmpl   $0x2,-0x4(%rbp)
+  40479d:	jbe    40477a <dtls1_guess_mtu+0x1e>
+  40479f:	mov    -0x14(%rbp),%eax
+  4047a2:	pop    %rbp
+  4047a3:	retq   
+
+00000000004047a4 <dtls1_get_message_header>:
+  4047a4:	push   %rbp
+  4047a5:	mov    %rsp,%rbp
+  4047a8:	sub    $0x10,%rsp
+  4047ac:	mov    %rdi,-0x8(%rbp)
+  4047b0:	mov    %rsi,-0x10(%rbp)
+  4047b4:	mov    -0x10(%rbp),%rax
+  4047b8:	mov    $0x58,%edx
+  4047bd:	mov    $0x0,%esi
+  4047c2:	mov    %rax,%rdi
+  4047c5:	callq  401590 <memset@plt>
+  4047ca:	mov    -0x8(%rbp),%rax
+  4047ce:	lea    0x1(%rax),%rdx
+  4047d2:	mov    %rdx,-0x8(%rbp)
+  4047d6:	movzbl (%rax),%edx
+  4047d9:	mov    -0x10(%rbp),%rax
+  4047dd:	mov    %dl,(%rax)
+  4047df:	mov    -0x8(%rbp),%rax
+  4047e3:	movzbl (%rax),%eax
+  4047e6:	movzbl %al,%eax
+  4047e9:	shl    $0x10,%rax
+  4047ed:	mov    %rax,%rdx
+  4047f0:	mov    -0x8(%rbp),%rax
+  4047f4:	add    $0x1,%rax
+  4047f8:	movzbl (%rax),%eax
+  4047fb:	movzbl %al,%eax
+  4047fe:	shl    $0x8,%rax
+  404802:	or     %rax,%rdx
+  404805:	mov    -0x8(%rbp),%rax
+  404809:	add    $0x2,%rax
+  40480d:	movzbl (%rax),%eax
+  404810:	movzbl %al,%eax
+  404813:	or     %rax,%rdx
+  404816:	mov    -0x10(%rbp),%rax
+  40481a:	mov    %rdx,0x8(%rax)
+  40481e:	addq   $0x3,-0x8(%rbp)
+  404823:	mov    -0x8(%rbp),%rax
+  404827:	movzbl (%rax),%eax
+  40482a:	movzbl %al,%eax
+  40482d:	shl    $0x8,%eax
+  404830:	mov    %eax,%edx
+  404832:	mov    -0x8(%rbp),%rax
+  404836:	add    $0x1,%rax
+  40483a:	movzbl (%rax),%eax
+  40483d:	movzbl %al,%eax
+  404840:	or     %eax,%edx
+  404842:	mov    -0x10(%rbp),%rax
+  404846:	mov    %dx,0x10(%rax)
+  40484a:	addq   $0x2,-0x8(%rbp)
+  40484f:	mov    -0x8(%rbp),%rax
+  404853:	movzbl (%rax),%eax
+  404856:	movzbl %al,%eax
+  404859:	shl    $0x10,%rax
+  40485d:	mov    %rax,%rdx
+  404860:	mov    -0x8(%rbp),%rax
+  404864:	add    $0x1,%rax
+  404868:	movzbl (%rax),%eax
+  40486b:	movzbl %al,%eax
+  40486e:	shl    $0x8,%rax
+  404872:	or     %rax,%rdx
+  404875:	mov    -0x8(%rbp),%rax
+  404879:	add    $0x2,%rax
+  40487d:	movzbl (%rax),%eax
+  404880:	movzbl %al,%eax
+  404883:	or     %rax,%rdx
+  404886:	mov    -0x10(%rbp),%rax
+  40488a:	mov    %rdx,0x18(%rax)
+  40488e:	addq   $0x3,-0x8(%rbp)
+  404893:	mov    -0x8(%rbp),%rax
+  404897:	movzbl (%rax),%eax
+  40489a:	movzbl %al,%eax
+  40489d:	shl    $0x10,%rax
+  4048a1:	mov    %rax,%rdx
+  4048a4:	mov    -0x8(%rbp),%rax
+  4048a8:	add    $0x1,%rax
+  4048ac:	movzbl (%rax),%eax
+  4048af:	movzbl %al,%eax
+  4048b2:	shl    $0x8,%rax
+  4048b6:	or     %rax,%rdx
+  4048b9:	mov    -0x8(%rbp),%rax
+  4048bd:	add    $0x2,%rax
+  4048c1:	movzbl (%rax),%eax
+  4048c4:	movzbl %al,%eax
+  4048c7:	or     %rax,%rdx
+  4048ca:	mov    -0x10(%rbp),%rax
+  4048ce:	mov    %rdx,0x20(%rax)
+  4048d2:	addq   $0x3,-0x8(%rbp)
+  4048d7:	leaveq 
+  4048d8:	retq   
+
+00000000004048d9 <dtls1_get_ccs_header>:
+  4048d9:	push   %rbp
+  4048da:	mov    %rsp,%rbp
+  4048dd:	sub    $0x10,%rsp
+  4048e1:	mov    %rdi,-0x8(%rbp)
+  4048e5:	mov    %rsi,-0x10(%rbp)
+  4048e9:	mov    -0x10(%rbp),%rax
+  4048ed:	mov    $0x4,%edx
+  4048f2:	mov    $0x0,%esi
+  4048f7:	mov    %rax,%rdi
+  4048fa:	callq  401590 <memset@plt>
+  4048ff:	mov    -0x8(%rbp),%rax
+  404903:	lea    0x1(%rax),%rdx
+  404907:	mov    %rdx,-0x8(%rbp)
+  40490b:	movzbl (%rax),%edx
+  40490e:	mov    -0x10(%rbp),%rax
+  404912:	mov    %dl,(%rax)
+  404914:	leaveq 
+  404915:	retq   
+
+0000000000404916 <dtls1_shutdown>:
+  404916:	push   %rbp
+  404917:	mov    %rsp,%rbp
+  40491a:	sub    $0x20,%rsp
+  40491e:	mov    %rdi,-0x18(%rbp)
+  404922:	mov    -0x18(%rbp),%rax
+  404926:	mov    %rax,%rdi
+  404929:	callq  4017e0 <ssl3_shutdown@plt>
+  40492e:	mov    %eax,-0x4(%rbp)
+  404931:	mov    -0x4(%rbp),%eax
+  404934:	leaveq 
+  404935:	retq   
+
+0000000000404936 <dtls1_process_heartbeat>:
+  404936:	push   %rbp
+  404937:	mov    %rsp,%rbp
+  40493a:	sub    $0x50,%rsp
+  40493e:	mov    %rdi,-0x48(%rbp)
+  404942:	mov    -0x48(%rbp),%rax
+  404946:	mov    0x80(%rax),%rax
+  40494d:	mov    0x130(%rax),%rax
+  404954:	mov    %rax,-0x8(%rbp)
+  404958:	movl   $0x10,-0xc(%rbp)
+  40495f:	mov    $0x0,%eax
+  404964:	callq  401900 <partStart>
+  404969:	mov    -0x8(%rbp),%rax
+  40496d:	lea    0x1(%rax),%rdx
+  404971:	mov    %rdx,-0x8(%rbp)
+  404975:	movzbl (%rax),%eax
+  404978:	movzbl %al,%eax
+  40497b:	mov    %ax,-0xe(%rbp)
+  40497f:	mov    -0x8(%rbp),%rax
+  404983:	movzbl (%rax),%eax
+  404986:	movzbl %al,%eax
+  404989:	shl    $0x8,%eax
+  40498c:	mov    %eax,%edx
+  40498e:	mov    -0x8(%rbp),%rax
+  404992:	add    $0x1,%rax
+  404996:	movzbl (%rax),%eax
+  404999:	movzbl %al,%eax
+  40499c:	or     %edx,%eax
+  40499e:	mov    %eax,-0x14(%rbp)
+  4049a1:	addq   $0x2,-0x8(%rbp)
+  4049a6:	mov    -0x8(%rbp),%rax
+  4049aa:	mov    %rax,-0x20(%rbp)
+  4049ae:	mov    $0x0,%eax
+  4049b3:	callq  401906 <partEnd>
+  4049b8:	mov    -0x48(%rbp),%rax
+  4049bc:	mov    0x98(%rax),%rax
+  4049c3:	test   %rax,%rax
+  4049c6:	je     404a26 <dtls1_process_heartbeat+0xf0>
+  4049c8:	mov    -0x48(%rbp),%rax
+  4049cc:	mov    0x98(%rax),%rax
+  4049d3:	mov    -0x48(%rbp),%rdx
+  4049d7:	mov    0xa0(%rdx),%rcx
+  4049de:	mov    -0x48(%rbp),%rdx
+  4049e2:	mov    0x80(%rdx),%rdx
+  4049e9:	mov    0x124(%rdx),%edx
+  4049ef:	mov    %edx,%edi
+  4049f1:	mov    -0x48(%rbp),%rdx
+  4049f5:	mov    0x80(%rdx),%rdx
+  4049fc:	mov    0x130(%rdx),%rdx
+  404a03:	mov    -0x48(%rbp),%rsi
+  404a07:	mov    (%rsi),%esi
+  404a09:	mov    -0x48(%rbp),%r8
+  404a0d:	mov    %rcx,(%rsp)
+  404a11:	mov    %r8,%r9
+  404a14:	mov    %rdi,%r8
+  404a17:	mov    %rdx,%rcx
+  404a1a:	mov    $0x18,%edx
+  404a1f:	mov    $0x0,%edi
+  404a24:	callq  *%rax
+  404a26:	cmpw   $0x1,-0xe(%rbp)
+  404a2b:	jne    404b54 <dtls1_process_heartbeat+0x21e>
+  404a31:	mov    -0xc(%rbp),%eax
+  404a34:	mov    -0x14(%rbp),%edx
+  404a37:	add    %edx,%eax
+  404a39:	add    $0x3,%eax
+  404a3c:	mov    $0x5d2,%edx
+  404a41:	mov    $0x404ed0,%esi
+  404a46:	mov    %eax,%edi
+  404a48:	callq  4015c0 <CRYPTO_malloc@plt>
+  404a4d:	mov    %rax,-0x28(%rbp)
+  404a51:	mov    -0x28(%rbp),%rax
+  404a55:	mov    %rax,-0x30(%rbp)
+  404a59:	mov    -0x30(%rbp),%rax
+  404a5d:	lea    0x1(%rax),%rdx
+  404a61:	mov    %rdx,-0x30(%rbp)
+  404a65:	movb   $0x2,(%rax)
+  404a68:	mov    -0x14(%rbp),%eax
+  404a6b:	shr    $0x8,%eax
+  404a6e:	mov    %eax,%edx
+  404a70:	mov    -0x30(%rbp),%rax
+  404a74:	mov    %dl,(%rax)
+  404a76:	mov    -0x30(%rbp),%rax
+  404a7a:	lea    0x1(%rax),%rdx
+  404a7e:	mov    -0x14(%rbp),%eax
+  404a81:	mov    %al,(%rdx)
+  404a83:	addq   $0x2,-0x30(%rbp)
+  404a88:	mov    -0x14(%rbp),%edx
+  404a8b:	mov    -0x20(%rbp),%rcx
+  404a8f:	mov    -0x30(%rbp),%rax
+  404a93:	mov    %rcx,%rsi
+  404a96:	mov    %rax,%rdi
+  404a99:	callq  401620 <memcpy@plt>
+  404a9e:	mov    -0x14(%rbp),%eax
+  404aa1:	add    %rax,-0x30(%rbp)
+  404aa5:	mov    -0xc(%rbp),%edx
+  404aa8:	mov    -0x30(%rbp),%rax
+  404aac:	mov    %edx,%esi
+  404aae:	mov    %rax,%rdi
+  404ab1:	callq  401700 <RAND_pseudo_bytes@plt>
+  404ab6:	mov    -0xc(%rbp),%eax
+  404ab9:	mov    -0x14(%rbp),%edx
+  404abc:	add    %edx,%eax
+  404abe:	add    $0x3,%eax
+  404ac1:	mov    %eax,%ecx
+  404ac3:	mov    -0x28(%rbp),%rdx
+  404ac7:	mov    -0x48(%rbp),%rax
+  404acb:	mov    $0x18,%esi
+  404ad0:	mov    %rax,%rdi
+  404ad3:	callq  401600 <dtls1_write_bytes@plt>
+  404ad8:	mov    %eax,-0x34(%rbp)
+  404adb:	cmpl   $0x0,-0x34(%rbp)
+  404adf:	js     404b3b <dtls1_process_heartbeat+0x205>
+  404ae1:	mov    -0x48(%rbp),%rax
+  404ae5:	mov    0x98(%rax),%rax
+  404aec:	test   %rax,%rax
+  404aef:	je     404b3b <dtls1_process_heartbeat+0x205>
+  404af1:	mov    -0x48(%rbp),%rax
+  404af5:	mov    0x98(%rax),%rax
+  404afc:	mov    -0x48(%rbp),%rdx
+  404b00:	mov    0xa0(%rdx),%rcx
+  404b07:	mov    -0xc(%rbp),%edx
+  404b0a:	mov    -0x14(%rbp),%esi
+  404b0d:	add    %esi,%edx
+  404b0f:	add    $0x3,%edx
+  404b12:	mov    %edx,%edi
+  404b14:	mov    -0x48(%rbp),%rdx
+  404b18:	mov    (%rdx),%esi
+  404b1a:	mov    -0x48(%rbp),%r8
+  404b1e:	mov    -0x28(%rbp),%rdx
+  404b22:	mov    %rcx,(%rsp)
+  404b26:	mov    %r8,%r9
+  404b29:	mov    %rdi,%r8
+  404b2c:	mov    %rdx,%rcx
+  404b2f:	mov    $0x18,%edx
+  404b34:	mov    $0x1,%edi
+  404b39:	callq  *%rax
+  404b3b:	mov    -0x28(%rbp),%rax
+  404b3f:	mov    %rax,%rdi
+  404b42:	callq  4016c0 <CRYPTO_free@plt>
+  404b47:	cmpl   $0x0,-0x34(%rbp)
+  404b4b:	jns    404b52 <dtls1_process_heartbeat+0x21c>
+  404b4d:	mov    -0x34(%rbp),%eax
+  404b50:	jmp    404bcd <dtls1_process_heartbeat+0x297>
+  404b52:	jmp    404bc8 <dtls1_process_heartbeat+0x292>
+  404b54:	cmpw   $0x2,-0xe(%rbp)
+  404b59:	jne    404bc8 <dtls1_process_heartbeat+0x292>
+  404b5b:	mov    -0x20(%rbp),%rax
+  404b5f:	movzbl (%rax),%eax
+  404b62:	movzbl %al,%eax
+  404b65:	shl    $0x8,%eax
+  404b68:	mov    %eax,%edx
+  404b6a:	mov    -0x20(%rbp),%rax
+  404b6e:	add    $0x1,%rax
+  404b72:	movzbl (%rax),%eax
+  404b75:	movzbl %al,%eax
+  404b78:	or     %edx,%eax
+  404b7a:	mov    %eax,-0x38(%rbp)
+  404b7d:	addq   $0x2,-0x20(%rbp)
+  404b82:	cmpl   $0x12,-0x14(%rbp)
+  404b86:	jne    404bc8 <dtls1_process_heartbeat+0x292>
+  404b88:	mov    -0x48(%rbp),%rax
+  404b8c:	mov    0x2a8(%rax),%eax
+  404b92:	cmp    -0x38(%rbp),%eax
+  404b95:	jne    404bc8 <dtls1_process_heartbeat+0x292>
+  404b97:	mov    -0x48(%rbp),%rax
+  404b9b:	mov    %rax,%rdi
+  404b9e:	callq  4016b0 <dtls1_stop_timer@plt>
+  404ba3:	mov    -0x48(%rbp),%rax
+  404ba7:	mov    0x2a8(%rax),%eax
+  404bad:	lea    0x1(%rax),%edx
+  404bb0:	mov    -0x48(%rbp),%rax
+  404bb4:	mov    %edx,0x2a8(%rax)
+  404bba:	mov    -0x48(%rbp),%rax
+  404bbe:	movl   $0x0,0x2a4(%rax)
+  404bc8:	mov    $0x0,%eax
+  404bcd:	leaveq 
+  404bce:	retq   
+
+0000000000404bcf <dtls1_heartbeat>:
+  404bcf:	push   %rbp
+  404bd0:	mov    %rsp,%rbp
+  404bd3:	sub    $0x30,%rsp
+  404bd7:	mov    %rdi,-0x28(%rbp)
+  404bdb:	movl   $0x12,-0x4(%rbp)
+  404be2:	movl   $0x10,-0x8(%rbp)
+  404be9:	mov    -0x28(%rbp),%rax
+  404bed:	mov    0x2a0(%rax),%eax
+  404bf3:	and    $0x1,%eax
+  404bf6:	test   %eax,%eax
+  404bf8:	je     404c0b <dtls1_heartbeat+0x3c>
+  404bfa:	mov    -0x28(%rbp),%rax
+  404bfe:	mov    0x2a0(%rax),%eax
+  404c04:	and    $0x2,%eax
+  404c07:	test   %eax,%eax
+  404c09:	je     404c34 <dtls1_heartbeat+0x65>
+  404c0b:	mov    $0x609,%r8d
+  404c11:	mov    $0x404ed0,%ecx
+  404c16:	mov    $0x16d,%edx
+  404c1b:	mov    $0x131,%esi
+  404c20:	mov    $0x14,%edi
+  404c25:	callq  4016a0 <ERR_put_error@plt>
+  404c2a:	mov    $0xffffffff,%eax
+  404c2f:	jmpq   404e31 <dtls1_heartbeat+0x262>
+  404c34:	mov    -0x28(%rbp),%rax
+  404c38:	mov    0x2a4(%rax),%eax
+  404c3e:	test   %eax,%eax
+  404c40:	je     404c6b <dtls1_heartbeat+0x9c>
+  404c42:	mov    $0x610,%r8d
+  404c48:	mov    $0x404ed0,%ecx
+  404c4d:	mov    $0x16e,%edx
+  404c52:	mov    $0x131,%esi
+  404c57:	mov    $0x14,%edi
+  404c5c:	callq  4016a0 <ERR_put_error@plt>
+  404c61:	mov    $0xffffffff,%eax
+  404c66:	jmpq   404e31 <dtls1_heartbeat+0x262>
+  404c6b:	mov    -0x28(%rbp),%rax
+  404c6f:	mov    %rax,%rdi
+  404c72:	callq  401750 <SSL_state@plt>
+  404c77:	and    $0x3000,%eax
+  404c7c:	test   %eax,%eax
+  404c7e:	jne    404c8b <dtls1_heartbeat+0xbc>
+  404c80:	mov    -0x28(%rbp),%rax
+  404c84:	mov    0x2c(%rax),%eax
+  404c87:	test   %eax,%eax
+  404c89:	je     404cb4 <dtls1_heartbeat+0xe5>
+  404c8b:	mov    $0x617,%r8d
+  404c91:	mov    $0x404ed0,%ecx
+  404c96:	mov    $0xf4,%edx
+  404c9b:	mov    $0x131,%esi
+  404ca0:	mov    $0x14,%edi
+  404ca5:	callq  4016a0 <ERR_put_error@plt>
+  404caa:	mov    $0xffffffff,%eax
+  404caf:	jmpq   404e31 <dtls1_heartbeat+0x262>
+  404cb4:	mov    -0x8(%rbp),%eax
+  404cb7:	mov    -0x4(%rbp),%edx
+  404cba:	add    %edx,%eax
+  404cbc:	cmp    $0x3ffd,%eax
+  404cc1:	jbe    404cd7 <dtls1_heartbeat+0x108>
+  404cc3:	mov    $0x40510e,%edx
+  404cc8:	mov    $0x61e,%esi
+  404ccd:	mov    $0x404ed0,%edi
+  404cd2:	callq  401650 <OpenSSLDie@plt>
+  404cd7:	mov    -0x8(%rbp),%eax
+  404cda:	mov    -0x4(%rbp),%edx
+  404cdd:	add    %edx,%eax
+  404cdf:	add    $0x3,%eax
+  404ce2:	mov    $0x629,%edx
+  404ce7:	mov    $0x404ed0,%esi
+  404cec:	mov    %eax,%edi
+  404cee:	callq  4015c0 <CRYPTO_malloc@plt>
+  404cf3:	mov    %rax,-0x10(%rbp)
+  404cf7:	mov    -0x10(%rbp),%rax
+  404cfb:	mov    %rax,-0x18(%rbp)
+  404cff:	mov    -0x18(%rbp),%rax
+  404d03:	lea    0x1(%rax),%rdx
+  404d07:	mov    %rdx,-0x18(%rbp)
+  404d0b:	movb   $0x1,(%rax)
+  404d0e:	mov    -0x4(%rbp),%eax
+  404d11:	shr    $0x8,%eax
+  404d14:	mov    %eax,%edx
+  404d16:	mov    -0x18(%rbp),%rax
+  404d1a:	mov    %dl,(%rax)
+  404d1c:	mov    -0x18(%rbp),%rax
+  404d20:	lea    0x1(%rax),%rdx
+  404d24:	mov    -0x4(%rbp),%eax
+  404d27:	mov    %al,(%rdx)
+  404d29:	addq   $0x2,-0x18(%rbp)
+  404d2e:	mov    -0x28(%rbp),%rax
+  404d32:	mov    0x2a8(%rax),%eax
+  404d38:	shr    $0x8,%eax
+  404d3b:	mov    %eax,%edx
+  404d3d:	mov    -0x18(%rbp),%rax
+  404d41:	mov    %dl,(%rax)
+  404d43:	mov    -0x18(%rbp),%rax
+  404d47:	lea    0x1(%rax),%rdx
+  404d4b:	mov    -0x28(%rbp),%rax
+  404d4f:	mov    0x2a8(%rax),%eax
+  404d55:	mov    %al,(%rdx)
+  404d57:	addq   $0x2,-0x18(%rbp)
+  404d5c:	mov    -0x18(%rbp),%rax
+  404d60:	mov    $0x10,%esi
+  404d65:	mov    %rax,%rdi
+  404d68:	callq  401700 <RAND_pseudo_bytes@plt>
+  404d6d:	addq   $0x10,-0x18(%rbp)
+  404d72:	mov    -0x8(%rbp),%edx
+  404d75:	mov    -0x18(%rbp),%rax
+  404d79:	mov    %edx,%esi
+  404d7b:	mov    %rax,%rdi
+  404d7e:	callq  401700 <RAND_pseudo_bytes@plt>
+  404d83:	mov    -0x8(%rbp),%eax
+  404d86:	mov    -0x4(%rbp),%edx
+  404d89:	add    %edx,%eax
+  404d8b:	add    $0x3,%eax
+  404d8e:	mov    %eax,%ecx
+  404d90:	mov    -0x10(%rbp),%rdx
+  404d94:	mov    -0x28(%rbp),%rax
+  404d98:	mov    $0x18,%esi
+  404d9d:	mov    %rax,%rdi
+  404da0:	callq  401600 <dtls1_write_bytes@plt>
+  404da5:	mov    %eax,-0x1c(%rbp)
+  404da8:	cmpl   $0x0,-0x1c(%rbp)
+  404dac:	js     404e22 <dtls1_heartbeat+0x253>
+  404dae:	mov    -0x28(%rbp),%rax
+  404db2:	mov    0x98(%rax),%rax
+  404db9:	test   %rax,%rax
+  404dbc:	je     404e08 <dtls1_heartbeat+0x239>
+  404dbe:	mov    -0x28(%rbp),%rax
+  404dc2:	mov    0x98(%rax),%rax
+  404dc9:	mov    -0x28(%rbp),%rdx
+  404dcd:	mov    0xa0(%rdx),%rcx
+  404dd4:	mov    -0x8(%rbp),%edx
+  404dd7:	mov    -0x4(%rbp),%esi
+  404dda:	add    %esi,%edx
+  404ddc:	add    $0x3,%edx
+  404ddf:	mov    %edx,%edi
+  404de1:	mov    -0x28(%rbp),%rdx
+  404de5:	mov    (%rdx),%esi
+  404de7:	mov    -0x28(%rbp),%r8
+  404deb:	mov    -0x10(%rbp),%rdx
+  404def:	mov    %rcx,(%rsp)
+  404df3:	mov    %r8,%r9
+  404df6:	mov    %rdi,%r8
+  404df9:	mov    %rdx,%rcx
+  404dfc:	mov    $0x18,%edx
+  404e01:	mov    $0x1,%edi
+  404e06:	callq  *%rax
+  404e08:	mov    -0x28(%rbp),%rax
+  404e0c:	mov    %rax,%rdi
+  404e0f:	callq  401610 <dtls1_start_timer@plt>
+  404e14:	mov    -0x28(%rbp),%rax
+  404e18:	movl   $0x1,0x2a4(%rax)
+  404e22:	mov    -0x10(%rbp),%rax
+  404e26:	mov    %rax,%rdi
+  404e29:	callq  4016c0 <CRYPTO_free@plt>
+  404e2e:	mov    -0x1c(%rbp),%eax
+  404e31:	leaveq 
+  404e32:	retq   
+
+0000000000404e33 <main>:
+  404e33:	push   %rbp
+  404e34:	mov    %rsp,%rbp
+  404e37:	mov    $0x0,%eax
+  404e3c:	pop    %rbp
+  404e3d:	retq   
+  404e3e:	xchg   %ax,%ax
+
+0000000000404e40 <__libc_csu_init>:
+  404e40:	push   %r15
+  404e42:	mov    %edi,%r15d
+  404e45:	push   %r14
+  404e47:	mov    %rsi,%r14
+  404e4a:	push   %r13
+  404e4c:	mov    %rdx,%r13
+  404e4f:	push   %r12
+  404e51:	lea    0x200f98(%rip),%r12        # 605df0 <__frame_dummy_init_array_entry>
+  404e58:	push   %rbp
+  404e59:	lea    0x200f98(%rip),%rbp        # 605df8 <__init_array_end>
+  404e60:	push   %rbx
+  404e61:	sub    %r12,%rbp
+  404e64:	xor    %ebx,%ebx
+  404e66:	sar    $0x3,%rbp
+  404e6a:	sub    $0x8,%rsp
+  404e6e:	callq  4014f0 <_init>
+  404e73:	test   %rbp,%rbp
+  404e76:	je     404e96 <__libc_csu_init+0x56>
+  404e78:	nopl   0x0(%rax,%rax,1)
+  404e80:	mov    %r13,%rdx
+  404e83:	mov    %r14,%rsi
+  404e86:	mov    %r15d,%edi
+  404e89:	callq  *(%r12,%rbx,8)
+  404e8d:	add    $0x1,%rbx
+  404e91:	cmp    %rbp,%rbx
+  404e94:	jne    404e80 <__libc_csu_init+0x40>
+  404e96:	add    $0x8,%rsp
+  404e9a:	pop    %rbx
+  404e9b:	pop    %rbp
+  404e9c:	pop    %r12
+  404e9e:	pop    %r13
+  404ea0:	pop    %r14
+  404ea2:	pop    %r15
+  404ea4:	retq   
+  404ea5:	data32 nopw %cs:0x0(%rax,%rax,1)
+
+0000000000404eb0 <__libc_csu_fini>:
+  404eb0:	repz retq 
+  404eb2:	xchg   %ax,%ax
+
+Disassembly of section .fini:
+
+0000000000404eb4 <_fini>:
+  404eb4:	sub    $0x8,%rsp
+  404eb8:	add    $0x8,%rsp
+  404ebc:	retq   

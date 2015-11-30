@@ -1,0 +1,12 @@
+  4038a3:	sub    $0x18,%rsp
+  4038a7:	mov    %rdi,%rbx
+  4038aa:	mov    0x80(%rdi),%rcx
+  4038b1:	mov    0x130(%rcx),%rbp
+  4038b8:	movzbl 0x0(%rbp),%r12d
+  4038bd:	movzbl 0x1(%rbp),%r13d
+  4038c2:	shl    $0x8,%r13d
+  4038c6:	movzbl 0x2(%rbp),%eax
+  4038ca:	or     %eax,%r13d
+  4038cd:	mov    0x98(%rdi),%rax
+  4038d4:	test   %rax,%rax
+  
