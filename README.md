@@ -20,5 +20,5 @@ Author : Yunho Kim, Sunghyun Hong
   
   3rd week of Nov. : Study jaccard index for measure similarity between origin source and vulnerable code 
   
-  1st week of Dec. : Write the script code for measure similarity between origin source and vulnerable code 
+  1st week of Dec. : Write the script code for measure similarity between origin source and vulnerable code (./jaccard/SimilarityCheck.cpp)
  
