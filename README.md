@@ -1,6 +1,6 @@
 # 2015 Kookmin University UROP Project
 
-Find the vulnerable code about specific open source in execute file 
+In this project, our team detects well known vulnerable part of OpenSSL which calls ‘Heartbleed bug’ in binary level. We used objdump for disassembled binary code to assembly. The vulnerable code can be figured out on the binary level when inserting branch statement or user functions at top and bottom of it in the high-level language before disassembled. That high-level code translated to branch or function call instructions as the same place in the entire code. After extract vulnerable part, we compared this assembly opcode patterns to the other programs which have Heartbleed bug. N-gram method and Jaccard similarity are used for analyzing it
 
 ----------
 
